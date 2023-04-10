@@ -1,0 +1,51 @@
+/*
+  ==============================================================================
+
+    This file contains the basic framework code for a JUCE plugin editor.
+
+  ==============================================================================
+*/
+
+#pragma once
+
+#include <JuceHeader.h>
+#include "PluginProcessor.h"
+
+//==============================================================================
+/**
+*/
+class BinauralPannerTestAudioProcessorEditor  : public juce::AudioProcessorEditor,
+                                                public juce::Slider::Listener
+{
+public:
+    BinauralPannerTestAudioProcessorEditor (BinauralPannerTestAudioProcessor&);
+    ~BinauralPannerTestAudioProcessorEditor() override;
+
+    //==============================================================================
+    void paint (juce::Graphics&) override;
+    void resized() override;
+    
+    virtual void sliderValueChanged(juce::Slider* slider) override;
+    
+    int windowWidth = 600;
+    int windowHeight = 300;
+
+private:
+    // This reference is provided as a quick way for your editor to
+    // access the processor object that created it.
+    BinauralPannerTestAudioProcessor& audioProcessor;
+    
+    juce::Slider azKnob;
+    juce::Slider elKnob;
+    juce::Slider dSlider;
+    
+    juce::Label azKnobLabel;
+    juce::Label elKnobLabel;
+    juce::Label dSliderLabel;
+    
+    juce::Label title;
+    
+    juce::LookAndFeel_V4 lookAndFeelV4;
+
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BinauralPannerTestAudioProcessorEditor)
+};
