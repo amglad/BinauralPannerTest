@@ -8,12 +8,6 @@
 
 namespace BinaryData
 {
-    extern const char*   COPYING_txt;
-    const int            COPYING_txtSize = 1053;
-
-    extern const char*   README_md;
-    const int            README_mdSize = 3419;
-
     extern const char*   gif2h5;
     const int            gif2h5Size = 211648;
 
@@ -323,20 +317,20 @@ namespace BinaryData
     extern const char*   INSTALL_RECEIPT_json;
     const int            INSTALL_RECEIPT_jsonSize = 2189;
 
-    extern const char*   README_md2;
-    const int            README_md2Size = 3469;
+    extern const char*   README_md;
+    const int            README_mdSize = 3469;
 
     extern const char*   coordinates_png;
     const int            coordinates_pngSize = 55485;
 
-    extern const char*   README_md3;
-    const int            README_md3Size = 3080;
+    extern const char*   README_md2;
+    const int            README_md2Size = 3080;
 
     extern const char*   SmallTheaterHRIRs_1_0_sofa;
     const int            SmallTheaterHRIRs_1_0_sofaSize = 24466026;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 109;
+    const int namedResourceListSize = 107;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

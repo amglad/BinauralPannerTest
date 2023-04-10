@@ -5,14 +5,9 @@
               jucerFormatVersion="1" headerPath="/Users/erictarr/Desktop/Repositories/BinauralPannerTest/BinauralPannerTest/Source/SOFA/libBasicSOFA-master-2/libBasicSOFA&#10;/Users/erictarr/Desktop/Repositories/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/include&#10;/Users/erictarr/Desktop/Repositories/BinauralPannerTest/BinauralPannerTest/Source/AudioFFT">
   <MAINGROUP id="voG2Iq" name="BinauralPannerTest">
     <GROUP id="{AE9A6D91-9A3E-B082-3FBF-11E49878F5D1}" name="Source">
-      <GROUP id="{06877926-A81D-32CD-87D7-BBD80D0520AD}" name="AudioFFT">
-        <GROUP id="{9750367B-7DFD-6172-3F71-0F8C8C6E5631}" name="test">
-          <FILE id="NnCn9w" name="Test.cpp" compile="1" resource="0" file="Source/AudioFFT/test/Test.cpp"/>
-        </GROUP>
-        <FILE id="NZiPJ6" name="AudioFFT.cpp" compile="1" resource="0" file="Source/AudioFFT/AudioFFT.cpp"/>
-        <FILE id="rQMsHU" name="AudioFFT.h" compile="0" resource="0" file="Source/AudioFFT/AudioFFT.h"/>
-        <FILE id="s6xGQW" name="COPYING.txt" compile="0" resource="1" file="Source/AudioFFT/COPYING.txt"/>
-        <FILE id="LVn4pR" name="README.md" compile="0" resource="1" file="Source/AudioFFT/README.md"/>
+      <GROUP id="{7BB1B9F4-CF9C-688C-FAB9-A11879195CBB}" name="AudioFFT">
+        <FILE id="Gk6JDE" name="AudioFFT.cpp" compile="1" resource="0" file="Source/AudioFFT/AudioFFT.cpp"/>
+        <FILE id="d068UB" name="AudioFFT.h" compile="0" resource="0" file="Source/AudioFFT/AudioFFT.h"/>
       </GROUP>
       <GROUP id="{5608B59E-A376-D6B3-778C-33D178B86BE7}" name="hdf5">
         <GROUP id="{E292AFC8-EC22-F529-B3B5-A7EB98034939}" name="1.12.2_2">
