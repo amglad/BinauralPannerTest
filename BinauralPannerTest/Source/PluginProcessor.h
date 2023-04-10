@@ -10,6 +10,9 @@
 
 #include <JuceHeader.h>
 #include "InterpolationDSP.h"
+#include "BasicSOFA.hpp"
+#include "BasicSOFAPriv.hpp"
+#include "AudioFFT.h"
 
 //==============================================================================
 /**
