@@ -25,10 +25,10 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     azKnob.setValue(0.0);
     azKnob.setTextValueSuffix(" degrees");
     azKnob.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 100, 25);
-    azKnob.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::ivory.darker(0.2));
-    azKnob.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::greenyellow.darker(0.1));
+    azKnob.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::ivory.darker(0.27));
+    azKnob.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::limegreen.darker(0.1));
     azKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.45));
-    azKnob.setColour(juce::Slider::ColourIds::rotarySliderOutlineColourId, juce::Colours::ivory.darker(0.25));
+    azKnob.setColour(juce::Slider::ColourIds::rotarySliderOutlineColourId, juce::Colours::ivory.darker(0.33));
     addAndMakeVisible(azKnob);
     
     azKnobLabel.setText("azimuth", juce::dontSendNotification);
@@ -46,10 +46,10 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     elKnob.setValue(0.0);
     elKnob.setTextValueSuffix(" degrees");
     elKnob.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 100, 25);
-    elKnob.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::ivory.darker(0.2));
-    elKnob.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::orangered.brighter(0.8));
+    elKnob.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::ivory.darker(0.27));
+    elKnob.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::orangered.brighter(0.7));
     elKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.45));
-    elKnob.setColour(juce::Slider::ColourIds::rotarySliderOutlineColourId, juce::Colours::ivory.darker(0.25));
+    elKnob.setColour(juce::Slider::ColourIds::rotarySliderOutlineColourId, juce::Colours::ivory.darker(0.33));
     addAndMakeVisible(elKnob);
     
     elKnobLabel.setText("elevation", juce::dontSendNotification);
@@ -67,10 +67,10 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     dSlider.setValue(6.0);
     dSlider.setTextValueSuffix(" feet");
     dSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 100, 25);
-    dSlider.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::ivory.darker(0.2));
+    dSlider.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::ivory.darker(0.27));
     dSlider.setColour(juce::Slider::ColourIds::trackColourId, juce::Colours::orange.brighter(0.9));
     dSlider.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.45));
-    dSlider.setColour(juce::Slider::ColourIds::backgroundColourId, juce::Colours::ivory.darker(0.25));
+    dSlider.setColour(juce::Slider::ColourIds::backgroundColourId, juce::Colours::ivory.darker(0.33));
     addAndMakeVisible(dSlider);
     
     dSliderLabel.setText("distance", juce::dontSendNotification);
@@ -104,7 +104,7 @@ BinauralPannerTestAudioProcessorEditor::~BinauralPannerTestAudioProcessorEditor(
 void BinauralPannerTestAudioProcessorEditor::paint (juce::Graphics& g)
 {
     // (Our component is opaque, so we must completely fill the background with a solid colour)
-    g.fillAll(juce::Colours::ivory.darker(0.2));
+    g.fillAll(juce::Colours::ivory.darker(0.28));
     
     // Define plugin bounds
     auto bounds = getLocalBounds();
