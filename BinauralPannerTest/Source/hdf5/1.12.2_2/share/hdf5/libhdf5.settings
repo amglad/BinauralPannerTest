@@ -4,10 +4,10 @@
 General Information:
 -------------------
                    HDF5 Version: 1.12.2
-                  Configured on: Mon Nov 28 20:13:18 UTC 2022
-                  Configured by: brew@HMBRW-A-001-M1-003.local
-                    Host system: aarch64-apple-darwin20.6.0
-              Uname information: Darwin HMBRW-A-001-M1-003.local 20.6.0 Darwin Kernel Version 20.6.0: Mon Aug 29 04:31:12 PDT 2022; root:xnu-7195.141.39~2/RELEASE_ARM64_T8101 arm64
+                  Configured on: Mon Nov 28 20:24:15 UTC 2022
+                  Configured by: brew@Ventura-arm64.local
+                    Host system: aarch64-apple-darwin22.1.0
+              Uname information: Darwin Ventura-arm64.local 22.1.0 Darwin Kernel Version 22.1.0: Sun Oct  9 20:15:37 PDT 2022; root:xnu-8792.41.9~2/RELEASE_ARM64_VMAPPLE arm64
                        Byte sex: little-endian
              Installation point: /opt/homebrew/Cellar/hdf5/1.12.2_2
 
@@ -34,7 +34,7 @@ Linking Options:
 Languages:
 ----------
                               C: yes
-                     C Compiler: clang ( Apple clang version 13.0.0 )
+                     C Compiler: clang ( Apple clang version 14.0.0 )
                        CPPFLAGS: 
                     H5_CPPFLAGS:   -DNDEBUG -UH5_DEBUG_API
                     AM_CPPFLAGS:  -I/opt/homebrew/opt/libaec/include
@@ -54,7 +54,7 @@ Languages:
          Static Fortran Library: yes
 
                             C++: yes
-                   C++ Compiler: clang++ ( Apple clang version 13.0.0 )
+                   C++ Compiler: clang++ ( Apple clang version 14.0.0 )
                       C++ Flags: 
                    H5 C++ Flags:   -Wall -Warray-bounds -Wcast-qual -Wconversion -Wdouble-promotion -Wextra -Wformat=2 -Wframe-larger-than=16384 -Wimplicit-fallthrough -Wnull-dereference -Wunused-const-variable -Wwrite-strings -Wpedantic -Wvolatile-register-var -Wno-c++-compat     -Wbad-function-cast -Wimplicit-function-declaration -Wincompatible-pointer-types -Wmissing-declarations -Wpacked -Wshadow -Wswitch -Wno-error=incompatible-pointer-types-discards-qualifiers -Wunused-function -Wunused-variable -Wunused-parameter -Wcast-align -Wformat -O3
                    AM C++ Flags: 

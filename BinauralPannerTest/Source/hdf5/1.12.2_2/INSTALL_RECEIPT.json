@@ -23,7 +23,7 @@
     "share/hdf5_examples/hl/fortran/run-hlfortran-ex.sh",
     "share/hdf5/libhdf5.settings"
   ],
-  "time": 1680382679,
+  "time": 1681225524,
   "source_modified_time": 1650386659,
   "compiler": "clang",
   "aliases": [
@@ -37,7 +37,7 @@
     },
     {
       "full_name": "isl",
-      "version": "0.25",
+      "version": "0.26",
       "declared_directly": false
     },
     {
@@ -62,7 +62,7 @@
     },
     {
       "full_name": "zstd",
-      "version": "1.5.4",
+      "version": "1.5.5",
       "declared_directly": false
     },
     {
@@ -90,10 +90,10 @@
   "arch": "arm64",
   "built_on": {
     "os": "Macintosh",
-    "os_version": "macOS 11",
-    "cpu_family": "arm_firestorm_icestorm",
-    "xcode": "13.2.1",
-    "clt": "13.2.0.0.1.1638488800",
+    "os_version": "macOS 13",
+    "cpu_family": "dunno",
+    "xcode": "14.1",
+    "clt": "14.1.0.0.1.1665256668",
     "preferred_perl": "5.30"
   }
 }

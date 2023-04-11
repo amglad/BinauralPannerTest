@@ -147,7 +147,9 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
         BasicSOFA::BasicSOFA sofa;
         audiofft::AudioFFT fft;
     
-    sofa.readSOFAFile("/Users/erictarr/Desktop/Repositories/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
+    sofa.readSOFAFile("/Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
+    // sofa.readSOFAFile("Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
+    
     // This is the place where you'd normally do the guts of your plugin's
     // audio processing...
     // Make sure to reset the state if your inner loop is processing

@@ -2,363 +2,359 @@
 
 <JUCERPROJECT id="tF5nrN" name="BinauralPannerTest" projectType="audioplug"
               useAppConfig="0" addUsingNamespaceToJuceHeader="0" displaySplashScreen="1"
-              jucerFormatVersion="1" headerPath="/Users/erictarr/Desktop/Repositories/BinauralPannerTest/BinauralPannerTest/Source/SOFA/libBasicSOFA-master-2/libBasicSOFA&#10;/Users/erictarr/Desktop/Repositories/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/include&#10;/Users/erictarr/Desktop/Repositories/BinauralPannerTest/BinauralPannerTest/Source/AudioFFT">
+              jucerFormatVersion="1" headerPath="~/BinauralPannerTest/BinauralPannerTest/Source/SOFA/libBasicSOFA-master-2/libBasicSOFA&#10;~/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/include&#10;~/BinauralPannerTest/BinauralPannerTest/Source/AudioFFT">
   <MAINGROUP id="voG2Iq" name="BinauralPannerTest">
     <GROUP id="{AE9A6D91-9A3E-B082-3FBF-11E49878F5D1}" name="Source">
-      <GROUP id="{7BB1B9F4-CF9C-688C-FAB9-A11879195CBB}" name="AudioFFT">
-        <FILE id="Gk6JDE" name="AudioFFT.cpp" compile="1" resource="0" file="Source/AudioFFT/AudioFFT.cpp"/>
-        <FILE id="d068UB" name="AudioFFT.h" compile="0" resource="0" file="Source/AudioFFT/AudioFFT.h"/>
-      </GROUP>
-      <GROUP id="{5608B59E-A376-D6B3-778C-33D178B86BE7}" name="hdf5">
-        <GROUP id="{E292AFC8-EC22-F529-B3B5-A7EB98034939}" name="1.12.2_2">
-          <GROUP id="{4C795666-2EDF-F61F-2C8F-622AD908515B}" name="bin">
-            <FILE id="K98zn2" name="gif2h5" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/gif2h5"/>
-            <FILE id="v4prnV" name="h5c++" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5c++"/>
-            <FILE id="K8uJeS" name="h5cc" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5cc"/>
-            <FILE id="yWsGUF" name="h5clear" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5clear"/>
-            <FILE id="Uv85ct" name="h5copy" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5copy"/>
-            <FILE id="R3GI6m" name="h5debug" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5debug"/>
-            <FILE id="wNsZZZ" name="h5diff" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5diff"/>
-            <FILE id="akGBeL" name="h5dump" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5dump"/>
-            <FILE id="dP0LIN" name="h5fc" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5fc"/>
-            <FILE id="Jud0yi" name="h5format_convert" compile="0" resource="1"
+      <GROUP id="{FC3BA05A-2B6D-00DE-4184-E9992648EB9A}" name="hdf5">
+        <GROUP id="{6418F6CC-9FC1-D7E6-8544-A180C480DA6C}" name="1.12.2_2">
+          <GROUP id="{743E4579-54CE-4875-FFBB-CFE2509CDF0F}" name="bin">
+            <FILE id="uv9Luv" name="gif2h5" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/gif2h5"/>
+            <FILE id="o5uQ4C" name="h5c++" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5c++"/>
+            <FILE id="THFVjX" name="h5cc" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5cc"/>
+            <FILE id="ZiATcc" name="h5clear" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5clear"/>
+            <FILE id="di35ec" name="h5copy" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5copy"/>
+            <FILE id="Z30uTt" name="h5debug" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5debug"/>
+            <FILE id="uGt3vA" name="h5diff" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5diff"/>
+            <FILE id="IdEEww" name="h5dump" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5dump"/>
+            <FILE id="pelvoY" name="h5fc" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5fc"/>
+            <FILE id="fMP25K" name="h5format_convert" compile="0" resource="1"
                   file="Source/hdf5/1.12.2_2/bin/h5format_convert"/>
-            <FILE id="VR3Y2c" name="h5import" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5import"/>
-            <FILE id="AiOHug" name="h5jam" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5jam"/>
-            <FILE id="ELRIts" name="h5ls" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5ls"/>
-            <FILE id="AQsFyg" name="h5mkgrp" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5mkgrp"/>
-            <FILE id="LfzQgx" name="h5perf_serial" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5perf_serial"/>
-            <FILE id="d1Fu0E" name="h5redeploy" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5redeploy"/>
-            <FILE id="M2mD7T" name="h5repack" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5repack"/>
-            <FILE id="jSuehE" name="h5repart" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5repart"/>
-            <FILE id="tvpTCR" name="h5stat" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5stat"/>
-            <FILE id="EFZv3o" name="h5unjam" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5unjam"/>
-            <FILE id="r7MXHz" name="h5watch" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5watch"/>
-            <FILE id="sBDGhH" name="h52gif" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h52gif"/>
+            <FILE id="tvWULD" name="h5import" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5import"/>
+            <FILE id="QMV9Ly" name="h5jam" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5jam"/>
+            <FILE id="l1YdXw" name="h5ls" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5ls"/>
+            <FILE id="gxFxU8" name="h5mkgrp" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5mkgrp"/>
+            <FILE id="B6IQ9B" name="h5perf_serial" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5perf_serial"/>
+            <FILE id="VOGXL7" name="h5redeploy" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5redeploy"/>
+            <FILE id="V6hOhy" name="h5repack" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5repack"/>
+            <FILE id="jHcORO" name="h5repart" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5repart"/>
+            <FILE id="iCyLjs" name="h5stat" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5stat"/>
+            <FILE id="qPKcrt" name="h5unjam" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5unjam"/>
+            <FILE id="fB1lnU" name="h5watch" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h5watch"/>
+            <FILE id="lmHwuj" name="h52gif" compile="0" resource="1" file="Source/hdf5/1.12.2_2/bin/h52gif"/>
           </GROUP>
-          <GROUP id="{74E6C330-80C7-2B59-510C-B158C7B8E463}" name="include">
-            <FILE id="CXwM2y" name="h5_gen.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5_gen.mod"/>
-            <FILE id="XnzYFi" name="h5a.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5a.mod"/>
-            <FILE id="sogfDP" name="H5AbstractDs.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5AbstractDs.h"/>
-            <FILE id="ojmMfl" name="H5ACpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5ACpublic.h"/>
-            <FILE id="Ly1hc5" name="H5api_adpt.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5api_adpt.h"/>
-            <FILE id="VjM0Ub" name="H5Apublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Apublic.h"/>
-            <FILE id="Bt34FE" name="H5ArrayType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5ArrayType.h"/>
-            <FILE id="InyeiQ" name="H5AtomType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5AtomType.h"/>
-            <FILE id="cUPi0U" name="H5Attribute.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Attribute.h"/>
-            <FILE id="r6pidm" name="H5Classes.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Classes.h"/>
-            <FILE id="NNZNb7" name="H5CommonFG.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5CommonFG.h"/>
-            <FILE id="L2GyC3" name="H5CompType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5CompType.h"/>
-            <FILE id="jO7qsc" name="H5Cpp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Cpp.h"/>
-            <FILE id="kK0UPq" name="H5CppDoc.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5CppDoc.h"/>
-            <FILE id="wbsGcr" name="H5Cpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Cpublic.h"/>
-            <FILE id="BQ8roJ" name="h5d.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5d.mod"/>
-            <FILE id="OGVDzn" name="H5DaccProp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5DaccProp.h"/>
-            <FILE id="FMJVEq" name="H5DataSet.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5DataSet.h"/>
-            <FILE id="wOmw0H" name="H5DataSpace.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5DataSpace.h"/>
-            <FILE id="w7CNrB" name="H5DataType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5DataType.h"/>
-            <FILE id="aZtvUd" name="H5DcreatProp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5DcreatProp.h"/>
-            <FILE id="pw9NAl" name="H5DOpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5DOpublic.h"/>
-            <FILE id="OSLnC8" name="H5Dpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Dpublic.h"/>
-            <FILE id="XGNgAu" name="h5ds.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5ds.mod"/>
-            <FILE id="LFOHJJ" name="H5DSpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5DSpublic.h"/>
-            <FILE id="VzkR06" name="H5DxferProp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5DxferProp.h"/>
-            <FILE id="sPg8rJ" name="h5e.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5e.mod"/>
-            <FILE id="gfHKAD" name="H5EnumType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5EnumType.h"/>
-            <FILE id="GSuasg" name="H5Epubgen.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Epubgen.h"/>
-            <FILE id="ZBjv0G" name="H5Epublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Epublic.h"/>
-            <FILE id="GsxWym" name="H5ESpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5ESpublic.h"/>
-            <FILE id="rbUq4T" name="H5Exception.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Exception.h"/>
-            <FILE id="Z5k2bM" name="h5f.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5f.mod"/>
-            <FILE id="V9DVct" name="H5f90i.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5f90i.h"/>
-            <FILE id="WkocQv" name="H5f90i_gen.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5f90i_gen.h"/>
-            <FILE id="J9rvtx" name="H5FaccProp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FaccProp.h"/>
-            <FILE id="W0cFpK" name="H5FcreatProp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FcreatProp.h"/>
-            <FILE id="qa5TUv" name="H5FDcore.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDcore.h"/>
-            <FILE id="LzKrw4" name="H5FDdirect.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDdirect.h"/>
-            <FILE id="YTARn2" name="H5FDfamily.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDfamily.h"/>
-            <FILE id="jNSRvS" name="H5FDhdfs.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDhdfs.h"/>
-            <FILE id="tBsd23" name="H5FDlog.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDlog.h"/>
-            <FILE id="lQQSiy" name="H5FDmirror.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDmirror.h"/>
-            <FILE id="y3WyWk" name="H5FDmpi.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDmpi.h"/>
-            <FILE id="Nn0Fdb" name="H5FDmpio.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDmpio.h"/>
-            <FILE id="vWkaDb" name="H5FDmulti.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDmulti.h"/>
-            <FILE id="ybtQ3R" name="H5FDpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDpublic.h"/>
-            <FILE id="lCvx7y" name="H5FDros3.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDros3.h"/>
-            <FILE id="uXOAeM" name="H5FDsec2.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDsec2.h"/>
-            <FILE id="GJq4Rk" name="H5FDsplitter.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDsplitter.h"/>
-            <FILE id="gcrYVk" name="H5FDstdio.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDstdio.h"/>
-            <FILE id="IYz6AC" name="H5FDwindows.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDwindows.h"/>
-            <FILE id="LzGWZi" name="H5File.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5File.h"/>
-            <FILE id="l1UuSP" name="H5FloatType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FloatType.h"/>
-            <FILE id="RmGDgx" name="h5fortkit.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5fortkit.mod"/>
-            <FILE id="uRqQKO" name="h5fortran_types.mod" compile="0" resource="1"
+          <GROUP id="{1DFA3A9B-CAE7-4B87-D480-28E31E75310E}" name="include">
+            <FILE id="j0OMLK" name="h5_gen.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5_gen.mod"/>
+            <FILE id="NODB22" name="h5a.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5a.mod"/>
+            <FILE id="WnAk5B" name="H5AbstractDs.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5AbstractDs.h"/>
+            <FILE id="d0qMyx" name="H5ACpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5ACpublic.h"/>
+            <FILE id="IkdOYw" name="H5api_adpt.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5api_adpt.h"/>
+            <FILE id="OQ76ZW" name="H5Apublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Apublic.h"/>
+            <FILE id="PQgL5p" name="H5ArrayType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5ArrayType.h"/>
+            <FILE id="rA51TL" name="H5AtomType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5AtomType.h"/>
+            <FILE id="AYO6G7" name="H5Attribute.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Attribute.h"/>
+            <FILE id="OtTEiq" name="H5Classes.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Classes.h"/>
+            <FILE id="DNlFDQ" name="H5CommonFG.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5CommonFG.h"/>
+            <FILE id="O5lSQG" name="H5CompType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5CompType.h"/>
+            <FILE id="GyyoWl" name="H5Cpp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Cpp.h"/>
+            <FILE id="f1POqt" name="H5CppDoc.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5CppDoc.h"/>
+            <FILE id="L3qDk9" name="H5Cpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Cpublic.h"/>
+            <FILE id="jfHOnN" name="h5d.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5d.mod"/>
+            <FILE id="Lywhf2" name="H5DaccProp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5DaccProp.h"/>
+            <FILE id="ypHcwq" name="H5DataSet.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5DataSet.h"/>
+            <FILE id="ZJYWBL" name="H5DataSpace.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5DataSpace.h"/>
+            <FILE id="jerL8n" name="H5DataType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5DataType.h"/>
+            <FILE id="xSgJma" name="H5DcreatProp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5DcreatProp.h"/>
+            <FILE id="bHOrrL" name="H5DOpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5DOpublic.h"/>
+            <FILE id="urjoNs" name="H5Dpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Dpublic.h"/>
+            <FILE id="kkMYcn" name="h5ds.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5ds.mod"/>
+            <FILE id="QqBdIe" name="H5DSpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5DSpublic.h"/>
+            <FILE id="i51l41" name="H5DxferProp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5DxferProp.h"/>
+            <FILE id="xRPGjC" name="h5e.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5e.mod"/>
+            <FILE id="E8syN7" name="H5EnumType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5EnumType.h"/>
+            <FILE id="CUAw6W" name="H5Epubgen.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Epubgen.h"/>
+            <FILE id="kOUGWX" name="H5Epublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Epublic.h"/>
+            <FILE id="IvB5Mb" name="H5ESpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5ESpublic.h"/>
+            <FILE id="lPrlEd" name="H5Exception.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Exception.h"/>
+            <FILE id="jJo6IL" name="h5f.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5f.mod"/>
+            <FILE id="nACcKV" name="H5f90i.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5f90i.h"/>
+            <FILE id="yWdkNn" name="H5f90i_gen.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5f90i_gen.h"/>
+            <FILE id="w6mByc" name="H5FaccProp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FaccProp.h"/>
+            <FILE id="XM0bpL" name="H5FcreatProp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FcreatProp.h"/>
+            <FILE id="wbbPS7" name="H5FDcore.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDcore.h"/>
+            <FILE id="mTZmC7" name="H5FDdirect.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDdirect.h"/>
+            <FILE id="kTOm1j" name="H5FDfamily.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDfamily.h"/>
+            <FILE id="QW9hfq" name="H5FDhdfs.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDhdfs.h"/>
+            <FILE id="T372xN" name="H5FDlog.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDlog.h"/>
+            <FILE id="MmCmKx" name="H5FDmirror.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDmirror.h"/>
+            <FILE id="nJCQvE" name="H5FDmpi.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDmpi.h"/>
+            <FILE id="HXnEWj" name="H5FDmpio.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDmpio.h"/>
+            <FILE id="iCmEXB" name="H5FDmulti.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDmulti.h"/>
+            <FILE id="IzgHxZ" name="H5FDpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDpublic.h"/>
+            <FILE id="xVlyrY" name="H5FDros3.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDros3.h"/>
+            <FILE id="hrPnr7" name="H5FDsec2.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDsec2.h"/>
+            <FILE id="gGDAQO" name="H5FDsplitter.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDsplitter.h"/>
+            <FILE id="YXf9wA" name="H5FDstdio.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDstdio.h"/>
+            <FILE id="WQ9nJr" name="H5FDwindows.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FDwindows.h"/>
+            <FILE id="CRxcaw" name="H5File.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5File.h"/>
+            <FILE id="pczhvY" name="H5FloatType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5FloatType.h"/>
+            <FILE id="fK7iWT" name="h5fortkit.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5fortkit.mod"/>
+            <FILE id="e6Vv8o" name="h5fortran_types.mod" compile="0" resource="1"
                   file="Source/hdf5/1.12.2_2/include/h5fortran_types.mod"/>
-            <FILE id="zHeKYO" name="H5Fpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Fpublic.h"/>
-            <FILE id="g2Hn6M" name="h5g.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5g.mod"/>
-            <FILE id="GhRepS" name="h5global.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5global.mod"/>
-            <FILE id="nx8CC4" name="H5Gpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Gpublic.h"/>
-            <FILE id="AXc64Q" name="H5Group.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Group.h"/>
-            <FILE id="qWHrj5" name="h5i.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5i.mod"/>
-            <FILE id="TAFRGD" name="H5IdComponent.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5IdComponent.h"/>
-            <FILE id="tPSgsj" name="h5im.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5im.mod"/>
-            <FILE id="LFfurp" name="H5IMpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5IMpublic.h"/>
-            <FILE id="JczyZZ" name="H5Include.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Include.h"/>
-            <FILE id="QMLtEH" name="H5IntType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5IntType.h"/>
-            <FILE id="ZamCGN" name="H5Ipublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Ipublic.h"/>
-            <FILE id="J85AqL" name="h5l.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5l.mod"/>
-            <FILE id="Ut697n" name="H5LaccProp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5LaccProp.h"/>
-            <FILE id="vUGw2B" name="H5LcreatProp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5LcreatProp.h"/>
-            <FILE id="bOcmCr" name="H5LDpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5LDpublic.h"/>
-            <FILE id="Lc3PNJ" name="h5lib.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5lib.mod"/>
-            <FILE id="mAug8c" name="H5Library.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Library.h"/>
-            <FILE id="QNMLsI" name="H5Location.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Location.h"/>
-            <FILE id="anC7TK" name="H5Lpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Lpublic.h"/>
-            <FILE id="gYLie0" name="h5lt.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5lt.mod"/>
-            <FILE id="rhWrlZ" name="h5lt_const.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5lt_const.mod"/>
-            <FILE id="OJFG3F" name="H5LTpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5LTpublic.h"/>
-            <FILE id="TGo5Ce" name="H5MMpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5MMpublic.h"/>
-            <FILE id="SJoySh" name="H5Mpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Mpublic.h"/>
-            <FILE id="hJHMQs" name="h5o.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5o.mod"/>
-            <FILE id="vXpO7o" name="H5Object.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Object.h"/>
-            <FILE id="j1ToQR" name="H5OcreatProp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5OcreatProp.h"/>
-            <FILE id="PDcCUC" name="H5Opublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Opublic.h"/>
-            <FILE id="GE5XrJ" name="H5overflow.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5overflow.h"/>
-            <FILE id="JRI7jX" name="h5p.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5p.mod"/>
-            <FILE id="h1B2MG" name="H5PacketTable.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5PacketTable.h"/>
-            <FILE id="sA5dUr" name="H5PLextern.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5PLextern.h"/>
-            <FILE id="I2FdRe" name="H5PLpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5PLpublic.h"/>
-            <FILE id="ALbKhU" name="H5Ppublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Ppublic.h"/>
-            <FILE id="d3IzoA" name="H5PredType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5PredType.h"/>
-            <FILE id="ljRe4v" name="H5PropList.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5PropList.h"/>
-            <FILE id="lZq76W" name="H5PTpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5PTpublic.h"/>
-            <FILE id="ildAeS" name="H5pubconf.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5pubconf.h"/>
-            <FILE id="JYiAtv" name="H5public.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5public.h"/>
-            <FILE id="hSOkB0" name="h5r.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5r.mod"/>
-            <FILE id="r0cmgV" name="H5Rpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Rpublic.h"/>
-            <FILE id="TbVPwv" name="h5s.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5s.mod"/>
-            <FILE id="bjAbZ9" name="H5Spublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Spublic.h"/>
-            <FILE id="PnEQ6o" name="H5StrType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5StrType.h"/>
-            <FILE id="UhkD0G" name="h5t.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5t.mod"/>
-            <FILE id="APXFKY" name="h5tb.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5tb.mod"/>
-            <FILE id="rg2xWt" name="h5tb_const.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5tb_const.mod"/>
-            <FILE id="xHQOqv" name="H5TBpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5TBpublic.h"/>
-            <FILE id="Uayw3H" name="H5Tpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Tpublic.h"/>
-            <FILE id="eaq9Tf" name="H5VarLenType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5VarLenType.h"/>
-            <FILE id="X8D21f" name="H5version.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5version.h"/>
-            <FILE id="cMcMJr" name="h5vl.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5vl.mod"/>
-            <FILE id="RgrwKp" name="H5VLconnector.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5VLconnector.h"/>
-            <FILE id="rmKK7r" name="H5VLconnector_passthru.h" compile="0" resource="0"
+            <FILE id="IzVeOw" name="H5Fpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Fpublic.h"/>
+            <FILE id="n35s0I" name="h5g.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5g.mod"/>
+            <FILE id="ATruk3" name="h5global.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5global.mod"/>
+            <FILE id="hl88TB" name="H5Gpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Gpublic.h"/>
+            <FILE id="CU9EiH" name="H5Group.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Group.h"/>
+            <FILE id="kthw7m" name="h5i.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5i.mod"/>
+            <FILE id="VWXDQV" name="H5IdComponent.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5IdComponent.h"/>
+            <FILE id="EnyrHn" name="h5im.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5im.mod"/>
+            <FILE id="IkDqLb" name="H5IMpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5IMpublic.h"/>
+            <FILE id="c5ktgx" name="H5Include.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Include.h"/>
+            <FILE id="UgNZog" name="H5IntType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5IntType.h"/>
+            <FILE id="m6qjlk" name="H5Ipublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Ipublic.h"/>
+            <FILE id="AvPhLA" name="h5l.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5l.mod"/>
+            <FILE id="wjJHul" name="H5LaccProp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5LaccProp.h"/>
+            <FILE id="AfyWWh" name="H5LcreatProp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5LcreatProp.h"/>
+            <FILE id="OiTu5C" name="H5LDpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5LDpublic.h"/>
+            <FILE id="Sbv4XP" name="h5lib.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5lib.mod"/>
+            <FILE id="xxjLfv" name="H5Library.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Library.h"/>
+            <FILE id="lM3Tkf" name="H5Location.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Location.h"/>
+            <FILE id="nAWmRF" name="H5Lpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Lpublic.h"/>
+            <FILE id="eUOme3" name="h5lt.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5lt.mod"/>
+            <FILE id="tAQ47H" name="h5lt_const.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5lt_const.mod"/>
+            <FILE id="knDdBe" name="H5LTpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5LTpublic.h"/>
+            <FILE id="HKElO7" name="H5MMpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5MMpublic.h"/>
+            <FILE id="XAFgOP" name="H5Mpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Mpublic.h"/>
+            <FILE id="UHOuGs" name="h5o.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5o.mod"/>
+            <FILE id="zlwNkT" name="H5Object.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Object.h"/>
+            <FILE id="cBsNn9" name="H5OcreatProp.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5OcreatProp.h"/>
+            <FILE id="hIGgpJ" name="H5Opublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Opublic.h"/>
+            <FILE id="HE83ZF" name="H5overflow.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5overflow.h"/>
+            <FILE id="QHg5wT" name="h5p.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5p.mod"/>
+            <FILE id="TvSXhs" name="H5PacketTable.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5PacketTable.h"/>
+            <FILE id="zHPIpN" name="H5PLextern.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5PLextern.h"/>
+            <FILE id="ODqOLJ" name="H5PLpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5PLpublic.h"/>
+            <FILE id="VZKyK7" name="H5Ppublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Ppublic.h"/>
+            <FILE id="UM5SBx" name="H5PredType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5PredType.h"/>
+            <FILE id="uFIYqH" name="H5PropList.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5PropList.h"/>
+            <FILE id="c794Li" name="H5PTpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5PTpublic.h"/>
+            <FILE id="QeM0Gj" name="H5pubconf.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5pubconf.h"/>
+            <FILE id="vEDu3I" name="H5public.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5public.h"/>
+            <FILE id="z7DhFz" name="h5r.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5r.mod"/>
+            <FILE id="YVrqcf" name="H5Rpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Rpublic.h"/>
+            <FILE id="KhT3nz" name="h5s.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5s.mod"/>
+            <FILE id="DPhuKK" name="H5Spublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Spublic.h"/>
+            <FILE id="ECy7lj" name="H5StrType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5StrType.h"/>
+            <FILE id="bSiDvB" name="h5t.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5t.mod"/>
+            <FILE id="ng5MlB" name="h5tb.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5tb.mod"/>
+            <FILE id="UkUSAb" name="h5tb_const.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5tb_const.mod"/>
+            <FILE id="GVzw7Z" name="H5TBpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5TBpublic.h"/>
+            <FILE id="gpSFhd" name="H5Tpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Tpublic.h"/>
+            <FILE id="sV2Dz8" name="H5VarLenType.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5VarLenType.h"/>
+            <FILE id="iIBnLw" name="H5version.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5version.h"/>
+            <FILE id="KsS7We" name="h5vl.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5vl.mod"/>
+            <FILE id="ah65ay" name="H5VLconnector.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5VLconnector.h"/>
+            <FILE id="fzKrqN" name="H5VLconnector_passthru.h" compile="0" resource="0"
                   file="Source/hdf5/1.12.2_2/include/H5VLconnector_passthru.h"/>
-            <FILE id="ASWiPQ" name="H5VLnative.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5VLnative.h"/>
-            <FILE id="jwLkUi" name="H5VLpassthru.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5VLpassthru.h"/>
-            <FILE id="dHu2TE" name="H5VLpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5VLpublic.h"/>
-            <FILE id="kglTEX" name="h5z.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5z.mod"/>
-            <FILE id="s7q5Qt" name="H5Zpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Zpublic.h"/>
-            <FILE id="vHuu8l" name="hdf5.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/hdf5.h"/>
-            <FILE id="dJohIF" name="hdf5.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/hdf5.mod"/>
-            <FILE id="e0AqPU" name="hdf5_hl.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/hdf5_hl.h"/>
+            <FILE id="SjATv0" name="H5VLnative.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5VLnative.h"/>
+            <FILE id="liPtHj" name="H5VLpassthru.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5VLpassthru.h"/>
+            <FILE id="D9KL4G" name="H5VLpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5VLpublic.h"/>
+            <FILE id="VS5Rms" name="h5z.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/h5z.mod"/>
+            <FILE id="QHgDKo" name="H5Zpublic.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/H5Zpublic.h"/>
+            <FILE id="G5SIbi" name="hdf5.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/hdf5.h"/>
+            <FILE id="YYIl66" name="hdf5.mod" compile="0" resource="1" file="Source/hdf5/1.12.2_2/include/hdf5.mod"/>
+            <FILE id="GzEAwM" name="hdf5_hl.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/include/hdf5_hl.h"/>
           </GROUP>
-          <GROUP id="{459F11CF-F542-3BB0-0CE6-0BF80E998FA0}" name="lib">
-            <FILE id="R9sRlQ" name="libhdf5.200.dylib" compile="0" resource="1"
+          <GROUP id="{704E6B4B-C9D6-8E84-243B-28A9B59EC078}" name="lib">
+            <FILE id="D2Qx9g" name="libhdf5.200.dylib" compile="0" resource="1"
                   file="Source/hdf5/1.12.2_2/lib/libhdf5.200.dylib"/>
-            <FILE id="wNDvJ5" name="libhdf5.a" compile="0" resource="1" file="Source/hdf5/1.12.2_2/lib/libhdf5.a"/>
-            <FILE id="di7UE6" name="libhdf5.dylib" compile="0" resource="1" file="Source/hdf5/1.12.2_2/lib/libhdf5.dylib"/>
-            <FILE id="Nx5i95" name="libhdf5_cpp.200.dylib" compile="0" resource="1"
+            <FILE id="rGMZuR" name="libhdf5.a" compile="0" resource="1" file="Source/hdf5/1.12.2_2/lib/libhdf5.a"/>
+            <FILE id="bwahm9" name="libhdf5.dylib" compile="0" resource="1" file="Source/hdf5/1.12.2_2/lib/libhdf5.dylib"/>
+            <FILE id="Jg6rFN" name="libhdf5_cpp.200.dylib" compile="0" resource="1"
                   file="Source/hdf5/1.12.2_2/lib/libhdf5_cpp.200.dylib"/>
-            <FILE id="orX76W" name="libhdf5_cpp.a" compile="0" resource="1" file="Source/hdf5/1.12.2_2/lib/libhdf5_cpp.a"/>
-            <FILE id="UGTcjZ" name="libhdf5_cpp.dylib" compile="0" resource="1"
+            <FILE id="Jyqzlg" name="libhdf5_cpp.a" compile="0" resource="1" file="Source/hdf5/1.12.2_2/lib/libhdf5_cpp.a"/>
+            <FILE id="OkjEcd" name="libhdf5_cpp.dylib" compile="0" resource="1"
                   file="Source/hdf5/1.12.2_2/lib/libhdf5_cpp.dylib"/>
-            <FILE id="ajJDo3" name="libhdf5_fortran.200.dylib" compile="0" resource="1"
+            <FILE id="JA9Tj2" name="libhdf5_fortran.200.dylib" compile="0" resource="1"
                   file="Source/hdf5/1.12.2_2/lib/libhdf5_fortran.200.dylib"/>
-            <FILE id="q1XJJH" name="libhdf5_fortran.a" compile="0" resource="1"
+            <FILE id="WuPElY" name="libhdf5_fortran.a" compile="0" resource="1"
                   file="Source/hdf5/1.12.2_2/lib/libhdf5_fortran.a"/>
-            <FILE id="cJlHFJ" name="libhdf5_fortran.dylib" compile="0" resource="1"
+            <FILE id="epE4AB" name="libhdf5_fortran.dylib" compile="0" resource="1"
                   file="Source/hdf5/1.12.2_2/lib/libhdf5_fortran.dylib"/>
-            <FILE id="KfYowP" name="libhdf5_hl.200.dylib" compile="0" resource="1"
+            <FILE id="j4QRAh" name="libhdf5_hl.200.dylib" compile="0" resource="1"
                   file="Source/hdf5/1.12.2_2/lib/libhdf5_hl.200.dylib"/>
-            <FILE id="uAxqzS" name="libhdf5_hl.a" compile="0" resource="1" file="Source/hdf5/1.12.2_2/lib/libhdf5_hl.a"/>
-            <FILE id="jBPcfS" name="libhdf5_hl.dylib" compile="0" resource="1"
+            <FILE id="esWvnR" name="libhdf5_hl.a" compile="0" resource="1" file="Source/hdf5/1.12.2_2/lib/libhdf5_hl.a"/>
+            <FILE id="pRgjyB" name="libhdf5_hl.dylib" compile="0" resource="1"
                   file="Source/hdf5/1.12.2_2/lib/libhdf5_hl.dylib"/>
-            <FILE id="ftMowz" name="libhdf5_hl_cpp.200.dylib" compile="0" resource="1"
+            <FILE id="dMAcFJ" name="libhdf5_hl_cpp.200.dylib" compile="0" resource="1"
                   file="Source/hdf5/1.12.2_2/lib/libhdf5_hl_cpp.200.dylib"/>
-            <FILE id="L2vrzI" name="libhdf5_hl_cpp.a" compile="0" resource="1"
+            <FILE id="Nb68FD" name="libhdf5_hl_cpp.a" compile="0" resource="1"
                   file="Source/hdf5/1.12.2_2/lib/libhdf5_hl_cpp.a"/>
-            <FILE id="o8jq02" name="libhdf5_hl_cpp.dylib" compile="0" resource="1"
+            <FILE id="lUJnBn" name="libhdf5_hl_cpp.dylib" compile="0" resource="1"
                   file="Source/hdf5/1.12.2_2/lib/libhdf5_hl_cpp.dylib"/>
-            <FILE id="da6vuZ" name="libhdf5_hl_fortran.a" compile="0" resource="1"
+            <FILE id="TEMMCF" name="libhdf5_hl_fortran.a" compile="0" resource="1"
                   file="Source/hdf5/1.12.2_2/lib/libhdf5_hl_fortran.a"/>
-            <FILE id="FPQ80I" name="libhdf5hl_fortran.200.dylib" compile="0" resource="1"
+            <FILE id="cY8W7u" name="libhdf5hl_fortran.200.dylib" compile="0" resource="1"
                   file="Source/hdf5/1.12.2_2/lib/libhdf5hl_fortran.200.dylib"/>
-            <FILE id="Jr4SbZ" name="libhdf5hl_fortran.a" compile="0" resource="1"
+            <FILE id="wlIW7H" name="libhdf5hl_fortran.a" compile="0" resource="1"
                   file="Source/hdf5/1.12.2_2/lib/libhdf5hl_fortran.a"/>
-            <FILE id="xUcbjK" name="libhdf5hl_fortran.dylib" compile="0" resource="1"
+            <FILE id="iVFVhc" name="libhdf5hl_fortran.dylib" compile="0" resource="1"
                   file="Source/hdf5/1.12.2_2/lib/libhdf5hl_fortran.dylib"/>
           </GROUP>
-          <GROUP id="{A20BB0B0-ED58-FA5F-4C76-1BEDEC3AAE6D}" name="share">
-            <GROUP id="{08424A84-FFD2-2910-FA0F-2152532A4329}" name="hdf5">
-              <FILE id="Gzm8Hx" name="libhdf5.settings" compile="0" resource="1"
+          <GROUP id="{7C24786A-2CF9-02CD-B6D6-5B8D998E850A}" name="share">
+            <GROUP id="{BC73C4B3-23C5-6880-DC68-A3FABC9A46CD}" name="hdf5">
+              <FILE id="r8nAdz" name="libhdf5.settings" compile="0" resource="1"
                     file="Source/hdf5/1.12.2_2/share/hdf5/libhdf5.settings"/>
             </GROUP>
-            <GROUP id="{68AA5F19-B422-4122-40F7-98B3383B14F4}" name="hdf5_examples">
-              <GROUP id="{F23018BB-519D-476B-E640-76AF79E0769F}" name="c">
-                <FILE id="nsFBcy" name="h5_attribute.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_attribute.c"/>
-                <FILE id="bB6Yyj" name="h5_chunk_read.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_chunk_read.c"/>
-                <FILE id="UAAgND" name="h5_cmprss.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_cmprss.c"/>
-                <FILE id="dnxlX4" name="h5_compound.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_compound.c"/>
-                <FILE id="XzL7GE" name="h5_crtatt.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_crtatt.c"/>
-                <FILE id="nZWgxF" name="h5_crtdat.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_crtdat.c"/>
-                <FILE id="dyeyPa" name="h5_crtgrp.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_crtgrp.c"/>
-                <FILE id="tDsTke" name="h5_crtgrpar.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_crtgrpar.c"/>
-                <FILE id="idz4g6" name="h5_crtgrpd.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_crtgrpd.c"/>
-                <FILE id="tCzhGn" name="h5_debug_trace.c" compile="1" resource="0"
+            <GROUP id="{EB611DF2-3EBE-CA56-D2AC-C3B6FBFEEE96}" name="hdf5_examples">
+              <GROUP id="{5BA2AC61-BF32-1EFE-EAA5-C32871C85D3D}" name="c">
+                <FILE id="AcMwUM" name="h5_attribute.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_attribute.c"/>
+                <FILE id="oOGQUg" name="h5_chunk_read.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_chunk_read.c"/>
+                <FILE id="p6mgut" name="h5_cmprss.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_cmprss.c"/>
+                <FILE id="tmwYE2" name="h5_compound.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_compound.c"/>
+                <FILE id="LwDYXo" name="h5_crtatt.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_crtatt.c"/>
+                <FILE id="Kh1vQJ" name="h5_crtdat.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_crtdat.c"/>
+                <FILE id="F3KJ99" name="h5_crtgrp.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_crtgrp.c"/>
+                <FILE id="xbUXn3" name="h5_crtgrpar.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_crtgrpar.c"/>
+                <FILE id="PO8cF5" name="h5_crtgrpd.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_crtgrpd.c"/>
+                <FILE id="qNIM1j" name="h5_debug_trace.c" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_debug_trace.c"/>
-                <FILE id="ZX2OYO" name="h5_drivers.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_drivers.c"/>
-                <FILE id="VmM9D0" name="h5_elink_unix2win.c" compile="1" resource="0"
+                <FILE id="l04CRH" name="h5_drivers.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_drivers.c"/>
+                <FILE id="PR0ho6" name="h5_elink_unix2win.c" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_elink_unix2win.c"/>
-                <FILE id="PptmyR" name="h5_extend.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_extend.c"/>
-                <FILE id="AWCWPd" name="h5_extend_write.c" compile="1" resource="0"
+                <FILE id="Jsqgqy" name="h5_extend.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_extend.c"/>
+                <FILE id="QcsvlI" name="h5_extend_write.c" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_extend_write.c"/>
-                <FILE id="jdVSga" name="h5_extlink.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_extlink.c"/>
-                <FILE id="SYX3pq" name="h5_group.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_group.c"/>
-                <FILE id="lQ6Gsx" name="h5_mount.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_mount.c"/>
-                <FILE id="MdCKFE" name="h5_rdwt.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_rdwt.c"/>
-                <FILE id="if0mvJ" name="h5_read.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_read.c"/>
-                <FILE id="htKuTS" name="h5_ref_compat.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_ref_compat.c"/>
-                <FILE id="SuytVk" name="h5_ref_extern.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_ref_extern.c"/>
-                <FILE id="v4bvQi" name="h5_ref2reg_deprec.c" compile="1" resource="0"
+                <FILE id="HxBwgp" name="h5_extlink.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_extlink.c"/>
+                <FILE id="VPNluW" name="h5_group.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_group.c"/>
+                <FILE id="POeLt5" name="h5_mount.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_mount.c"/>
+                <FILE id="PkcIUK" name="h5_rdwt.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_rdwt.c"/>
+                <FILE id="fVqiTD" name="h5_read.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_read.c"/>
+                <FILE id="ql4Vcr" name="h5_ref_compat.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_ref_compat.c"/>
+                <FILE id="F4Qkuz" name="h5_ref_extern.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_ref_extern.c"/>
+                <FILE id="rw0r4O" name="h5_ref2reg_deprec.c" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_ref2reg_deprec.c"/>
-                <FILE id="DpiHLq" name="h5_reference_deprec.c" compile="1" resource="0"
+                <FILE id="WqzdQm" name="h5_reference_deprec.c" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_reference_deprec.c"/>
-                <FILE id="uUxwsW" name="h5_select.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_select.c"/>
-                <FILE id="CdnvOI" name="h5_shared_mesg.c" compile="1" resource="0"
+                <FILE id="NkRlNG" name="h5_select.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_select.c"/>
+                <FILE id="Dew3Bu" name="h5_shared_mesg.c" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_shared_mesg.c"/>
-                <FILE id="C2CI6H" name="h5_subset.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_subset.c"/>
-                <FILE id="dcKy6g" name="h5_vds-eiger.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_vds-eiger.c"/>
-                <FILE id="Zv4kSW" name="h5_vds-exc.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_vds-exc.c"/>
-                <FILE id="aqYSDr" name="h5_vds-exclim.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_vds-exclim.c"/>
-                <FILE id="L6sJ8l" name="h5_vds-percival-unlim-maxmin.c" compile="1"
+                <FILE id="UNI1ol" name="h5_subset.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_subset.c"/>
+                <FILE id="W7rOnQ" name="h5_vds-eiger.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_vds-eiger.c"/>
+                <FILE id="pwCPPb" name="h5_vds-exc.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_vds-exc.c"/>
+                <FILE id="ue3bT6" name="h5_vds-exclim.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_vds-exclim.c"/>
+                <FILE id="QDNCRQ" name="h5_vds-percival-unlim-maxmin.c" compile="1"
                       resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_vds-percival-unlim-maxmin.c"/>
-                <FILE id="bzrTz4" name="h5_vds-percival-unlim.c" compile="1" resource="0"
+                <FILE id="MwFSvi" name="h5_vds-percival-unlim.c" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_vds-percival-unlim.c"/>
-                <FILE id="X5QTHK" name="h5_vds-percival.c" compile="1" resource="0"
+                <FILE id="dtoszp" name="h5_vds-percival.c" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_vds-percival.c"/>
-                <FILE id="hSX4IC" name="h5_vds-simpleIO.c" compile="1" resource="0"
+                <FILE id="e5Cs3O" name="h5_vds-simpleIO.c" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_vds-simpleIO.c"/>
-                <FILE id="VpZp48" name="h5_vds.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_vds.c"/>
-                <FILE id="YwgjV1" name="h5_write.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_write.c"/>
-                <FILE id="z1DzJl" name="ph5_filtered_writes.c" compile="1" resource="0"
+                <FILE id="s97xGi" name="h5_vds.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_vds.c"/>
+                <FILE id="KEXkBk" name="h5_write.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/h5_write.c"/>
+                <FILE id="cT7sRH" name="ph5_filtered_writes.c" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/ph5_filtered_writes.c"/>
-                <FILE id="anMap6" name="ph5_filtered_writes_no_sel.c" compile="1" resource="0"
+                <FILE id="Nysd7F" name="ph5_filtered_writes_no_sel.c" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/ph5_filtered_writes_no_sel.c"/>
-                <FILE id="P1eZbc" name="ph5example.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/ph5example.c"/>
-                <FILE id="YXkdxE" name="run-c-ex.sh" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/run-c-ex.sh"/>
+                <FILE id="DY2cMf" name="ph5example.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/ph5example.c"/>
+                <FILE id="J0HWPU" name="run-c-ex.sh" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c/run-c-ex.sh"/>
               </GROUP>
-              <GROUP id="{3C5345C2-7AD8-784D-E047-BCB116B4A7BE}" name="c++">
-                <FILE id="HFPLhc" name="chunks.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/chunks.cpp"/>
-                <FILE id="BGEQvR" name="compound.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/compound.cpp"/>
-                <FILE id="rIN2pN" name="create.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/create.cpp"/>
-                <FILE id="b2Hla3" name="extend_ds.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/extend_ds.cpp"/>
-                <FILE id="rsJg97" name="h5group.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/h5group.cpp"/>
-                <FILE id="SDaq2R" name="h5tutr_cmprss.cpp" compile="1" resource="0"
+              <GROUP id="{966B1BE1-F03B-8EA1-EB90-D29C852F1B7A}" name="c++">
+                <FILE id="DF6KQg" name="chunks.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/chunks.cpp"/>
+                <FILE id="poXPRJ" name="compound.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/compound.cpp"/>
+                <FILE id="PSRpSJ" name="create.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/create.cpp"/>
+                <FILE id="CX9xwS" name="extend_ds.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/extend_ds.cpp"/>
+                <FILE id="tfRoXj" name="h5group.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/h5group.cpp"/>
+                <FILE id="cKunJ4" name="h5tutr_cmprss.cpp" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/h5tutr_cmprss.cpp"/>
-                <FILE id="Y4XEzh" name="h5tutr_crtatt.cpp" compile="1" resource="0"
+                <FILE id="gb8htE" name="h5tutr_crtatt.cpp" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/h5tutr_crtatt.cpp"/>
-                <FILE id="fOHH7l" name="h5tutr_crtdat.cpp" compile="1" resource="0"
+                <FILE id="NBehag" name="h5tutr_crtdat.cpp" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/h5tutr_crtdat.cpp"/>
-                <FILE id="v7I8lP" name="h5tutr_crtgrp.cpp" compile="1" resource="0"
+                <FILE id="ZGEHpS" name="h5tutr_crtgrp.cpp" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/h5tutr_crtgrp.cpp"/>
-                <FILE id="HVrExJ" name="h5tutr_crtgrpar.cpp" compile="1" resource="0"
+                <FILE id="CusYIE" name="h5tutr_crtgrpar.cpp" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/h5tutr_crtgrpar.cpp"/>
-                <FILE id="mzWW4s" name="h5tutr_crtgrpd.cpp" compile="1" resource="0"
+                <FILE id="BbNjw4" name="h5tutr_crtgrpd.cpp" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/h5tutr_crtgrpd.cpp"/>
-                <FILE id="KCxdsB" name="h5tutr_extend.cpp" compile="1" resource="0"
+                <FILE id="MoDAFn" name="h5tutr_extend.cpp" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/h5tutr_extend.cpp"/>
-                <FILE id="cCyZ7b" name="h5tutr_rdwt.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/h5tutr_rdwt.cpp"/>
-                <FILE id="tL8jUR" name="h5tutr_subset.cpp" compile="1" resource="0"
+                <FILE id="CTN0em" name="h5tutr_rdwt.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/h5tutr_rdwt.cpp"/>
+                <FILE id="Id97nk" name="h5tutr_subset.cpp" compile="1" resource="0"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/h5tutr_subset.cpp"/>
-                <FILE id="iiaXba" name="readdata.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/readdata.cpp"/>
-                <FILE id="Bph3uI" name="run-c++-ex.sh" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/run-c++-ex.sh"/>
-                <FILE id="nTwcFg" name="writedata.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/writedata.cpp"/>
+                <FILE id="uF1c0N" name="readdata.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/readdata.cpp"/>
+                <FILE id="zu24U8" name="run-c++-ex.sh" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/run-c++-ex.sh"/>
+                <FILE id="t6FcYH" name="writedata.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/c++/writedata.cpp"/>
               </GROUP>
-              <GROUP id="{CFB5A729-92CC-CB68-82F3-9A4D24C2F071}" name="fortran">
-                <FILE id="E9XKDC" name="compound.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/compound.f90"/>
-                <FILE id="GkI3zh" name="compound_complex_fortran2003.f90" compile="0"
+              <GROUP id="{E87351E6-518F-96E0-01BC-1958B7E73A6B}" name="fortran">
+                <FILE id="hTcIWx" name="compound.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/compound.f90"/>
+                <FILE id="AiDrqR" name="compound_complex_fortran2003.f90" compile="0"
                       resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/compound_complex_fortran2003.f90"/>
-                <FILE id="nIcX76" name="compound_fortran2003.f90" compile="0" resource="1"
+                <FILE id="sk9te1" name="compound_fortran2003.f90" compile="0" resource="1"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/compound_fortran2003.f90"/>
-                <FILE id="rKwJoZ" name="h5_cmprss.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_cmprss.f90"/>
-                <FILE id="GgojZO" name="h5_crtatt.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_crtatt.f90"/>
-                <FILE id="bQWSqc" name="h5_crtdat.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_crtdat.f90"/>
-                <FILE id="lUmeM9" name="h5_crtgrp.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_crtgrp.f90"/>
-                <FILE id="yitZvs" name="h5_crtgrpar.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_crtgrpar.f90"/>
-                <FILE id="gOSIK6" name="h5_crtgrpd.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_crtgrpd.f90"/>
-                <FILE id="AhUX2B" name="h5_extend.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_extend.f90"/>
-                <FILE id="D1Ejon" name="h5_rdwt.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_rdwt.f90"/>
-                <FILE id="SFpURs" name="h5_subset.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_subset.f90"/>
-                <FILE id="SIvFSB" name="hyperslab.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/hyperslab.f90"/>
-                <FILE id="M27jRw" name="mountexample.f90" compile="0" resource="1"
+                <FILE id="sppQux" name="h5_cmprss.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_cmprss.f90"/>
+                <FILE id="FeuSYE" name="h5_crtatt.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_crtatt.f90"/>
+                <FILE id="JmQldP" name="h5_crtdat.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_crtdat.f90"/>
+                <FILE id="vEIa2Y" name="h5_crtgrp.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_crtgrp.f90"/>
+                <FILE id="a3LOs7" name="h5_crtgrpar.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_crtgrpar.f90"/>
+                <FILE id="jdoSZ1" name="h5_crtgrpd.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_crtgrpd.f90"/>
+                <FILE id="PGePgW" name="h5_extend.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_extend.f90"/>
+                <FILE id="HiAdg3" name="h5_rdwt.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_rdwt.f90"/>
+                <FILE id="WWE6XD" name="h5_subset.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/h5_subset.f90"/>
+                <FILE id="iBaWIy" name="hyperslab.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/hyperslab.f90"/>
+                <FILE id="QMOYEh" name="mountexample.f90" compile="0" resource="1"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/mountexample.f90"/>
-                <FILE id="SfOqMm" name="nested_derived_type.f90" compile="0" resource="1"
+                <FILE id="pz1YD7" name="nested_derived_type.f90" compile="0" resource="1"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/nested_derived_type.f90"/>
-                <FILE id="lLRzAk" name="ph5example.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/ph5example.f90"/>
-                <FILE id="Y7sqbR" name="refobjexample.f90" compile="0" resource="1"
+                <FILE id="rzAnME" name="ph5example.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/ph5example.f90"/>
+                <FILE id="lw14NK" name="refobjexample.f90" compile="0" resource="1"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/refobjexample.f90"/>
-                <FILE id="yn0Tdh" name="refregexample.f90" compile="0" resource="1"
+                <FILE id="ThbyjH" name="refregexample.f90" compile="0" resource="1"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/refregexample.f90"/>
-                <FILE id="wQjBNn" name="run-fortran-ex.sh" compile="0" resource="1"
+                <FILE id="FEWCZp" name="run-fortran-ex.sh" compile="0" resource="1"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/run-fortran-ex.sh"/>
-                <FILE id="VmmLcg" name="rwdset_fortran2003.f90" compile="0" resource="1"
+                <FILE id="ndwoHf" name="rwdset_fortran2003.f90" compile="0" resource="1"
                       file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/rwdset_fortran2003.f90"/>
-                <FILE id="rBgM1m" name="selectele.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/selectele.f90"/>
+                <FILE id="WBARVH" name="selectele.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/fortran/selectele.f90"/>
               </GROUP>
-              <GROUP id="{268866A4-D292-40A7-0D2A-8025DDEE020E}" name="hl">
-                <GROUP id="{B35CDFC0-0071-4D40-DE6D-D1E57F399787}" name="c">
-                  <FILE id="fxnMp5" name="ex_ds1.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_ds1.c"/>
-                  <FILE id="i3BMZY" name="ex_image1.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_image1.c"/>
-                  <FILE id="Czo6tc" name="ex_image2.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_image2.c"/>
-                  <FILE id="XD5fsL" name="ex_lite1.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_lite1.c"/>
-                  <FILE id="lfuc05" name="ex_lite2.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_lite2.c"/>
-                  <FILE id="M8BmO2" name="ex_lite3.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_lite3.c"/>
-                  <FILE id="aY3dco" name="ex_table_01.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_01.c"/>
-                  <FILE id="iHOc82" name="ex_table_02.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_02.c"/>
-                  <FILE id="KLjASG" name="ex_table_03.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_03.c"/>
-                  <FILE id="idWhqV" name="ex_table_04.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_04.c"/>
-                  <FILE id="gT99H7" name="ex_table_05.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_05.c"/>
-                  <FILE id="rQfnD7" name="ex_table_06.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_06.c"/>
-                  <FILE id="kZyrLe" name="ex_table_07.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_07.c"/>
-                  <FILE id="bRK8Gj" name="ex_table_08.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_08.c"/>
-                  <FILE id="vV3XrH" name="ex_table_09.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_09.c"/>
-                  <FILE id="S4iVkH" name="ex_table_10.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_10.c"/>
-                  <FILE id="e1xpUq" name="ex_table_11.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_11.c"/>
-                  <FILE id="plqkN4" name="ex_table_12.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_12.c"/>
-                  <FILE id="R04iU3" name="image8.txt" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/image8.txt"/>
-                  <FILE id="C832Wb" name="image24pixel.txt" compile="0" resource="1"
+              <GROUP id="{A5B39A68-2F66-398D-69AB-E21253FE19CD}" name="hl">
+                <GROUP id="{965598D4-48BF-542B-0512-C728ED485831}" name="c">
+                  <FILE id="TZpstn" name="ex_ds1.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_ds1.c"/>
+                  <FILE id="QUOLQx" name="ex_image1.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_image1.c"/>
+                  <FILE id="Rj1LwP" name="ex_image2.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_image2.c"/>
+                  <FILE id="XyGckX" name="ex_lite1.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_lite1.c"/>
+                  <FILE id="F7JMOi" name="ex_lite2.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_lite2.c"/>
+                  <FILE id="dkRkOH" name="ex_lite3.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_lite3.c"/>
+                  <FILE id="CmtxFg" name="ex_table_01.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_01.c"/>
+                  <FILE id="xLS0zp" name="ex_table_02.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_02.c"/>
+                  <FILE id="FzimiP" name="ex_table_03.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_03.c"/>
+                  <FILE id="E5wXuE" name="ex_table_04.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_04.c"/>
+                  <FILE id="QFcOg1" name="ex_table_05.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_05.c"/>
+                  <FILE id="S45jUe" name="ex_table_06.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_06.c"/>
+                  <FILE id="aUw6tF" name="ex_table_07.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_07.c"/>
+                  <FILE id="gBG7Pn" name="ex_table_08.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_08.c"/>
+                  <FILE id="MiCH5r" name="ex_table_09.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_09.c"/>
+                  <FILE id="lC6HfY" name="ex_table_10.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_10.c"/>
+                  <FILE id="RhNeLL" name="ex_table_11.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_11.c"/>
+                  <FILE id="lyLs94" name="ex_table_12.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ex_table_12.c"/>
+                  <FILE id="fbRMnb" name="image8.txt" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/image8.txt"/>
+                  <FILE id="F3BGSI" name="image24pixel.txt" compile="0" resource="1"
                         file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/image24pixel.txt"/>
-                  <FILE id="g3L7Xy" name="pal_rgb.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/pal_rgb.h"/>
-                  <FILE id="VOLcZC" name="ptExampleFL.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ptExampleFL.c"/>
-                  <FILE id="XFyOXj" name="run-hlc-ex.sh" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/run-hlc-ex.sh"/>
+                  <FILE id="w5Qzlu" name="pal_rgb.h" compile="0" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/pal_rgb.h"/>
+                  <FILE id="RPNLtr" name="ptExampleFL.c" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/ptExampleFL.c"/>
+                  <FILE id="QPK1mw" name="run-hlc-ex.sh" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c/run-hlc-ex.sh"/>
                 </GROUP>
-                <GROUP id="{9F53FE62-D370-05D7-60B8-59C316D268F9}" name="c++">
-                  <FILE id="TJvbeW" name="ptExampleFL.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c++/ptExampleFL.cpp"/>
-                  <FILE id="SG2yp7" name="run-hlc++-ex.sh" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c++/run-hlc++-ex.sh"/>
+                <GROUP id="{94FEAA0B-81C5-6EB1-BFAC-6EE731F2931F}" name="c++">
+                  <FILE id="pJJ7zT" name="ptExampleFL.cpp" compile="1" resource="0" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c++/ptExampleFL.cpp"/>
+                  <FILE id="OWyTfs" name="run-hlc++-ex.sh" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/c++/run-hlc++-ex.sh"/>
                 </GROUP>
-                <GROUP id="{8BFDCA8C-7BA7-B735-EFA9-99E4A9CB26CC}" name="fortran">
-                  <FILE id="NnZxDD" name="ex_ds1.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/fortran/ex_ds1.f90"/>
-                  <FILE id="zMJ5HB" name="exlite.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/fortran/exlite.f90"/>
-                  <FILE id="wWxG9e" name="run-hlfortran-ex.sh" compile="0" resource="1"
+                <GROUP id="{DFD23B29-2411-1F32-1F98-FCEACF474B28}" name="fortran">
+                  <FILE id="PnbSgc" name="ex_ds1.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/fortran/ex_ds1.f90"/>
+                  <FILE id="ZHfoCp" name="exlite.f90" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/fortran/exlite.f90"/>
+                  <FILE id="FuMDxS" name="run-hlfortran-ex.sh" compile="0" resource="1"
                         file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/fortran/run-hlfortran-ex.sh"/>
                 </GROUP>
-                <FILE id="qVArfE" name="run-hl-ex.sh" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/run-hl-ex.sh"/>
+                <FILE id="JEKyqT" name="run-hl-ex.sh" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/hl/run-hl-ex.sh"/>
               </GROUP>
-              <FILE id="mUy1gM" name="README" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/README"/>
-              <FILE id="iT90i1" name="run-all-ex.sh" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/run-all-ex.sh"/>
+              <FILE id="Ut16KJ" name="README" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/README"/>
+              <FILE id="AZ3rOS" name="run-all-ex.sh" compile="0" resource="1" file="Source/hdf5/1.12.2_2/share/hdf5_examples/run-all-ex.sh"/>
             </GROUP>
           </GROUP>
-          <FILE id="FzhY1g" name="COPYING" compile="0" resource="1" file="Source/hdf5/1.12.2_2/COPYING"/>
-          <FILE id="xbxwq0" name="INSTALL_RECEIPT.json" compile="0" resource="1"
+          <FILE id="xuqyuP" name="COPYING" compile="0" resource="1" file="Source/hdf5/1.12.2_2/COPYING"/>
+          <FILE id="UqwDV9" name="INSTALL_RECEIPT.json" compile="0" resource="1"
                 file="Source/hdf5/1.12.2_2/INSTALL_RECEIPT.json"/>
-          <FILE id="t7gNPV" name="README.md" compile="0" resource="1" file="Source/hdf5/1.12.2_2/README.md"/>
+          <FILE id="QYLtjH" name="README.md" compile="0" resource="1" file="Source/hdf5/1.12.2_2/README.md"/>
         </GROUP>
       </GROUP>
       <GROUP id="{12CD3CEC-8D36-2309-1239-35C1BD14E71C}" name="SOFA">
@@ -380,6 +376,12 @@
         <FILE id="DtzSYt" name="SmallTheaterHRIRs_1.0.sofa" compile="0" resource="1"
               file="Source/SOFA/SmallTheaterHRIRs_1.0.sofa"/>
       </GROUP>
+      <GROUP id="{7BB1B9F4-CF9C-688C-FAB9-A11879195CBB}" name="AudioFFT">
+        <FILE id="Gk6JDE" name="AudioFFT.cpp" compile="1" resource="0" file="Source/AudioFFT/AudioFFT.cpp"
+              xcodeResource="0"/>
+        <FILE id="d068UB" name="AudioFFT.h" compile="0" resource="0" file="Source/AudioFFT/AudioFFT.h"
+              xcodeResource="0"/>
+      </GROUP>
       <FILE id="Ey6miy" name="InterpolationDSP.cpp" compile="1" resource="0"
             file="Source/InterpolationDSP.cpp"/>
       <FILE id="GmNBsg" name="InterpolationDSP.h" compile="0" resource="0"
@@ -395,13 +397,12 @@
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
   <EXPORTFORMATS>
-    <XCODE_MAC targetFolder="Builds/MacOSX" extraLinkerFlags="-L$/Users/erictarr/Desktop/Repositories/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/lib&#10;-lhdf5&#10;-lhdf5_cpp&#10;-lhdf5_fortran&#10;-lhdf5_hl_cpp&#10;-lhdf5_hl_fortran&#10;-lhdf5_hl&#10;-lhdf5hl_fortran"
-               extraCompilerFlags="-DH5_USE_110_API" externalLibraries="hdf5&#10;">
+    <XCODE_MAC targetFolder="Builds/MacOSX" extraLinkerFlags="-L$/Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/lib&#10;-L$/Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/lib&#10;-lhdf5&#10;-lhdf5_cpp&#10;-lhdf5_fortran&#10;-lhdf5_hl_cpp&#10;-lhdf5_hl_fortran&#10;-lhdf5_hl&#10;-lhdf5hl_fortran"
+               extraCompilerFlags="-DH5_USE_110_API" externalLibraries="hdf5&#10;"
+               xcodeValidArchs="arm64,i386,x86_64">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug" targetName="BinauralPannerTest" headerPath="/Users/erictarr/Desktop/Repositories/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/include&#10;/Users/erictarr/Desktop/Repositories/BinauralPannerTest/BinauralPannerTest/Source/SOFA/libBasicSOFA-master-2/libBasicSOFA&#10;/Users/erictarr/Desktop/Repositories/BinauralPannerTest/BinauralPannerTest/Source/AudioFFT"
-                       libraryPath="/Users/erictarr/Desktop/Repositories/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/lib&#10;"/>
-        <CONFIGURATION isDebug="0" name="Release" targetName="BinauralPannerTest" headerPath="/Users/erictarr/Desktop/Repositories/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/include&#10;/Users/erictarr/Desktop/Repositories/BinauralPannerTest/BinauralPannerTest/Source/SOFA/libBasicSOFA-master-2/libBasicSOFA&#10;/Users/erictarr/Desktop/Repositories/BinauralPannerTest/BinauralPannerTest/Source/AudioFFT"
-                       libraryPath="/Users/erictarr/Desktop/Repositories/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/lib"/>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="BinauralPannerTest" libraryPath="/Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/lib&#10;/Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/lib"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="BinauralPannerTest" libraryPath="/Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/lib&#10;/Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/lib"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_audio_basics" path="../../../../../../Applications/JUCE/modules"/>

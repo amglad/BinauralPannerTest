@@ -9,7 +9,7 @@
 namespace BinaryData
 {
     extern const char*   gif2h5;
-    const int            gif2h5Size = 211648;
+    const int            gif2h5Size = 211136;
 
     extern const char*   h5c;
     const int            h5cSize = 13037;
@@ -18,61 +18,61 @@ namespace BinaryData
     const int            h5ccSize = 12865;
 
     extern const char*   h5clear;
-    const int            h5clearSize = 209536;
+    const int            h5clearSize = 192512;
 
     extern const char*   h5copy;
-    const int            h5copySize = 209696;
+    const int            h5copySize = 209200;
 
     extern const char*   h5debug;
-    const int            h5debugSize = 88656;
+    const int            h5debugSize = 55360;
 
     extern const char*   h5diff;
-    const int            h5diffSize = 294928;
+    const int            h5diffSize = 294368;
 
     extern const char*   h5dump;
-    const int            h5dumpSize = 280112;
+    const int            h5dumpSize = 279520;
 
     extern const char*   h5fc;
     const int            h5fcSize = 12649;
 
     extern const char*   h5format_convert;
-    const int            h5format_convertSize = 209456;
+    const int            h5format_convertSize = 208960;
 
     extern const char*   h5import;
-    const int            h5importSize = 260592;
+    const int            h5importSize = 243408;
 
     extern const char*   h5jam;
-    const int            h5jamSize = 209888;
+    const int            h5jamSize = 192848;
 
     extern const char*   h5ls;
-    const int            h5lsSize = 229888;
+    const int            h5lsSize = 229392;
 
     extern const char*   h5mkgrp;
-    const int            h5mkgrpSize = 209472;
+    const int            h5mkgrpSize = 192464;
 
     extern const char*   h5perf_serial;
-    const int            h5perf_serialSize = 228768;
+    const int            h5perf_serialSize = 228192;
 
     extern const char*   h5redeploy;
     const int            h5redeploySize = 5900;
 
     extern const char*   h5repack;
-    const int            h5repackSize = 298384;
+    const int            h5repackSize = 297696;
 
     extern const char*   h5repart;
-    const int            h5repartSize = 70640;
+    const int            h5repartSize = 53968;
 
     extern const char*   h5stat;
-    const int            h5statSize = 210544;
+    const int            h5statSize = 210016;
 
     extern const char*   h5unjam;
-    const int            h5unjamSize = 209744;
+    const int            h5unjamSize = 192720;
 
     extern const char*   h5watch;
-    const int            h5watchSize = 210256;
+    const int            h5watchSize = 209728;
 
     extern const char*   h52gif;
-    const int            h52gifSize = 210064;
+    const int            h52gifSize = 209568;
 
     extern const char*   h5_gen_mod;
     const int            h5_gen_modSize = 60794;
@@ -153,64 +153,64 @@ namespace BinaryData
     const int            hdf5_modSize = 81393;
 
     extern const char*   libhdf5_200_dylib;
-    const int            libhdf5_200_dylibSize = 3531760;
+    const int            libhdf5_200_dylibSize = 3496928;
 
     extern const char*   libhdf5_a;
-    const int            libhdf5_aSize = 7865184;
+    const int            libhdf5_aSize = 7844136;
 
     extern const char*   libhdf5_dylib;
-    const int            libhdf5_dylibSize = 3531760;
+    const int            libhdf5_dylibSize = 3496928;
 
     extern const char*   libhdf5_cpp_200_dylib;
-    const int            libhdf5_cpp_200_dylibSize = 451520;
+    const int            libhdf5_cpp_200_dylibSize = 434000;
 
     extern const char*   libhdf5_cpp_a;
-    const int            libhdf5_cpp_aSize = 675776;
+    const int            libhdf5_cpp_aSize = 688184;
 
     extern const char*   libhdf5_cpp_dylib;
-    const int            libhdf5_cpp_dylibSize = 451520;
+    const int            libhdf5_cpp_dylibSize = 434000;
 
     extern const char*   libhdf5_fortran_200_dylib;
-    const int            libhdf5_fortran_200_dylibSize = 361744;
+    const int            libhdf5_fortran_200_dylibSize = 343984;
 
     extern const char*   libhdf5_fortran_a;
-    const int            libhdf5_fortran_aSize = 403824;
+    const int            libhdf5_fortran_aSize = 403792;
 
     extern const char*   libhdf5_fortran_dylib;
-    const int            libhdf5_fortran_dylibSize = 361744;
+    const int            libhdf5_fortran_dylibSize = 343984;
 
     extern const char*   libhdf5_hl_200_dylib;
-    const int            libhdf5_hl_200_dylibSize = 172368;
+    const int            libhdf5_hl_200_dylibSize = 172048;
 
     extern const char*   libhdf5_hl_a;
-    const int            libhdf5_hl_aSize = 150560;
+    const int            libhdf5_hl_aSize = 150432;
 
     extern const char*   libhdf5_hl_dylib;
-    const int            libhdf5_hl_dylibSize = 172368;
+    const int            libhdf5_hl_dylibSize = 172048;
 
     extern const char*   libhdf5_hl_cpp_200_dylib;
-    const int            libhdf5_hl_cpp_200_dylibSize = 72592;
+    const int            libhdf5_hl_cpp_200_dylibSize = 55920;
 
     extern const char*   libhdf5_hl_cpp_a;
     const int            libhdf5_hl_cpp_aSize = 10768;
 
     extern const char*   libhdf5_hl_cpp_dylib;
-    const int            libhdf5_hl_cpp_dylibSize = 72592;
+    const int            libhdf5_hl_cpp_dylibSize = 55920;
 
     extern const char*   libhdf5_hl_fortran_a;
     const int            libhdf5_hl_fortran_aSize = 155104;
 
     extern const char*   libhdf5hl_fortran_200_dylib;
-    const int            libhdf5hl_fortran_200_dylibSize = 191008;
+    const int            libhdf5hl_fortran_200_dylibSize = 174256;
 
     extern const char*   libhdf5hl_fortran_a;
     const int            libhdf5hl_fortran_aSize = 155104;
 
     extern const char*   libhdf5hl_fortran_dylib;
-    const int            libhdf5hl_fortran_dylibSize = 191008;
+    const int            libhdf5hl_fortran_dylibSize = 174256;
 
     extern const char*   libhdf5_settings;
-    const int            libhdf5_settingsSize = 4944;
+    const int            libhdf5_settingsSize = 4934;
 
     extern const char*   runcex_sh;
     const int            runcex_shSize = 5473;
@@ -315,7 +315,7 @@ namespace BinaryData
     const int            COPYINGSize = 5505;
 
     extern const char*   INSTALL_RECEIPT_json;
-    const int            INSTALL_RECEIPT_jsonSize = 2189;
+    const int            INSTALL_RECEIPT_jsonSize = 2170;
 
     extern const char*   README_md;
     const int            README_mdSize = 3469;

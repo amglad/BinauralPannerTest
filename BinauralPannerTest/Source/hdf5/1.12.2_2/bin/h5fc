@@ -56,7 +56,7 @@ LIBSBASE=""
 EXIT_SUCCESS=0
 EXIT_FAILURE=1
 
-host_os="darwin20.6.0"
+host_os="darwin22.1.0"
 
 prog_name="`basename $0`"
 
