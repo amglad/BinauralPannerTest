@@ -19,13 +19,25 @@ BinauralPannerTestAudioProcessor::BinauralPannerTestAudioProcessor()
                       #endif
                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                      #endif
-                       )
+                       ), state(*this, nullptr, "PanningParams", createParameterLayout())
 #endif
 {
 }
 
 BinauralPannerTestAudioProcessor::~BinauralPannerTestAudioProcessor()
 {
+}
+
+juce::AudioProcessorValueTreeState::ParameterLayout BinauralPannerTestAudioProcessor::createParameterLayout()
+{
+    std::vector<std::unique_ptr<juce::RangedAudioParameter>> params;
+    
+    params.push_back(std::make_unique<juce::AudioParameterFloat> ("AzimuthAngle", // parameter ID
+                                                                  "Azimuth", // parameter name in automation lane
+                                                                  juce::NormalisableRange<float>(-180.f,180.f), // normalizable range
+                                                                  0.f) // default value
+                                                                  );
+    return { params.begin(), params.end() };
 }
 
 //==============================================================================
@@ -147,7 +159,7 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
         BasicSOFA::BasicSOFA sofa;
         audiofft::AudioFFT fft;
     
-    sofa.readSOFAFile("/Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
+    sofa.readSOFAFile("Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
     // sofa.readSOFAFile("Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
     
     // This is the place where you'd normally do the guts of your plugin's
