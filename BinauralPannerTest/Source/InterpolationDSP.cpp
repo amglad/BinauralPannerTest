@@ -19,11 +19,11 @@ InterpolationDSP::InterpolationDSP()
         return;
     
     // Getting sampling rate and number of files
-    Fs = sofa.getFs();
+    //Fs = sofa.getFs();
     M = sofa.getM();
 }
 
-const double InterpolationDSP::interpolate(int az, int el, float d)
+std::vector<std::vector<float>> InterpolationDSP::interpolate(int az, int el, float d, int buffer)
 {
     // Finding the mod of our distance
     float dMod = fmod((d-2),4);
@@ -36,32 +36,130 @@ const double InterpolationDSP::interpolate(int az, int el, float d)
     const double dLowW = abs(dMod/4);
     const double dHighW = abs(dMod/4);
     
-    auto channel = 0;
+    // Creating empty real and imaginary vectors for fft
+    std::vector<float> reLow(audiofft::AudioFFT::ComplexSize(buffer));
+    std::vector<float> imLow(audiofft::AudioFFT::ComplexSize(buffer));
+    std::vector<float> reHigh(audiofft::AudioFFT::ComplexSize(buffer));
+    std::vector<float> imHigh(audiofft::AudioFFT::ComplexSize(buffer));
     
-    // Getting HRIRs from .sofa file
-    const double *hLow = sofa.getHRIR(channel, az, el, dLow);
-    const double *hHigh = sofa.getHRIR(channel, az, el, dHigh);
+    // Allocating array for the interpolation
+    std::vector<std::vector<float>> Hinterp(buffer);
     
-//    for(auto i = 0; i < sofa.getN(); i++)
-//        auto x = hLow[i];
+    // Looping for both channels
+    for(auto channel = 0; channel < 2; channel++)
+    {
+        // Getting HRIRs from .sofa file
+        const double *hLow = sofa.getHRIR(channel, az, el, dLow);
+        const double *hHigh = sofa.getHRIR(channel, az, el, dHigh);
+        
+        // Casting to a float
+        const float *hLowF = (const float *) hLow;
+        const float *hHighF = (const float *) hHigh;
+        
+        // Initializing fft size
+        fft.init(buffer);
+        
+        // Performing fft
+        for(auto i = 0; i < buffer; i++)
+        {
+            fft.fft(&hLowF[i],&reLow[i],&imLow[i]);
+            fft.fft(&hHighF[i],&reHigh[i],&imHigh[i]);
+        }
+        
+        // Calculating interpolation
+        for(auto i = 0; i < buffer; i++)
+        {
+            Hinterp[channel][i] = hLowF[i] * dLowW + hHighF[i] * dHighW;
+        }
+    }
     
-    // FFT Work
-    const size_t fftSize = 2048;
+    // Return the value
+    return Hinterp;
+}
+
+
+
+
+std::vector<std::vector<float>> InterpolationDSP::getHRIRs(int az, int el, float d, int buffer)
+{
     
-//    std::vector<float> input(fftSize, 0.0f);
-    std::vector<float> re(audiofft::AudioFFT::ComplexSize(fftSize));
-    std::vector<float> im(audiofft::AudioFFT::ComplexSize(fftSize));
-    std::vector<float> output(fftSize);
+    // Creating empty real and imaginary vectors for fft
+    std::vector<float> re(audiofft::AudioFFT::ComplexSize(buffer));
+    std::vector<float> im(audiofft::AudioFFT::ComplexSize(buffer));
     
-    fft.init(2048);
+    // Allocating array for the final array
+    std::vector<std::vector<float>> HRTF(buffer);
     
-//    const double *HLow = fft.fft(input.data(), re.data(), im.data());
-//    const double *HHigh = fft.ifft(output.data(), re.data(), im.data());
+    // Looping for both channels
+    for(auto channel = 0; channel < 2; channel++)
+    {
+        // Getting HRIRs from .sofa file
+        const double *hrir = sofa.getHRIR(channel, az, el, d);
+        // Casting to a float
+        const float *hrirF = (const float *) hrir;
+        
+        // Initializing fft size
+        fft.init(buffer);
+        
+        // Performing fft
+        for(auto i = 0; i < buffer; i++)
+        {
+            fft.fft(&hrirF[i],&re[i],&im[i]);
+        }
+        
+        // Placing them into 2D array
+        for(auto i = 0; i < buffer; i++)
+        {
+            HRTF[channel][i] = hrir[i];
+        }
+    }
     
+    // Return the value
+    return HRTF;
+}
     
-//    // Getting weights of the HRIRs in the frequency domain
-//    const double *HRIR = HLow * dLowW + HHigh * dHighW;
-//
-//    return HRIR;
+
+
+
+
+std::vector<std::vector<float>> InterpolationDSP::convolve(int az, int el, float d, int buffer, std::vector<std::vector<float>> signal, std::vector<std::vector<float>> HRTF)
+{
+    
+    // Creating empty real and imaginary vectors for fft
+    std::vector<float> re(audiofft::AudioFFT::ComplexSize(buffer));
+    std::vector<float> im(audiofft::AudioFFT::ComplexSize(buffer));
+    
+    // Allocating array for the final array
+    std::vector<std::vector<float>> output(buffer);
+    
+    // Looping for both channels
+    for(auto channel = 0; channel < 2; channel++)
+    {
+        
+        // Initializing fft size
+        fft.init(buffer);
+        
+        // Performing fft
+        for(auto i = 0; i < buffer; i++)
+        {
+            fft.fft(&signal[channel][i],&re[i],&im[i]);
+        }
+        
+        // Frequency domain multiplication for convolution
+        for(auto i = 0; i < buffer; i++)
+        {
+            output[channel][i] = signal[channel][i] * HRTF[channel][i];
+        }
+        
+        // Inverse Fourier Transform (Do we need a different re and im this time?)
+        for(auto i = 0; i < buffer; i++)
+        {
+            fft.ifft(&output[channel][i],&re[i],&im[i]);
+        }
+        
+    }
+    
+    // Return the value
+    return output;
 }
 

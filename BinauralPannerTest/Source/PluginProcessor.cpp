@@ -167,16 +167,41 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
         
-    interp.interpolate(0,0,2);
     
+    
+    
+    
+    
+    
+    // Getting buffer samples
     int numSamples = buffer.getNumSamples();
     
+    // Getting azimuth, elevation, and distance
     float azimuthAngle = *state.getRawParameterValue("AzimuthAngle");
     setAzimuth(azimuthAngle);
     float elevationAngle = *state.getRawParameterValue("ElevationAngle");
     setElevation(elevationAngle);
     float distanceValue = *state.getRawParameterValue("DistanceValue");
     setDistance(distanceValue);
+    
+    // Preallocating info for hrir
+    std::vector<std::vector<float>> hrtf;
+    
+    // I have no idea if this is the right format for the part of the signal we will be putting in but I needed something to add
+    std::vector<std::vector<float>> signal;
+    
+    // Checking to see if the distance is in the HRIR array
+    if(distanceValue == 2 || distanceValue == 6 || distanceValue== 10 || distanceValue == 14)
+    {
+        hrtf = interp.getHRIRs(azimuthAngle,elevationAngle,distanceValue,numSamples);
+    }
+    else
+    {
+        hrtf = interp.interpolate(azimuthAngle,elevationAngle,distanceValue,numSamples);
+    }
+    
+    // Convolving signal
+    std::vector<std::vector<float>> output = interp.convolve(azimuthAngle, elevationAngle, distanceValue, numSamples, signal, hrtf);
     
     // This is the place where you'd normally do the guts of your plugin's
     // audio processing...
@@ -185,6 +210,10 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     // Alternatively, you can process the samples with the channels
     // interleaved by keeping the same state.
 
+    
+    
+    
+    
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
         auto* channelData = buffer.getWritePointer (channel);

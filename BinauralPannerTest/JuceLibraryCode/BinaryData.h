@@ -327,7 +327,7 @@ namespace BinaryData
     const int            README_md2Size = 3080;
 
     extern const char*   SmallTheaterHRIRs_1_0_sofa;
-    const int            SmallTheaterHRIRs_1_0_sofaSize = 24466026;
+    const int            SmallTheaterHRIRs_1_0_sofaSize = 25051963;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
     const int namedResourceListSize = 107;

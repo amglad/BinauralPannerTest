@@ -21,17 +21,13 @@ class InterpolationDSP
 public:
     InterpolationDSP(); // Constructor
     
-    const double getLow(float d); // Grabs the
+    // Returns the frequency domain HRTF that is interpolated
+    std::vector<std::vector<float>> interpolate(int az, int el, float d, int buffer);
+    // Returns the frequency domain HRTF
+    std::vector<std::vector<float>> getHRIRs(int az, int el, float d, int buffer);
+    // Convolves the signal with the HRTF provided
+    std::vector<std::vector<float>> convolve(int az, int el, float d, int buffer, std::vector<std::vector<float>> signal, std::vector<std::vector<float>> HRTF);
     
-    const double getHigh(float d);
-    
-    const double interpolate2(double dLow, double dHigh, double dLowW, double dHighW);
-    
-    const double interpolate(int az, int el, float d);
-    
-    const double getWeightHigh(float d, float dMod);
-    
-    const double getWeightLow(float d, float dMod);
 
     
     
