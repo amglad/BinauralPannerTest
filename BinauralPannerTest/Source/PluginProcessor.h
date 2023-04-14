@@ -66,11 +66,18 @@ public:
     
     float distance;
     void setDistance(float distanceValue);
-    
-    InterpolationDSP interp;
 
 private:
     
-    //==============================================================================
+    InterpolationDSP interp;
+ 
+public:
+    
+    juce::AudioProcessorValueTreeState state;
+    
+    // function to fill the value tree
+    juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
+    
+    //============================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BinauralPannerTestAudioProcessor)
 };
