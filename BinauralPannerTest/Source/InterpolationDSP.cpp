@@ -132,6 +132,14 @@ std::vector<std::vector<float>> InterpolationDSP::interConv(int az, int el, floa
 
 
 
+
+
+
+
+
+
+// Functions that are all individual (helped me picture what I needed from each to combine into the function above)
+/*----------------------------------------------------------------------------------------------------------------*/
 std::vector<std::vector<float>> InterpolationDSP::interpolate(int az, int el, float d, int buffer)
 {
     // Finding the mod of our distance

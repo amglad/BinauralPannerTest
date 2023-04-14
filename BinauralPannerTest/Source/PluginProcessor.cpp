@@ -169,10 +169,6 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
         
     
     
-    
-    
-    
-    
     // Getting buffer samples
     int numSamples = buffer.getNumSamples();
     
@@ -184,29 +180,35 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
 //    float distanceValue = *state.getRawParameterValue("DistanceValue");
 //    setDistance(distanceValue);
     
-    int azimuthAngle1 = 0;
-    int elevationAngle1 = 0;
-    int distanceValue1 = 2;
-    
-    
-    // Preallocating info for hrir
-    std::vector<std::vector<float>> hrtf;
+    int azimuthAngle = 0;
+    int elevationAngle = 0;
+    int distanceValue = 2;
     
     // I have no idea if this is the right format for the part of the signal we will be putting in but I needed something to add
     std::vector<float> signal;
     
     // Doing interpolation and convolution
-    std::vector<std::vector<float>> output = interp.interConv(azimuthAngle1, elevationAngle1, distanceValue1, numSamples, signal);
+    std::vector<std::vector<float>> output = interp.interConv(azimuthAngle, elevationAngle, distanceValue, numSamples, signal);
+    
+    
+    
+    
+    
+    
+    
     
     /* THIS SECTION IS IF YOU USE INDIVIDUAL FUNCTIONS
-    // Checking to see if the distance is in the HRIR array
-    if(distanceValue1 == 2 || distanceValue1 == 6 || distanceValue1== 10 || distanceValue1 == 14)
+    
+     // Preallocating info for hrir
+     std::vector<std::vector<float>> hrtf;
+     // Checking to see if the distance is in the HRIR array
+    if(distanceValue == 2 || distanceValue == 6 || distanceValue == 10 || distanceValue == 14)
     {
-        hrtf = interp.getHRIRs(azimuthAngle1,elevationAngle1,distanceValue1,numSamples);
+        hrtf = interp.getHRIRs(azimuthAngle,elevationAngle,distanceValue,numSamples);
     }
     else
     {
-        hrtf = interp.interpolate(azimuthAngle1,elevationAngle1,distanceValue1,numSamples);
+        hrtf = interp.interpolate(azimuthAngle,elevationAngle,distanceValue,numSamples);
     }
     
     // Convolving signal

@@ -21,14 +21,19 @@ class InterpolationDSP
 public:
     InterpolationDSP(); // Constructor
     
+    // Interpolates and covolves in 1
+    std::vector<std::vector<float>> interConv(int az, int el, float d, int buffer, std::vector<float> signal);
+    
+    
+    
+    // Functions that are all individual (helped me picture what I needed from each to combine into the function above)
     // Returns the frequency domain HRTF that is interpolated
     std::vector<std::vector<float>> interpolate(int az, int el, float d, int buffer);
     // Returns the frequency domain HRTF
     std::vector<std::vector<float>> getHRIRs(int az, int el, float d, int buffer);
     // Convolves the signal with the HRTF provided
     std::vector<std::vector<float>> convolve(int buffer, std::vector<float> signal, std::vector<std::vector<float>> HRTF);
-    // Interpolates and covolves in 1
-    std::vector<std::vector<float>> interConv(int az, int el, float d, int buffer, std::vector<float> signal);
+    
     
     
 
