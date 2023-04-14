@@ -42,6 +42,9 @@ const double InterpolationDSP::interpolate(int az, int el, float d)
     const double *hLow = sofa.getHRIR(channel, az, el, dLow);
     const double *hHigh = sofa.getHRIR(channel, az, el, dHigh);
     
+    for(auto i = 0; i < sofa.getN(); i++)
+        auto x = hLow[i];
+    
     // FFT Work
     const size_t fftSize = 2048;
     
@@ -61,50 +64,4 @@ const double InterpolationDSP::interpolate(int az, int el, float d)
 //
 //    return HRIR;
 }
-
-//const double InterpolationDSP::getLow(float d)
-//{
-//    // Finding the mod of our distance
-//    float dMod = fmod((d-2),4);
-//
-//    // Getting the low distance
-//    int dLow = d - dMod;
-//
-//    return dLow;
-//}
-//
-//const double InterpolationDSP::getHigh(float d)
-//{
-//    // Finding the mod of our distance
-//    float dMod = fmod((d-2),4);
-//
-//    // Getting high distance
-//    int dHigh = d + (4 - dMod);
-//
-//    return dHigh;
-//}
-//
-//const double InterpolationDSP::getWeightHigh(float d, float dMod)
-//{
-//    // Finding weights
-//    float dHighW = abs(dMod/4);
-//    return dHighW;
-//}
-//
-//const double InterpolationDSP::getWeightLow(float d, float dMod)
-//{
-//    // Finding weights
-//    float dLowW = abs(dMod/4);
-//    return dLowW;
-//}
-//
-//
-//const double InterpolationDSP::interpolate2(double HLow, double HHigh, double dLowW, double dHighW)
-//{
-//    // Getting weights of the HRIRs in the frequency domain
-//    const double HRIR = HLow * dLowW + HHigh * dHighW;
-//
-//    return HRIR;
-//}
-
 

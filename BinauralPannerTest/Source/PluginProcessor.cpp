@@ -144,7 +144,7 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
         
-    InterpolationDSP interp;
+    interp.interpolate(0,0,2);
     
     
     

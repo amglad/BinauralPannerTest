@@ -66,10 +66,11 @@ public:
     
     float distance;
     void setDistance(float distanceValue);
+    
+    InterpolationDSP interp;
 
 private:
     
-    InterpolationDSP interp;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BinauralPannerTestAudioProcessor)
 };

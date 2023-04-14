@@ -13,6 +13,7 @@
 #include "BasicSOFAPriv.hpp"
 #include "AudioFFT.h"
 #include "math.h"
+#include <iostream>
 
 class InterpolationDSP
 {
