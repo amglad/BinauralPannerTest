@@ -42,13 +42,13 @@ const double InterpolationDSP::interpolate(int az, int el, float d)
     const double *hLow = sofa.getHRIR(channel, az, el, dLow);
     const double *hHigh = sofa.getHRIR(channel, az, el, dHigh);
     
-    for(auto i = 0; i < sofa.getN(); i++)
-        auto x = hLow[i];
+//    for(auto i = 0; i < sofa.getN(); i++)
+//        auto x = hLow[i];
     
     // FFT Work
     const size_t fftSize = 2048;
     
-    std::vector<float> input(fftSize, 0.0f);
+//    std::vector<float> input(fftSize, 0.0f);
     std::vector<float> re(audiofft::AudioFFT::ComplexSize(fftSize));
     std::vector<float> im(audiofft::AudioFFT::ComplexSize(fftSize));
     std::vector<float> output(fftSize);
