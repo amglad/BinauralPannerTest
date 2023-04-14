@@ -72,6 +72,10 @@ public:
 private:
     
     InterpolationDSP interp;
+    BasicSOFA::BasicSOFA sofa;
+    audiofft::AudioFFT fft;
+ 
+public:
     
     juce::AudioProcessorValueTreeState state;
     

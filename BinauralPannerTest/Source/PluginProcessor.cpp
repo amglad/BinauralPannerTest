@@ -32,11 +32,22 @@ juce::AudioProcessorValueTreeState::ParameterLayout BinauralPannerTestAudioProce
 {
     std::vector<std::unique_ptr<juce::RangedAudioParameter>> params;
     
-    params.push_back(std::make_unique<juce::AudioParameterFloat> ("AzimuthAngle", // parameter ID
+    params.push_back(std::make_unique<juce::AudioParameterFloat> (juce::ParameterID { "AzimuthAngle", 1}, // parameter ID
                                                                   "Azimuth", // parameter name in automation lane
-                                                                  juce::NormalisableRange<float>(-180.f,180.f), // normalizable range
+                                                                  juce::NormalisableRange<float>(-180.f,180.f,15.0), // normalizable range
                                                                   0.f) // default value
                                                                   );
+    params.push_back(std::make_unique<juce::AudioParameterFloat> (juce::ParameterID { "ElevationAngle", 1}, // parameter ID
+                                                                  "Elevation", // parameter name in automation lane
+                                                                  juce::NormalisableRange<float>(-45.f,90.f,15.0), // normalizable range
+                                                                  0.f) // default value
+                                                                  );
+    params.push_back(std::make_unique<juce::AudioParameterFloat> (juce::ParameterID { "DistanceValue", 1}, // parameter ID
+                                                                  "Distance", // parameter name in automation lane
+                                                                  juce::NormalisableRange<float>(-2.f,14.f,0.1), // normalizable range
+                                                                  6.f) // default value
+                                                                  );
+    
     return { params.begin(), params.end() };
 }
 
@@ -155,9 +166,15 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     // this code if your algorithm always overwrites all the output channels.
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
-        
-        BasicSOFA::BasicSOFA sofa;
-        audiofft::AudioFFT fft;
+    
+    int numSamples = buffer.getNumSamples();
+    
+    float azimuthAngle = *state.getRawParameterValue("AzimuthAngle");
+    setAzimuth(azimuthAngle);
+    float elevationAngle = *state.getRawParameterValue("ElevationAngle");
+    setElevation(elevationAngle);
+    float distanceValue = *state.getRawParameterValue("DistanceValue");
+    setDistance(distanceValue);
     
     sofa.readSOFAFile("Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
     // sofa.readSOFAFile("Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
@@ -168,10 +185,11 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     // the samples and the outer loop is handling the channels.
     // Alternatively, you can process the samples with the channels
     // interleaved by keeping the same state.
+
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
         auto* channelData = buffer.getWritePointer (channel);
-
+        
         // ..do something to the data...
     }
 }
@@ -193,12 +211,24 @@ void BinauralPannerTestAudioProcessor::getStateInformation (juce::MemoryBlock& d
     // You should use this method to store your parameters in the memory block.
     // You could do that either as raw data, or use the XML or ValueTree classes
     // as intermediaries to make it easy to save and load complex data.
+    
+    auto currentState = state.copyState();
+    std::unique_ptr<juce::XmlElement> xml(currentState.createXml());
+    copyXmlToBinary(*xml, destData);
 }
 
 void BinauralPannerTestAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
 {
     // You should use this method to restore your parameters from this memory block,
     // whose contents will have been created by the getStateInformation() call.
+    
+    std::unique_ptr<juce::XmlElement> xml (getXmlFromBinary(data, sizeInBytes));
+    if (xml && xml->hasTagName(state.state.getType()))
+    {
+        state.replaceState(juce::ValueTree::fromXml(*xml));
+    }
+    
+        
 }
 
 void BinauralPannerTestAudioProcessor::setAzimuth(float azimuthValue)

@@ -14,8 +14,8 @@
 //==============================================================================
 /**
 */
-class BinauralPannerTestAudioProcessorEditor  : public juce::AudioProcessorEditor,
-                                                public juce::Slider::Listener
+class BinauralPannerTestAudioProcessorEditor  : public juce::AudioProcessorEditor
+                                                // public juce::Slider::Listener
 {
 public:
     BinauralPannerTestAudioProcessorEditor (BinauralPannerTestAudioProcessor&);
@@ -25,7 +25,7 @@ public:
     void paint (juce::Graphics&) override;
     void resized() override;
     
-    virtual void sliderValueChanged(juce::Slider* slider) override;
+    // virtual void sliderValueChanged(juce::Slider* slider) override;
     
     int windowWidth = 600;
     int windowHeight = 300;
@@ -46,6 +46,10 @@ private:
     juce::Label title;
     
     juce::LookAndFeel_V4 lookAndFeelV4;
+    
+public:
+    
+    std::vector<std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment>> sliderAttachment;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BinauralPannerTestAudioProcessorEditor)
 };
