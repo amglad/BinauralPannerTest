@@ -15,6 +15,8 @@ class InterpolationDSP
     
 public:
     
+    float processSample(const float* x, float* re, float* im);
+    
     
     
 private:
