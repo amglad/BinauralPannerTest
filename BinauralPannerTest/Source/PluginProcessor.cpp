@@ -177,31 +177,41 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     int numSamples = buffer.getNumSamples();
     
     // Getting azimuth, elevation, and distance
-    float azimuthAngle = *state.getRawParameterValue("AzimuthAngle");
-    setAzimuth(azimuthAngle);
-    float elevationAngle = *state.getRawParameterValue("ElevationAngle");
-    setElevation(elevationAngle);
-    float distanceValue = *state.getRawParameterValue("DistanceValue");
-    setDistance(distanceValue);
+//    float azimuthAngle = *state.getRawParameterValue("AzimuthAngle");
+//    setAzimuth(azimuthAngle);
+//    float elevationAngle = *state.getRawParameterValue("ElevationAngle");
+//    setElevation(elevationAngle);
+//    float distanceValue = *state.getRawParameterValue("DistanceValue");
+//    setDistance(distanceValue);
+    
+    int azimuthAngle1 = 0;
+    int elevationAngle1 = 0;
+    int distanceValue1 = 2;
+    
     
     // Preallocating info for hrir
     std::vector<std::vector<float>> hrtf;
     
     // I have no idea if this is the right format for the part of the signal we will be putting in but I needed something to add
-    std::vector<std::vector<float>> signal;
+    std::vector<float> signal;
     
+    // Doing interpolation and convolution
+    std::vector<std::vector<float>> output = interp.interConv(azimuthAngle1, elevationAngle1, distanceValue1, numSamples, signal);
+    
+    /* THIS SECTION IS IF YOU USE INDIVIDUAL FUNCTIONS
     // Checking to see if the distance is in the HRIR array
-    if(distanceValue == 2 || distanceValue == 6 || distanceValue== 10 || distanceValue == 14)
+    if(distanceValue1 == 2 || distanceValue1 == 6 || distanceValue1== 10 || distanceValue1 == 14)
     {
-        hrtf = interp.getHRIRs(azimuthAngle,elevationAngle,distanceValue,numSamples);
+        hrtf = interp.getHRIRs(azimuthAngle1,elevationAngle1,distanceValue1,numSamples);
     }
     else
     {
-        hrtf = interp.interpolate(azimuthAngle,elevationAngle,distanceValue,numSamples);
+        hrtf = interp.interpolate(azimuthAngle1,elevationAngle1,distanceValue1,numSamples);
     }
     
     // Convolving signal
-    std::vector<std::vector<float>> output = interp.convolve(azimuthAngle, elevationAngle, distanceValue, numSamples, signal, hrtf);
+    std::vector<std::vector<float>> output = interp.convolve(numSamples, signal, hrtf);
+     */
     
     // This is the place where you'd normally do the guts of your plugin's
     // audio processing...

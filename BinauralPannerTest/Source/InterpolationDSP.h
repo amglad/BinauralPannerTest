@@ -26,7 +26,10 @@ public:
     // Returns the frequency domain HRTF
     std::vector<std::vector<float>> getHRIRs(int az, int el, float d, int buffer);
     // Convolves the signal with the HRTF provided
-    std::vector<std::vector<float>> convolve(int az, int el, float d, int buffer, std::vector<std::vector<float>> signal, std::vector<std::vector<float>> HRTF);
+    std::vector<std::vector<float>> convolve(int buffer, std::vector<float> signal, std::vector<std::vector<float>> HRTF);
+    // Interpolates and covolves in 1
+    std::vector<std::vector<float>> interConv(int az, int el, float d, int buffer, std::vector<float> signal);
+    
     
 
     
