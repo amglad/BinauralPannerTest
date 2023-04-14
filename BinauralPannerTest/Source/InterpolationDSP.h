@@ -15,12 +15,13 @@ class InterpolationDSP
     
 public:
     
-    float processSample(const float* x, float* re, float* im);
+    float processSample(const float* a, float* b, float* c);
     
     
     
 private:
     
+    int bufferSize = 1024;
     
     
 };
