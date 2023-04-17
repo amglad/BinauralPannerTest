@@ -26,21 +26,13 @@ public:
     InterpolationDSP(); // Constructor
     
     // Interpolates and covolves in 1
-    std::vector<std::vector<float>> interConv(int az, int el, float d, int buffer, std::vector<float> signal);
+    std::array<std::array<float, 1024>, 2> interConv(int az, int el, float d, int buffer, std::array<float,1024 * 2> signal);
     
-    void getNextAudioBlock(const juce::AudioSourceChannelInfo& bufferToFill) override;
+    void pushNextSampleIntoFifo (float sample, std::array<float,1024 * 2> fftData) noexcept;
     
-    void pushNextSampleIntoFifo (float sample) noexcept;
+    void fourierTransform (std::array<float,1024 * 2> fftData);
     
-    
-    
-    // Functions that are all individual (helped me picture what I needed from each to combine into the function above)
-    // Returns the frequency domain HRTF that is interpolated
-    std::vector<std::vector<float>> interpolate(int az, int el, float d, int buffer);
-    // Returns the frequency domain HRTF
-    std::vector<std::vector<float>> getHRIRs(int az, int el, float d, int buffer);
-    // Convolves the signal with the HRTF provided
-    std::vector<std::vector<float>> convolve(int buffer, std::vector<float> signal, std::vector<std::vector<float>> HRTF);
+    void getNextAudioBlock(const juce::AudioSourceChannelInfo& bufferToFill);
     
     
     
@@ -69,16 +61,14 @@ private:
     float dMod;
     
     BasicSOFA::BasicSOFA sofa;
-    audiofft::AudioFFT fft;
+//    audiofft::AudioFFT fft;
     
     // fft object
-    juce::dsp::FFT fftLeft;
-    juce::dsp::FFT fftRight;
-    juce::dsp::FFT fftSignal;
+    juce::dsp::FFT fft;
     // 1024 size which will contain incoming audio data in samples
     std::array<float, fftSize> fifo;
     // 2048 size contains results of fft calculations
-    std::array<float,fftSize> fftData;
+    std::array<float,fftSize * 2> fftData;
     // Temporary index
     int fifoIndex = 0;
     // Tells us whether the next FFt block is ready

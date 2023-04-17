@@ -184,36 +184,27 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     int elevationAngle = 0;
     int distanceValue = 2;
     
-    // I have no idea if this is the right format for the part of the signal we will be putting in but I needed something to add
-    std::vector<float> signal;
+    // Creating an fft vector for the signal coming in;
+    std::array<float,1024 * 2> fftSignal;
+    
+//    interp.getNextAudioBlock(buffer*);
+    
+    for (int channel = 0; channel < totalNumInputChannels; ++channel)
+    {
+        auto* channelData = buffer.getWritePointer (channel);
+        for (auto i = 0; i < numSamples; ++i)
+        {
+            interp.pushNextSampleIntoFifo (channelData[i],fftSignal);
+        }
+        interp.fourierTransform(fftSignal);
+        // ..do something to the data...
+    }
     
     // Doing interpolation and convolution
-    std::vector<std::vector<float>> output = interp.interConv(azimuthAngle, elevationAngle, distanceValue, numSamples, signal);
+    std::array<std::array<float, 1024>, 2> output = interp.interConv(azimuthAngle, elevationAngle, distanceValue, numSamples, fftSignal);
     
     
-    
-    
-    
-    
-    
-    
-    /* THIS SECTION IS IF YOU USE INDIVIDUAL FUNCTIONS
-    
-     // Preallocating info for hrir
-     std::vector<std::vector<float>> hrtf;
-     // Checking to see if the distance is in the HRIR array
-    if(distanceValue == 2 || distanceValue == 6 || distanceValue == 10 || distanceValue == 14)
-    {
-        hrtf = interp.getHRIRs(azimuthAngle,elevationAngle,distanceValue,numSamples);
-    }
-    else
-    {
-        hrtf = interp.interpolate(azimuthAngle,elevationAngle,distanceValue,numSamples);
-    }
-    
-    // Convolving signal
-    std::vector<std::vector<float>> output = interp.convolve(numSamples, signal, hrtf);
-     */
+
     
     // This is the place where you'd normally do the guts of your plugin's
     // audio processing...
@@ -226,12 +217,7 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     
     
     
-    for (int channel = 0; channel < totalNumInputChannels; ++channel)
-    {
-        auto* channelData = buffer.getWritePointer (channel);
-        
-        // ..do something to the data...
-    }
+
 }
 
 //==============================================================================
