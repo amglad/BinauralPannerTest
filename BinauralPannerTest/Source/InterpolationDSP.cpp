@@ -10,7 +10,7 @@
 
 #include "InterpolationDSP.h"
 
-InterpolationDSP::InterpolationDSP()
+InterpolationDSP::InterpolationDSP() : fftEngine (fftOrder)
 {
     
     // Reading SOFA file
@@ -25,29 +25,6 @@ InterpolationDSP::InterpolationDSP()
 
 std::vector<std::vector<float>> InterpolationDSP::interConv(int az, int el, float d, int buffer, std::vector<float> signal)
 {
-    // Creating empty real and imaginary vectors for fft interpolation
-    std::vector<float> reLow(audiofft::AudioFFT::ComplexSize(buffer));
-    std::vector<float> imLow(audiofft::AudioFFT::ComplexSize(buffer));
-    std::vector<float> reHigh(audiofft::AudioFFT::ComplexSize(buffer));
-    std::vector<float> imHigh(audiofft::AudioFFT::ComplexSize(buffer));
-    
-    // Creating empty real and imaginary vectors for fft no interpolation
-    std::vector<float> reH(audiofft::AudioFFT::ComplexSize(buffer));
-    std::vector<float> imH(audiofft::AudioFFT::ComplexSize(buffer));
-    
-    // Creating empty real and imaginary vectors for fft signal
-    std::vector<float> re(audiofft::AudioFFT::ComplexSize(buffer));
-    std::vector<float> im(audiofft::AudioFFT::ComplexSize(buffer));
-    
-    // Creating empty real and imaginary vectors for ifft output signal
-    std::vector<float> reOut(audiofft::AudioFFT::ComplexSize(buffer));
-    std::vector<float> imOut(audiofft::AudioFFT::ComplexSize(buffer));
-    
-    // Allocating array for the final array
-    std::vector<std::vector<float>> output(buffer);
-    
-    
-    
     if(d == 2 || d == 6 || d == 10 || d == 14) // If in HRIR database
     {
         // Looping for both channels
@@ -55,24 +32,37 @@ std::vector<std::vector<float>> InterpolationDSP::interConv(int az, int el, floa
         {
             // Getting HRIRs from .sofa file
             const double *hrir = sofa.getHRIR(channel, az, el, d);
-            // Casting to a float
-            const float *hrirF = (const float *) hrir;
             
-            // Initializing fft size
-            fft.init(buffer);
+            // Creating vector to fillin
+            std::vector<float> hrirVec(2048);
             
-            // Performing fft
-            for(auto i = 0; i < buffer; i++)
+            // Writing current audio block
+            getNextAudioBlock(const juce::AudioSourceChannelInfo&); // We grab the new stuff from the current buffer
+            
+            // Writing values to float?
+            for(auto i = 0; i < 2048; ++i)
             {
-                fft.fft(&hrirF[i],&re[i],&im[i]);
-                fft.fft(&signal[i],&re[i],&im[i]);
+                hrirVec[i] = hrir[i];
             }
             
-            // Frequency domain convolution
-            for(auto i = 0; i < buffer; i++)
+            // Writing this to the new type of variable? Do we need to create multiple instances if FIFO?
+            for(auto i = 0; i < 2048; ++i)
             {
-                output[channel][i] = signal[i] * hrirF[i];
+                pushNextSampleIntoFifo(hrirVec[i]);
             }
+            
+            // FFT Calculation?
+            fftLeft.performFrequencyOnlyForwardTransform(hrirVec.data());
+            
+            for(auto i = 0; i < 2048; ++i)
+            {
+                output  = hrirVec.data() * signalVec.data();
+            }
+            
+            
+            
+            
+            
         }
     }
     else // If we need to interpolate
@@ -95,191 +85,59 @@ std::vector<std::vector<float>> InterpolationDSP::interConv(int az, int el, floa
             const double *hLow = sofa.getHRIR(channel, az, el, dLow);
             const double *hHigh = sofa.getHRIR(channel, az, el, dHigh);
             
+            // Putting into a vector
+            std::vector<float> hrirVec(
+            
+            
             // Casting to a float
             const float *hLowF = (const float *) hLow;
             const float *hHighF = (const float *) hHigh;
             
             // Initializing fft size
             fft.init(buffer);
-            
-            // Performing fft
-            for(auto i = 0; i < buffer; i++)
-            {
-                fft.fft(&hLowF[i],&reLow[i],&imLow[i]);
-                fft.fft(&hHighF[i],&reHigh[i],&imHigh[i]);
-                fft.fft(&signal[i],&re[i],&im[i]);
-            }
-            
-            // Calculating interpolation and convolving
-            for(auto i = 0; i < buffer; i++)
-            {
-                output[channel][i] = signal[i] * (hLowF[i] * dLowW + hHighF[i] * dHighW);
-            }
-            
-            
-            // Inverse Fourier Transform (Do we need a different re and im this time? I recreated them as zeros but idk if that will work)
-            for(auto i = 0; i < buffer; i++)
-            {
-                fft.ifft(&output[channel][i],&reOut[i],&imOut[i]);
-            }
+        
         }
     }
     
     // Return the value
-    return output;
+//    return output;
+    
 }
 
 
 
-
-
-
-
-
-
-
-// Functions that are all individual (helped me picture what I needed from each to combine into the function above)
-/*----------------------------------------------------------------------------------------------------------------*/
-std::vector<std::vector<float>> InterpolationDSP::interpolate(int az, int el, float d, int buffer)
+void InterpolationDSP::getNextAudioBlock(const juce::AudioSourceChannelInfo& bufferToFill)
 {
-    // Finding the mod of our distance
-    float dMod = fmod((d-2),4);
-    
-    // Getting the surrounding distances
-    int dLow = d - dMod;
-    int dHigh = d + (4 - dMod);
-    
-    // Finding weights
-    const double dLowW = abs(dMod/4);
-    const double dHighW = abs(dMod/4);
-    
-    // Creating empty real and imaginary vectors for fft
-    std::vector<float> reLow(audiofft::AudioFFT::ComplexSize(buffer));
-    std::vector<float> imLow(audiofft::AudioFFT::ComplexSize(buffer));
-    std::vector<float> reHigh(audiofft::AudioFFT::ComplexSize(buffer));
-    std::vector<float> imHigh(audiofft::AudioFFT::ComplexSize(buffer));
-    
-    // Allocating array for the interpolation
-    std::vector<std::vector<float>> Hinterp(buffer);
-    
-    // Looping for both channels
-    for(auto channel = 0; channel < 2; channel++)
+    if(bufferToFill.buffer->getNumChannels() > 0)
     {
-        // Getting HRIRs from .sofa file
-        const double *hLow = sofa.getHRIR(channel, az, el, dLow);
-        const double *hHigh = sofa.getHRIR(channel, az, el, dHigh);
+        auto* channelData = bufferToFill.buffer->getReadPointer(0, bufferToFill.startSample);
         
-        // Casting to a float
-        const float *hLowF = (const float *) hLow;
-        const float *hHighF = (const float *) hHigh;
-        
-        // Initializing fft size
-        fft.init(buffer);
-        
-        // Performing fft
-        for(auto i = 0; i < buffer; i++)
+        for (auto i = 0; i < bufferToFill.numSamples; ++i)
         {
-            fft.fft(&hLowF[i],&reLow[i],&imLow[i]);
-            fft.fft(&hHighF[i],&reHigh[i],&imHigh[i]);
-        }
-        
-        // Calculating interpolation
-        for(auto i = 0; i < buffer; i++)
-        {
-            Hinterp[channel][i] = hLowF[i] * dLowW + hHighF[i] * dHighW;
+            pushNextSampleIntoFifo (channelData[i]);
         }
     }
-    
-    // Return the value
-    return Hinterp;
 }
 
-
-
-
-std::vector<std::vector<float>> InterpolationDSP::getHRIRs(int az, int el, float d, int buffer)
+void InterpolationDSP::pushNextSampleIntoFifo (float sample) noexcept
 {
-    
-    // Creating empty real and imaginary vectors for fft
-    std::vector<float> re(audiofft::AudioFFT::ComplexSize(buffer));
-    std::vector<float> im(audiofft::AudioFFT::ComplexSize(buffer));
-    
-    // Allocating array for the final array
-    std::vector<std::vector<float>> HRTF(buffer);
-    
-    // Looping for both channels
-    for(auto channel = 0; channel < 2; channel++)
+    // if the fifo contains enough data, set a flag to say
+    // that the next line should now be rendered..
+    if (fifoIndex == fftSize)       // [8]
     {
-        // Getting HRIRs from .sofa file
-        const double *hrir = sofa.getHRIR(channel, az, el, d);
-        // Casting to a float
-        const float *hrirF = (const float *) hrir;
-        
-        // Initializing fft size
-        fft.init(buffer);
-        
-        // Performing fft
-        for(auto i = 0; i < buffer; i++)
-        {
-            fft.fft(&hrirF[i],&re[i],&im[i]);
-        }
-        
-        // Placing them into 2D array
-        for(auto i = 0; i < buffer; i++)
-        {
-            HRTF[channel][i] = hrirF[i];
-        }
+       if (! nextFFTBlockReady)    // [9]
+       {
+           std::fill (fftData.begin(), fftData.end(), 0.0f);
+           std::copy (fifo.begin(), fifo.end(), fftData.begin());
+           nextFFTBlockReady = true;
+       }
+
+       fifoIndex = 0;
     }
-    
-    // Return the value
-    return HRTF;
+
+    fifo[(size_t) fifoIndex++] = sample; // [9]
 }
-    
 
-
-
-
-std::vector<std::vector<float>> InterpolationDSP::convolve(int buffer, std::vector<float> signal, std::vector<std::vector<float>> HRTF)
-{
-    
-    // Creating empty real and imaginary vectors for fft
-    std::vector<float> re(audiofft::AudioFFT::ComplexSize(buffer));
-    std::vector<float> im(audiofft::AudioFFT::ComplexSize(buffer));
-    
-    
-    // Allocating array for the final array
-    std::vector<std::vector<float>> output(buffer);
-    
-    // Looping for both channels
-    for(auto channel = 0; channel < 2; channel++)
-    {
-        
-        // Initializing fft size
-        fft.init(buffer);
-        
-        // Performing fft
-        for(auto i = 0; i < buffer; i++)
-        {
-            fft.fft(&signal[i],&re[i],&im[i]);
-        }
-        
-        // Frequency domain multiplication for convolution
-        for(auto i = 0; i < buffer; i++)
-        {
-            output[channel][i] = signal[i] * HRTF[channel][i];
-        }
-        
-        // Inverse Fourier Transform (Do we need a different re and im this time?)
-        for(auto i = 0; i < buffer; i++)
-        {
-            fft.ifft(&output[channel][i],&re[i],&im[i]);
-        }
-        
-    }
-    
-    // Return the value
-    return output;
-}
 
 
 
