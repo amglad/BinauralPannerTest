@@ -23,50 +23,40 @@ InterpolationDSP::InterpolationDSP() : fft (fftOrder)
     M = sofa.getM();
 }
 
-std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int el, float d, int buffer, std::array<float,1024 * 2> signal) // Not sure which amount of signal (buffer or just 1024 we will be using)
+std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int el, float d, int buffer, int channel, std::array<float,1024 * 2> signal) // Not sure which amount of signal (buffer or just 1024 we will be using)
 {
     // Creating final output
     std::array<std::array<float, 1024>, 2> output;
     
     if(d == 2 || d == 6 || d == 10 || d == 14) // If in HRIR database
     {
-        // Looping for both channels
-        for(auto channel = 0; channel < 2; channel++)
+        // Getting HRIRs from .sofa file
+        const double *hrir = sofa.getHRIR(channel, az, el, d);
+        
+        // Creating HRTF bucket to fill in with frequency data
+        std::array<float, 1024 * 2> HRTF;
+            
+        // Writing this data to the bucket HRTF
+        for(auto i = 0; i < buffer; ++i)
         {
-            // Getting HRIRs from .sofa file
-            const double *hrir = sofa.getHRIR(channel, az, el, d);
-            
-            // Creating float vector to fill in with hrir data
-            std::vector<float> hrirVec(buffer);
-            
-            // Creating HRTF bucket to fill in with frequency data
-            std::array<float, 1024 * 2> HRTF;
-            
-            // Writing values to float?
-            for(auto i = 0; i < buffer; ++i)
-            {
-                hrirVec[i] = hrir[i];
-            }
-            
-            // Writing this data to the bucket HRTF
-            for(auto i = 0; i < buffer; ++i)
-            {
-                pushNextSampleIntoFifo(hrirVec[i], HRTF);
-            }
-            
-            // FFT Calculation
-            fourierTransform(HRTF);
-
-            // Convolution
-            for(auto i = 0; i < 1024; ++i)
-            {
-                output[i][channel] = HRTF[i] * signal[i];
-            }
-            
-            // Returning output
-            return output;
+            pushNextSampleIntoFifo(hrir[i], HRTF);
         }
+        
+        // FFT Calculation
+        fourierTransform(HRTF);
+        
+        // Convolution
+        for(auto i = 0; i < 1024; ++i)
+        {
+            output[i][channel] = HRTF[i] * signal[i];
+        }
+        
+        // Returning output
+        return output;
+        
     }
+    
+    
     else // If we need to interpolate
     {
         // Finding the mod of our distance
@@ -79,64 +69,50 @@ std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int e
         // Finding weights
         const double dLowW = abs((4 - dMod)/4);
         const double dHighW = abs(dMod/4);
-
-        // Looping for both channels
-        for(auto channel = 0; channel < 2; channel++)
+            
+        // Getting HRIRs from .sofa file
+        const double *hrirLow = sofa.getHRIR(channel, az, el, dLow);
+        const double *hrirHigh = sofa.getHRIR(channel, az, el, dHigh);
+        
+        // Creating HRTF bucket to fill in with frequency data
+        std::array<float, 1024 * 2> HRTFLow;
+        std::array<float, 1024 * 2> HRTFHigh;
+        std::array<float, 1024 * 2> HRTF;
+        
+        
+        // Writing this data to the bucket HRTFLow
+        for(auto i = 0; i < buffer; ++i)
         {
-            
-            // Getting HRIRs from .sofa file
-            const double *hrirLow = sofa.getHRIR(channel, az, el, dLow);
-            const double *hrirHigh = sofa.getHRIR(channel, az, el, dHigh);
-            
-            // Creating float vector to fill in with hrir data. Don't know if we need to do this or if we can just pass the hrir to pushNextSampleIntoFifo
-            std::vector<float> hrirLowVec(buffer);
-            std::vector<float> hrirHighVec(buffer);
-            
-            // Creating HRTF bucket to fill in with frequency data
-            std::array<float, 1024 * 2> HRTFLow;
-            std::array<float, 1024 * 2> HRTFHigh;
-            std::array<float, 1024 * 2> HRTF;
-            
-            // Writing values to float?
-            for(auto i = 0; i < buffer; ++i)
-            {
-                hrirLowVec[i] = hrirLow[i];
-                hrirHighVec[i] = hrirHigh[i];
-            }
-            
-            // Writing this data to the bucket HRTFLow
-            for(auto i = 0; i < buffer; ++i)
-            {
-                pushNextSampleIntoFifo(hrirLowVec[i], HRTFLow);
-            }
-            // FFT Calculation
-            fourierTransform(HRTFLow);
-            
-            // Writing this data to the bucket HRTFHigh
-            for(auto i = 0; i < buffer; ++i)
-            {
-                pushNextSampleIntoFifo(hrirHighVec[i], HRTFHigh);
-            }
-            // FFT Calculation
-            fourierTransform(HRTFHigh);
-            
-            // The for loops above and below this are an example of not knowing how many samples to run these for
-            
-            // Weighting
-            for(auto i = 0; i < 1024; ++i)
-            {
-                HRTF[i] = HRTFLow[i] * dLowW + HRTFHigh[i] * dHighW;
-            }
-            
-            // Convolution
-            for(auto i = 0; i < 1024; ++i)
-            {
-                output[i][channel] = HRTF[i] * signal[i];
-            }
-            
-            // Not quite sure how to do inverse fft
-            
+            pushNextSampleIntoFifo(hrirLow[i], HRTFLow);
         }
+        // FFT Calculation
+        fourierTransform(HRTFLow);
+        
+        // Writing this data to the bucket HRTFHigh
+        for(auto i = 0; i < buffer; ++i)
+        {
+            pushNextSampleIntoFifo(hrirHigh[i], HRTFHigh);
+        }
+        // FFT Calculation
+        fourierTransform(HRTFHigh);
+        
+        // The for loops above and below this are an example of not knowing how many samples to run these for
+        
+        // Weighting
+        for(auto i = 0; i < 1024; ++i)
+        {
+            HRTF[i] = HRTFLow[i] * dLowW + HRTFHigh[i] * dHighW;
+        }
+        
+        // Convolution
+        for(auto i = 0; i < 1024; ++i)
+        {
+            output[i][channel] = HRTF[i] * signal[i];
+        }
+        
+        // Not quite sure how to do inverse fft
+            
+        
     }
     return output;
 }

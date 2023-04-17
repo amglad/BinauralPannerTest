@@ -192,18 +192,15 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
         auto* channelData = buffer.getWritePointer (channel);
-        for (auto i = 0; i < numSamples; ++i)
+        for (auto n = 0; n < numSamples; ++n)
         {
-            interp.pushNextSampleIntoFifo (channelData[i],fftSignal);
+            interp.pushNextSampleIntoFifo (channelData[n],fftSignal);
         }
         interp.fourierTransform(fftSignal);
         // ..do something to the data...
+        // Doing interpolation and convolution
+        std::array<std::array<float, 1024>, 2> output = interp.interConv(azimuthAngle, elevationAngle, distanceValue, numSamples, channel, fftSignal);
     }
-    
-    // Doing interpolation and convolution
-    std::array<std::array<float, 1024>, 2> output = interp.interConv(azimuthAngle, elevationAngle, distanceValue, numSamples, fftSignal);
-    
-    
 
     
     // This is the place where you'd normally do the guts of your plugin's

@@ -26,7 +26,7 @@ public:
     InterpolationDSP(); // Constructor
     
     // Interpolates and covolves in 1
-    std::array<std::array<float, 1024>, 2> interConv(int az, int el, float d, int buffer, std::array<float,1024 * 2> signal);
+    std::array<std::array<float, 1024>, 2> interConv(int az, int el, float d, int buffer, int channel, std::array<float,1024 * 2> signal);
     
     void pushNextSampleIntoFifo (float sample, std::array<float,1024 * 2> fftData) noexcept;
     
