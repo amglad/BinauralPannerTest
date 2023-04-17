@@ -32,6 +32,8 @@ public:
     
     void fourierTransform (std::array<float,1024 * 2> fftData);
     
+    void inverseFourierTransform (std::array<float,1024 * 2> fftData);
+    
     void getNextAudioBlock(const juce::AudioSourceChannelInfo& bufferToFill);
     
     

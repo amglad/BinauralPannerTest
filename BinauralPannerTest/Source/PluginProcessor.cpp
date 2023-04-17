@@ -173,16 +173,16 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     int numSamples = buffer.getNumSamples();
     
     // Getting azimuth, elevation, and distance
-//    float azimuthAngle = *state.getRawParameterValue("AzimuthAngle");
-//    setAzimuth(azimuthAngle);
-//    float elevationAngle = *state.getRawParameterValue("ElevationAngle");
-//    setElevation(elevationAngle);
-//    float distanceValue = *state.getRawParameterValue("DistanceValue");
-//    setDistance(distanceValue);
+    float azimuthAngle = *state.getRawParameterValue("AzimuthAngle");
+    setAzimuth(azimuthAngle);
+    float elevationAngle = *state.getRawParameterValue("ElevationAngle");
+    setElevation(elevationAngle);
+    float distanceValue = *state.getRawParameterValue("DistanceValue");
+    setDistance(distanceValue);
     
-    int azimuthAngle = 0;
-    int elevationAngle = 0;
-    int distanceValue = 2;
+//    int azimuthAngle = 0;
+//    int elevationAngle = 0;
+//    int distanceValue = 2;
     
     // Creating an fft vector for the signal coming in;
     std::array<float,1024 * 2> fftSignal;

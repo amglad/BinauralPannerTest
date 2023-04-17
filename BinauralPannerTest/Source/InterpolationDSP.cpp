@@ -27,6 +27,7 @@ std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int e
 {
     // Creating final output
     std::array<std::array<float, 1024>, 2> output;
+    std::array<float, 1024 * 2> outputFreq;
     
     if(d == 2 || d == 6 || d == 10 || d == 14) // If in HRIR database
     {
@@ -46,9 +47,16 @@ std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int e
         fourierTransform(HRTF);
         
         // Convolution
+        for(auto i = 0; i < 1024 * 2; ++i)
+        {
+            outputFreq[i] = HRTF[i] * signal[i];
+        }
+        
+        inverseFourierTransform(outputFreq);
+        
         for(auto i = 0; i < 1024; ++i)
         {
-            output[i][channel] = HRTF[i] * signal[i];
+            output[channel][i] = outputFreq[i];
         }
         
         // Returning output
@@ -99,19 +107,24 @@ std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int e
         // The for loops above and below this are an example of not knowing how many samples to run these for
         
         // Weighting
-        for(auto i = 0; i < 1024; ++i)
+        for(auto i = 0; i < 1024 * 2; ++i)
         {
             HRTF[i] = HRTFLow[i] * dLowW + HRTFHigh[i] * dHighW;
         }
         
         // Convolution
-        for(auto i = 0; i < 1024; ++i)
+        for(auto i = 0; i < 1024 * 2; ++i)
         {
-            output[i][channel] = HRTF[i] * signal[i];
+            outputFreq[i] = HRTF[i] * signal[i];
         }
         
+        inverseFourierTransform(outputFreq);
+        
         // Not quite sure how to do inverse fft
-            
+        for(auto i = 0; i < 1024; ++i)
+        {
+            output[channel][i] = outputFreq[i];
+        }
         
     }
     return output;
@@ -121,7 +134,12 @@ std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int e
 
 void InterpolationDSP::fourierTransform (std::array<float,1024 * 2> fftData)
 {
-    fft.performFrequencyOnlyForwardTransform(fftData.data());
+    fft.performRealOnlyForwardTransform(fftData.data());
+}
+
+void InterpolationDSP::inverseFourierTransform (std::array<float,1024 * 2> fftData)
+{
+    fft.performRealOnlyInverseTransform(fftData.data());
 }
 
                                        
