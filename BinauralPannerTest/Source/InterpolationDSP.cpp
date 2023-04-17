@@ -23,7 +23,7 @@ InterpolationDSP::InterpolationDSP() : fft (fftOrder)
     M = sofa.getM();
 }
 
-std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int el, float d, int buffer, std::array<float,1024 * 2> signal)
+std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int el, float d, int buffer, std::array<float,1024 * 2> signal) // Not sure which amount of signal (buffer or just 1024 we will be using)
 {
     // Creating final output
     std::array<std::array<float, 1024>, 2> output;
@@ -36,10 +36,10 @@ std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int e
             // Getting HRIRs from .sofa file
             const double *hrir = sofa.getHRIR(channel, az, el, d);
             
-            // Creating vector to fillin
+            // Creating float vector to fill in with hrir data
             std::vector<float> hrirVec(buffer);
             
-            // Creating HRTF bucket to fill
+            // Creating HRTF bucket to fill in with frequency data
             std::array<float, 1024 * 2> HRTF;
             
             // Writing values to float?
@@ -67,7 +67,6 @@ std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int e
             return output;
         }
     }
-    
     else // If we need to interpolate
     {
         // Finding the mod of our distance
@@ -78,7 +77,7 @@ std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int e
         int dHigh = d + (4 - dMod);
         
         // Finding weights
-        const double dLowW = abs(dMod/4);
+        const double dLowW = abs((4 - dMod)/4);
         const double dHighW = abs(dMod/4);
 
         // Looping for both channels
@@ -89,11 +88,11 @@ std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int e
             const double *hrirLow = sofa.getHRIR(channel, az, el, dLow);
             const double *hrirHigh = sofa.getHRIR(channel, az, el, dHigh);
             
-            // Creating vector to fillin
+            // Creating float vector to fill in with hrir data. Don't know if we need to do this or if we can just pass the hrir to pushNextSampleIntoFifo
             std::vector<float> hrirLowVec(buffer);
             std::vector<float> hrirHighVec(buffer);
             
-            // Creating HRTF bucket to fill
+            // Creating HRTF bucket to fill in with frequency data
             std::array<float, 1024 * 2> HRTFLow;
             std::array<float, 1024 * 2> HRTFHigh;
             std::array<float, 1024 * 2> HRTF;
@@ -113,14 +112,16 @@ std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int e
             // FFT Calculation
             fourierTransform(HRTFLow);
             
-            // Writing this data to the bucket HRTFLow
+            // Writing this data to the bucket HRTFHigh
             for(auto i = 0; i < buffer; ++i)
             {
                 pushNextSampleIntoFifo(hrirHighVec[i], HRTFHigh);
             }
             // FFT Calculation
             fourierTransform(HRTFHigh);
-
+            
+            // The for loops above and below this are an example of not knowing how many samples to run these for
+            
             // Weighting
             for(auto i = 0; i < 1024; ++i)
             {
