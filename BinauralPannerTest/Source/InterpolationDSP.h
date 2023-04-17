@@ -21,36 +21,27 @@
 
 class InterpolationDSP
 {
+public:
+    // Designates size of the fft window and the number of points on which it will operate. Corresponds to 2 to the power of order
+    static constexpr auto fftOrder = 11;
+    // Left bit shift operator which produces 2048 as binary number 100,000,000,000
+    static constexpr auto fftSize = 1 << fftOrder;
     
+
 public:
     InterpolationDSP(); // Constructor
     
     // Interpolates and covolves in 1
-    std::array<std::array<float, 1024>, 2> interConv(int az, int el, float d, int buffer, int channel, std::array<float,1024 * 2> signal);
+    std::array<std::array<float, 1024>, 2> interConv(int az, int el, float d, int buffer, int channel, std::array<float,fftSize * 2> signal);
     
-    void pushNextSampleIntoFifo (float sample, std::array<float,1024 * 2> fftData) noexcept;
+    void pushNextSampleIntoFifo (float sample, std::array<float,fftSize * 2> fftData) noexcept;
     
-    void fourierTransform (std::array<float,1024 * 2> fftData);
+    void fourierTransform (std::array<float,fftSize * 2> fftData);
     
-    void inverseFourierTransform (std::array<float,1024 * 2> fftData);
+    void inverseFourierTransform (std::array<float,fftSize * 2> fftData);
     
     void getNextAudioBlock(const juce::AudioSourceChannelInfo& bufferToFill);
-    
-    
-    
-    
-    
-public:
-    // Designates size of the fft window and the number of points on which it will operate. Corresponds to 2 to the power of order
-    static constexpr auto fftOrder = 10;
-    // Left bit shift operator which produces 1024 as binary number 10000000000
-    static constexpr auto fftSize = 1<< fftOrder;
-    
 
-    
-    
-    
-    
 private:
     float Fs;
     float M;
@@ -64,6 +55,16 @@ private:
     
     BasicSOFA::BasicSOFA sofa;
 //    audiofft::AudioFFT fft;
+    
+    // Creating final output (How do we make it variable with the buffer size?)
+    std::array<std::array<float, 1024>, 2> output;
+    std::array<float, fftSize * 2> outputFreq;
+    
+    // Creating HRTF bucket to fill in with frequency data
+    std::array<float, fftSize * 2> HRTFLow;
+    std::array<float, fftSize * 2> HRTFHigh;
+    std::array<float, fftSize * 2> HRTF;
+    
     
     // fft object
     juce::dsp::FFT fft;

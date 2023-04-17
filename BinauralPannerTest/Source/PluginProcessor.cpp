@@ -180,21 +180,24 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     float distanceValue = *state.getRawParameterValue("DistanceValue");
     setDistance(distanceValue);
     
-//    int azimuthAngle = 0;
-//    int elevationAngle = 0;
-//    int distanceValue = 2;
-    
     // Creating an fft vector for the signal coming in;
-    std::array<float,1024 * 2> fftSignal;
+    std::array<float,2048 * 2> fftSignal;
     
-//    interp.getNextAudioBlock(buffer*);
     
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
         auto* channelData = buffer.getWritePointer (channel);
-        for (auto n = 0; n < numSamples; ++n)
+        for (auto n = 0; n < 2048; ++n)
         {
-            interp.pushNextSampleIntoFifo (channelData[n],fftSignal);
+            if(n < numSamples)
+            {
+                interp.pushNextSampleIntoFifo (channelData[n],fftSignal);
+            }
+            else
+            {
+                interp.pushNextSampleIntoFifo(0.0f, fftSignal);
+            }
+            
         }
         interp.fourierTransform(fftSignal);
         // ..do something to the data...

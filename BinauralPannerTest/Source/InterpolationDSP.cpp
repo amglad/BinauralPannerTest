@@ -23,19 +23,17 @@ InterpolationDSP::InterpolationDSP() : fft (fftOrder)
     M = sofa.getM();
 }
 
-std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int el, float d, int buffer, int channel, std::array<float,1024 * 2> signal) // Not sure which amount of signal (buffer or just 1024 we will be using)
+std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int el, float d, int buffer, int channel, std::array<float,fftSize * 2> signal) // Not sure which amount of signal (buffer or just 1024 we will be using)
 {
-    // Creating final output
-    std::array<std::array<float, 1024>, 2> output;
-    std::array<float, 1024 * 2> outputFreq;
     
+    // For when working with trying to keep the HRTF the same if it's not changed with an if statement, how do we keep track of the previous HRTF? The easiest way to do it would be to have the HRTF stored in the frequency domain so that if it doesn't change, all we have to do is the multiplication of the frequency domain signal to convolve then an inverse fft. Would we be able to write a new function for that? Then we could have the if statement in the process block and run this if it did change but the other one if it didn't. This would also make it so we don't have to recalculate the interpolation for the distance. Also, thank fuck we aren't doing this with 3D interpolation.
     if(d == 2 || d == 6 || d == 10 || d == 14) // If in HRIR database
     {
         // Getting HRIRs from .sofa file
         const double *hrir = sofa.getHRIR(channel, az, el, d);
         
         // Creating HRTF bucket to fill in with frequency data
-        std::array<float, 1024 * 2> HRTF;
+        std::array<float, fftSize * 2> HRTF;
             
         // Writing this data to the bucket HRTF
         for(auto i = 0; i < buffer; ++i)
@@ -47,14 +45,15 @@ std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int e
         fourierTransform(HRTF);
         
         // Convolution
-        for(auto i = 0; i < 1024 * 2; ++i)
+        for(auto i = 0; i < fftSize * 2; ++i)
         {
             outputFreq[i] = HRTF[i] * signal[i];
         }
         
         inverseFourierTransform(outputFreq);
         
-        for(auto i = 0; i < 1024; ++i)
+        // Does this have to be 1024 or whatever the buffer is?
+        for(auto i = 0; i < buffer; ++i)
         {
             output[channel][i] = outputFreq[i];
         }
@@ -82,14 +81,9 @@ std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int e
         const double *hrirLow = sofa.getHRIR(channel, az, el, dLow);
         const double *hrirHigh = sofa.getHRIR(channel, az, el, dHigh);
         
-        // Creating HRTF bucket to fill in with frequency data
-        std::array<float, 1024 * 2> HRTFLow;
-        std::array<float, 1024 * 2> HRTFHigh;
-        std::array<float, 1024 * 2> HRTF;
-        
         
         // Writing this data to the bucket HRTFLow
-        for(auto i = 0; i < buffer; ++i)
+        for(auto i = 0; i < fftSize; ++i)
         {
             pushNextSampleIntoFifo(hrirLow[i], HRTFLow);
         }
@@ -97,7 +91,7 @@ std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int e
         fourierTransform(HRTFLow);
         
         // Writing this data to the bucket HRTFHigh
-        for(auto i = 0; i < buffer; ++i)
+        for(auto i = 0; i < fftSize; ++i)
         {
             pushNextSampleIntoFifo(hrirHigh[i], HRTFHigh);
         }
@@ -107,13 +101,13 @@ std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int e
         // The for loops above and below this are an example of not knowing how many samples to run these for
         
         // Weighting
-        for(auto i = 0; i < 1024 * 2; ++i)
+        for(auto i = 0; i < fftSize * 2; ++i)
         {
             HRTF[i] = HRTFLow[i] * dLowW + HRTFHigh[i] * dHighW;
         }
         
         // Convolution
-        for(auto i = 0; i < 1024 * 2; ++i)
+        for(auto i = 0; i < fftSize * 2; ++i)
         {
             outputFreq[i] = HRTF[i] * signal[i];
         }
@@ -121,7 +115,7 @@ std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int e
         inverseFourierTransform(outputFreq);
         
         // Not quite sure how to do inverse fft
-        for(auto i = 0; i < 1024; ++i)
+        for(auto i = 0; i < buffer; ++i)
         {
             output[channel][i] = outputFreq[i];
         }
@@ -132,18 +126,18 @@ std::array<std::array<float, 1024>, 2> InterpolationDSP::interConv(int az, int e
 
 
 
-void InterpolationDSP::fourierTransform (std::array<float,1024 * 2> fftData)
+void InterpolationDSP::fourierTransform (std::array<float,fftSize * 2> fftData)
 {
     fft.performRealOnlyForwardTransform(fftData.data());
 }
 
-void InterpolationDSP::inverseFourierTransform (std::array<float,1024 * 2> fftData)
+void InterpolationDSP::inverseFourierTransform (std::array<float,fftSize * 2> fftData)
 {
     fft.performRealOnlyInverseTransform(fftData.data());
 }
 
                                        
-void InterpolationDSP::pushNextSampleIntoFifo (float sample, std::array<float,1024 * 2> fftData) noexcept
+void InterpolationDSP::pushNextSampleIntoFifo (float sample, std::array<float,fftSize * 2> fftData) noexcept
 {
     // if the fifo contains enough data, set a flag to say
     // that the next line should now be rendered..
