@@ -195,6 +195,7 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
             }
             else
             {
+                // Zero padding
                 interp.pushNextSampleIntoFifo(0.0f, fftSignal);
             }
             
