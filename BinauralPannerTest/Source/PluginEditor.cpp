@@ -30,7 +30,6 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     azKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.45));
     azKnob.setColour(juce::Slider::ColourIds::rotarySliderOutlineColourId, juce::Colours::ivory.darker(0.33));
     addAndMakeVisible(azKnob);
-//    sliderAttachment.emplace_back(new juce::AudioProcessorValueTreeState::SliderAttachment(audioProcessor.state, "AzimuthAngle", azKnob));
     
     azKnobLabel.setText("azimuth", juce::dontSendNotification);
     azKnobLabel.attachToComponent(&azKnob, false);
@@ -52,7 +51,6 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     elKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.45));
     elKnob.setColour(juce::Slider::ColourIds::rotarySliderOutlineColourId, juce::Colours::ivory.darker(0.33));
     addAndMakeVisible(elKnob);
- //   sliderAttachment.emplace_back(new juce::AudioProcessorValueTreeState::SliderAttachment(audioProcessor.state, "ElevationAngle", elKnob));
     
     elKnobLabel.setText("elevation", juce::dontSendNotification);
     elKnobLabel.attachToComponent(&elKnob, false);
@@ -74,7 +72,6 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     dSlider.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.45));
     dSlider.setColour(juce::Slider::ColourIds::backgroundColourId, juce::Colours::ivory.darker(0.33));
     addAndMakeVisible(dSlider);
- //   sliderAttachment.emplace_back(new juce::AudioProcessorValueTreeState::SliderAttachment(audioProcessor.state, "DistanceValue", dSlider));
     
     dSliderLabel.setText("distance", juce::dontSendNotification);
     dSliderLabel.attachToComponent(&dSlider, false);
