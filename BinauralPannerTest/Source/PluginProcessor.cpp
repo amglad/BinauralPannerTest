@@ -200,6 +200,10 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
         {
             hrir = interp.getHRIR(azimuthAngle, elevationAngle, distanceValue, numSamples, channel);
             // Loading the impulse response we want to the convolution
+            for (auto n = 0; n < interp.fftSize; n++)
+            {
+                DBG(hrir[n]); // Getting some NAN values
+            }
             conv.loadImpulseResponse(hrir, 2048, juce::dsp::Convolution::Stereo::yes, juce::dsp::Convolution::Trim::yes, 0);
         }
         
