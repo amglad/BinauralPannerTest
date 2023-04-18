@@ -202,8 +202,15 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
         }
         interp.fourierTransform(fftSignal);
         // ..do something to the data...
-        // Doing interpolation and convolution
-        std::array<std::array<float, 1024>, 2> output = interp.interConv(azimuthAngle, elevationAngle, distanceValue, numSamples, channel, fftSignal);
+        if (changedKnobs?)
+        {
+            // Doing interpolation and convolution
+            interp.interConv(azimuthAngle, elevationAngle, distanceValue, numSamples, channel, fftSignal, buffer);
+        }
+        else
+        {
+            interp.reConv(numSamples, channel, fftSignal, buffer);
+        }
     }
 
     

@@ -32,7 +32,9 @@ public:
     InterpolationDSP(); // Constructor
     
     // Interpolates and covolves in 1
-    std::array<std::array<float, 1024>, 2> interConv(int az, int el, float d, int buffer, int channel, std::array<float,fftSize * 2> signal);
+    void interConv(int az, int el, float d, int numSamples, int channel, std::array<float,fftSize * 2> signal, juce::AudioBuffer<float>& buffer);
+    
+    void reConv(int numSamples, int channel, std::array<float,fftSize * 2> signal, juce::AudioBuffer<float>& buffer);
     
     void pushNextSampleIntoFifo (float sample, std::array<float,fftSize * 2> fftData) noexcept;
     
@@ -40,7 +42,6 @@ public:
     
     void inverseFourierTransform (std::array<float,fftSize * 2> fftData);
     
-    void getNextAudioBlock(const juce::AudioSourceChannelInfo& bufferToFill);
 
 private:
     float Fs;
@@ -57,7 +58,6 @@ private:
 //    audiofft::AudioFFT fft;
     
     // Creating final output (How do we make it variable with the buffer size?)
-    std::array<std::array<float, 1024>, 2> output;
     std::array<float, fftSize * 2> outputFreq;
     
     // Creating HRTF bucket to fill in with frequency data
