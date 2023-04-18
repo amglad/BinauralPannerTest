@@ -116,8 +116,17 @@ void BinauralPannerTestAudioProcessor::changeProgramName (int index, const juce:
 //==============================================================================
 void BinauralPannerTestAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    // Use this method as the place to do any pre-playback
-    // initialisation that you need..
+    juce::dsp::ProcessSpec spec;
+    
+    // Setting up specifications
+    spec.maximumBlockSize = samplesPerBlock;
+    spec.sampleRate = sampleRate;
+    spec.numChannels = getTotalNumOutputChannels();
+    
+    // Seting up the convolution
+    conv.prepare(spec);
+    conv.reset();
+    
 }
 
 void BinauralPannerTestAudioProcessor::releaseResources()
@@ -180,41 +189,30 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     float distanceValue = *state.getRawParameterValue("DistanceValue");
     setDistance(distanceValue);
     
-    // Creating an fft vector for the signal coming in;
-    std::array<float,2048 * 2> fftSignal;
+    // Making Audio Block
+    juce::dsp::AudioBlock<float> block {buffer};
     
-    
+    // Doing for both channels
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
-        auto* channelData = buffer.getWritePointer (channel);
-        for (auto n = 0; n < 2048; ++n)
+        // Getting the proper hrir
+        if (azimuthAngle != azStore || elevationAngle != elStore || distanceValue != dStore)
         {
-            if(n < numSamples)
-            {
-                fftSignal[n] = channelData[n];
-            }
-            else
-            {
-                // Zero padding
-                fftSignal[n] = 0.0f;
-            }
-            
+            hrir = interp.getHRIR(azimuthAngle, elevationAngle, distanceValue, numSamples, channel);
+            // Loading the impulse response we want to the convolution
+            conv.loadImpulseResponse(hrir, 2048, juce::dsp::Convolution::Stereo::yes, juce::dsp::Convolution::Trim::yes, 0);
         }
-        interp.fourierTransform(fftSignal);
         
-//        if (azimuthAngle != azStore || elevationAngle != elStore || distanceValue != dStore)
-//        {
-            // Doing interpolation and convolution
-            interp.interConv(azimuthAngle, elevationAngle, distanceValue, numSamples, channel, fftSignal, buffer);
-//        }
-//        else
-//        {
-//            interp.reConv(numSamples, channel, fftSignal, buffer);
-//        }
-//        azStore = azimuthAngle;
-//        elStore = elevationAngle;
-//        dStore = distanceValue;
-//        DBG(azStore);
+        // Setting comparison values
+        azStore = azimuthAngle;
+        elStore = elevationAngle;
+        dStore = distanceValue;
+        
+        // Writing to block
+        conv.process(juce::dsp::ProcessContextReplacing<float>(block));
+        // Writing to buffer
+        block.copyTo(buffer);
+        
     }
 
     

@@ -70,10 +70,14 @@ public:
     float azStore = 0.f;
     float elStore = 0.f;
     float dStore = 0.f;
+    const float* hrir;
+    juce::dsp::Convolution conv;
 
 private:
     
     InterpolationDSP interp;
+    
+    
  
 public:
     

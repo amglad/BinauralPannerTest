@@ -32,22 +32,10 @@ public:
     InterpolationDSP(); // Constructor
     
     // Interpolates and covolves in 1
-    void interConv(int az, int el, float d, int numSamples, int channel, std::array<float,fftSize * 2> signal, juce::AudioBuffer<float>& buffer);
-    
-    void reConv(int numSamples, int channel, std::array<float,fftSize * 2> signal, juce::AudioBuffer<float>& buffer);
-    
-    void pushNextSampleIntoFifo (float sample, std::array<float,fftSize * 2> fftData) noexcept;
-    
-    void fourierTransform (std::array<float,fftSize * 2> fftData);
-    
-    void inverseFourierTransform (std::array<float,fftSize * 2> fftData);
+    const float* getHRIR(int az, int el, float d, int numSamples, int channel);
     
 
 private:
-    float Fs;
-    float M;
-    int bufferSize;
-    
     int az;
     int el;
     float d;
@@ -55,26 +43,15 @@ private:
     float dMod;
     
     BasicSOFA::BasicSOFA sofa;
-//    audiofft::AudioFFT fft;
-    
-    // Creating final output (How do we make it variable with the buffer size?)
-    std::array<float, fftSize * 2> outputFreq;
     
     // Creating HRTF bucket to fill in with frequency data
     std::array<float, fftSize * 2> HRTFLow;
     std::array<float, fftSize * 2> HRTFHigh;
     std::array<float, fftSize * 2> HRTF;
-    
-    
+    std::array<float, fftSize * 2> hrir;
+    std::array<float, fftSize> hrirF;
+
     // fft object
     juce::dsp::FFT fft;
-    // 1024 size which will contain incoming audio data in samples
-    std::array<float, fftSize> fifo;
-    // 2048 size contains results of fft calculations
-    std::array<float,fftSize * 2> fftData;
-    // Temporary index
-    int fifoIndex = 0;
-    // Tells us whether the next FFt block is ready
-    bool nextFFTBlockReady = false;
     
 };
