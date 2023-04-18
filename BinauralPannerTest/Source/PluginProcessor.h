@@ -66,6 +66,10 @@ public:
     
     float distance;
     void setDistance(float distanceValue);
+    
+    float azStore = 0.f;
+    float elStore = 0.f;
+    float dStore = 0.f;
 
 private:
     

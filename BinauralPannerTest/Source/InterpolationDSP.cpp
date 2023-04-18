@@ -14,7 +14,7 @@ InterpolationDSP::InterpolationDSP() : fft (fftOrder)
 {
     
     // Reading SOFA file
-    bool success = sofa.readSOFAFile("/Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
+    bool success = sofa.readSOFAFile("/Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
     if(!success)
         return;
     
@@ -38,7 +38,7 @@ void InterpolationDSP::interConv(int az, int el, float d, int numSamples, int ch
         // Writing this data to the bucket HRTF
         for(auto n = 0; n < numSamples; ++n)
         {
-            pushNextSampleIntoFifo(hrir[n], HRTF);
+            HRTF[n] = hrir[n];
         }
         
         // FFT Calculation
@@ -82,7 +82,7 @@ void InterpolationDSP::interConv(int az, int el, float d, int numSamples, int ch
         // Writing this data to the bucket HRTFLow
         for(auto n = 0; n < fftSize; ++n)
         {
-            pushNextSampleIntoFifo(hrirLow[n], HRTFLow);
+            HRTFLow[n] = hrirLow[n];
         }
         // FFT Calculation
         fourierTransform(HRTFLow);
@@ -90,7 +90,7 @@ void InterpolationDSP::interConv(int az, int el, float d, int numSamples, int ch
         // Writing this data to the bucket HRTFHigh
         for(auto n = 0; n < fftSize; ++n)
         {
-            pushNextSampleIntoFifo(hrirHigh[n], HRTFHigh);
+            HRTFHigh[n] = hrirHigh[n];
         }
         // FFT Calculation
         fourierTransform(HRTFHigh);
@@ -100,7 +100,7 @@ void InterpolationDSP::interConv(int az, int el, float d, int numSamples, int ch
         // Weighting
         for(auto n = 0; n < fftSize * 2; ++n)
         {
-            HRTF[n] = HRTFLow[n] * dLowW + HRTFHigh[n] * dHighW;
+            HRTF[n] = (HRTFLow[n] * dLowW) + (HRTFHigh[n] * dHighW);
         }
         
         // Convolution

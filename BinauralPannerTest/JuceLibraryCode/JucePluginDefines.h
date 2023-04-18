@@ -14,7 +14,7 @@
  #define JucePlugin_Build_VST              0
 #endif
 #ifndef  JucePlugin_Build_VST3
- #define JucePlugin_Build_VST3             1
+ #define JucePlugin_Build_VST3             0
 #endif
 #ifndef  JucePlugin_Build_AU
  #define JucePlugin_Build_AU               1
@@ -41,13 +41,13 @@
  #define JucePlugin_Enable_ARA             0
 #endif
 #ifndef  JucePlugin_Name
- #define JucePlugin_Name                   "BinauralPannerTest"
+ #define JucePlugin_Name                   "BinauralPanner"
 #endif
 #ifndef  JucePlugin_Desc
  #define JucePlugin_Desc                   "BinauralPannerTest"
 #endif
 #ifndef  JucePlugin_Manufacturer
- #define JucePlugin_Manufacturer           "yourcompany"
+ #define JucePlugin_Manufacturer           "ya mum plugs"
 #endif
 #ifndef  JucePlugin_ManufacturerWebsite
  #define JucePlugin_ManufacturerWebsite    "www.yourcompany.com"
@@ -137,7 +137,7 @@
  #define JucePlugin_IAASubType             JucePlugin_PluginCode
 #endif
 #ifndef  JucePlugin_IAAName
- #define JucePlugin_IAAName                "yourcompany: BinauralPannerTest"
+ #define JucePlugin_IAAName                "ya mum plugs: BinauralPanner"
 #endif
 #ifndef  JucePlugin_VSTNumMidiInputs
  #define JucePlugin_VSTNumMidiInputs       16

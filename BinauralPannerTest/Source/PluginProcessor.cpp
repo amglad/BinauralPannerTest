@@ -34,17 +34,17 @@ juce::AudioProcessorValueTreeState::ParameterLayout BinauralPannerTestAudioProce
     
     params.push_back(std::make_unique<juce::AudioParameterFloat> (juce::ParameterID { "AzimuthAngle", 1}, // parameter ID
                                                                   "Azimuth", // parameter name in automation lane
-                                                                  juce::NormalisableRange<float>(-180.f,180.f,15.0), // normalizable range
+                                                                  juce::NormalisableRange<float>(-165.f,180.f,15.0), // normalizable range
                                                                   0.f) // default value
                                                                   );
     params.push_back(std::make_unique<juce::AudioParameterFloat> (juce::ParameterID { "ElevationAngle", 1}, // parameter ID
                                                                   "Elevation", // parameter name in automation lane
-                                                                  juce::NormalisableRange<float>(-45.f,90.f,15.0), // normalizable range
+                                                                  juce::NormalisableRange<float>(-45.f,75.f,15.0), // normalizable range
                                                                   0.f) // default value
                                                                   );
     params.push_back(std::make_unique<juce::AudioParameterFloat> (juce::ParameterID { "DistanceValue", 1}, // parameter ID
                                                                   "Distance", // parameter name in automation lane
-                                                                  juce::NormalisableRange<float>(-2.f,14.f,0.1), // normalizable range
+                                                                  juce::NormalisableRange<float>(2.f,14.f,0.1), // normalizable range
                                                                   6.f) // default value
                                                                   );
     
@@ -191,26 +191,30 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
         {
             if(n < numSamples)
             {
-                interp.pushNextSampleIntoFifo (channelData[n],fftSignal);
+                fftSignal[n] = channelData[n];
             }
             else
             {
                 // Zero padding
-                interp.pushNextSampleIntoFifo(0.0f, fftSignal);
+                fftSignal[n] = 0.0f;
             }
             
         }
         interp.fourierTransform(fftSignal);
-        // ..do something to the data...
-        if (changedKnobs?)
-        {
+        
+//        if (azimuthAngle != azStore || elevationAngle != elStore || distanceValue != dStore)
+//        {
             // Doing interpolation and convolution
             interp.interConv(azimuthAngle, elevationAngle, distanceValue, numSamples, channel, fftSignal, buffer);
-        }
-        else
-        {
-            interp.reConv(numSamples, channel, fftSignal, buffer);
-        }
+//        }
+//        else
+//        {
+//            interp.reConv(numSamples, channel, fftSignal, buffer);
+//        }
+//        azStore = azimuthAngle;
+//        elStore = elevationAngle;
+//        dStore = distanceValue;
+//        DBG(azStore);
     }
 
     

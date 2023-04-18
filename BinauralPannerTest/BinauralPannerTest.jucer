@@ -2,7 +2,9 @@
 
 <JUCERPROJECT id="tF5nrN" name="BinauralPannerTest" projectType="audioplug"
               useAppConfig="0" addUsingNamespaceToJuceHeader="0" displaySplashScreen="1"
-              jucerFormatVersion="1" headerPath="~/BinauralPannerTest/BinauralPannerTest/Source/SOFA/libBasicSOFA-master-2/libBasicSOFA&#10;~/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/include&#10;~/BinauralPannerTest/BinauralPannerTest/Source/AudioFFT">
+              jucerFormatVersion="1" headerPath="~/BinauralPannerTest/BinauralPannerTest/Source/SOFA/libBasicSOFA-master-2/libBasicSOFA&#10;~/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/include&#10;~/BinauralPannerTest/BinauralPannerTest/Source/AudioFFT"
+              pluginManufacturer="ya mum plugs" pluginDesc="BinauralPannerTest"
+              pluginName="BinauralPanner" pluginFormats="buildAU,buildStandalone">
   <MAINGROUP id="voG2Iq" name="BinauralPannerTest">
     <GROUP id="{AE9A6D91-9A3E-B082-3FBF-11E49878F5D1}" name="Source">
       <GROUP id="{FC3BA05A-2B6D-00DE-4184-E9992648EB9A}" name="hdf5">
