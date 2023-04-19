@@ -16,6 +16,8 @@ InterpolationDSP::InterpolationDSP() : fft (fftOrder)
     // Reading SOFA file
     bool success = sofa.readSOFAFile("/Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
     if(!success)
+        bool success = sofa.readSOFAFile("/Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
+    if(!success)
         return;
 
 }
@@ -30,11 +32,10 @@ void InterpolationDSP::getHRIR(int az, int el, float d, juce::AudioBuffer<float>
             const double *hrir = sofa.getHRIR(c, az, el, d);
             
             // Writing this data to a float array
-            for(auto n = 0; n < hrirSize; ++n)
+            for(int n = 0; n < hrirSize; ++n)
             {
                 buffer.getWritePointer(c)[n] = static_cast<float> (hrir[n]);
             }
-            
         }
     }
     else // If we need to interpolate
@@ -54,34 +55,40 @@ void InterpolationDSP::getHRIR(int az, int el, float d, juce::AudioBuffer<float>
             // Getting HRIRs from .sofa file
             const double *hrirLow = sofa.getHRIR(c, az, el, dLow);
             const double *hrirHigh = sofa.getHRIR(c, az, el, dHigh);
+            
             // Writing this data to the bucket HRTFLow
-            for(auto n = 0; n < fftSize; ++n)
+            for(int n = 0; n < fftSize; ++n)
             {
                 HRTFLow[n] = hrirLow[n];
             }
-            // FFT Calculation
-            fft.performRealOnlyForwardTransform(HRTFLow.data(),true);
             
             // Writing this data to the bucket HRTFHigh
-            for(auto n = 0; n < fftSize; ++n)
+            for(int n = 0; n < fftSize; ++n)
             {
                 HRTFHigh[n] = hrirHigh[n];
             }
-            // FFT Calculation
+            
+            // Time domain weighting?
+//            for (int n = 0; n < fftSize; ++n)
+//            {
+//                HRTF[n] = (HRTFLow[n] + HRTFHigh[n]) / 2;
+//            }
+            
+            // FFT Calculations
+            fft.performRealOnlyForwardTransform(HRTFLow.data(),true);
             fft.performRealOnlyForwardTransform(HRTFHigh.data(),true);
             
-            // The for loops above and below this are an example of not knowing how many samples to run these for
-            
             // Weighting
-            for(auto n = 0; n < fftSize * 2; ++n)
+            for(int n = 0; n < fftSize * 2; ++n)
             {
                 HRTF[n] = (HRTFLow[n] * dLowW) + (HRTFHigh[n] * dHighW);
             }
             
             // IFFT
             fft.performRealOnlyInverseTransform(HRTF.data());
+            
             // Writing this data to a float array
-            for(auto n = 0; n < hrirSize; ++n)
+            for(int n = 0; n < hrirSize; ++n)
             {
                 buffer.getWritePointer(c)[n] = HRTF[n];
             }

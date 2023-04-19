@@ -18,7 +18,6 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     
     
     // azimuth knob
-    // azKnob.addListener(this);
     azKnob.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
     azKnob.setBounds(50,75,150,150);
     azKnob.setRange(-180.0,180,15.0);
@@ -39,7 +38,6 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     
     
     // elevation knob
-    // elKnob.addListener(this);
     elKnob.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
     elKnob.setBounds(400,75,150,150);
     elKnob.setRange(-45.0,90,15.0);
@@ -60,7 +58,6 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     
     
     // distance slider
-    // dSlider.addListener(this);
     dSlider.setSliderStyle(juce::Slider::LinearVertical);
     dSlider.setBounds(225,50,150,200);
     dSlider.setRange(2.0,14.0,0.1);
@@ -95,7 +92,6 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     setResizable(true, true);
     setResizeLimits(windowWidth/2, windowHeight/2, windowWidth*2, windowHeight*2);
     setSize(windowWidth, windowHeight);
-    
     
     sliderAttachment.emplace_back(new juce::AudioProcessorValueTreeState::SliderAttachment(audioProcessor.state, "AzimuthAngle", azKnob));
     sliderAttachment.emplace_back(new juce::AudioProcessorValueTreeState::SliderAttachment(audioProcessor.state, "ElevationAngle", elKnob));
@@ -157,19 +153,3 @@ void BinauralPannerTestAudioProcessorEditor::resized()
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
 }
-
-//void BinauralPannerTestAudioProcessorEditor::sliderValueChanged(juce::Slider* slider)
-//{
-//    if (slider == &azKnob)
-//    {
-//        audioProcessor.setAzimuth(azKnob.getValue());
-//    }
-//    if (slider == &elKnob)
-//    {
-//        audioProcessor.setElevation(elKnob.getValue());
-//    }
-//    if (slider == &dSlider)
-//    {
-//        audioProcessor.setDistance(dSlider.getValue());
-//    }
-//}

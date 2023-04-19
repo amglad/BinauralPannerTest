@@ -34,12 +34,12 @@ juce::AudioProcessorValueTreeState::ParameterLayout BinauralPannerTestAudioProce
     
     params.push_back(std::make_unique<juce::AudioParameterFloat> (juce::ParameterID { "AzimuthAngle", 1}, // parameter ID
                                                                   "Azimuth", // parameter name in automation lane
-                                                                  juce::NormalisableRange<float>(-165.f,180.f,15.0), // normalizable range
+                                                                  juce::NormalisableRange<float>(-180.f,180.f,15.0), // normalizable range
                                                                   0.f) // default value
                                                                   );
     params.push_back(std::make_unique<juce::AudioParameterFloat> (juce::ParameterID { "ElevationAngle", 1}, // parameter ID
                                                                   "Elevation", // parameter name in automation lane
-                                                                  juce::NormalisableRange<float>(-45.f,75.f,15.0), // normalizable range
+                                                                  juce::NormalisableRange<float>(-45.f,90.f,15.0), // normalizable range
                                                                   0.f) // default value
                                                                   );
     params.push_back(std::make_unique<juce::AudioParameterFloat> (juce::ParameterID { "DistanceValue", 1}, // parameter ID
@@ -192,27 +192,29 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     // Making Audio Block
     juce::dsp::AudioBlock<float> block (buffer);
     auto context = juce::dsp::ProcessContextReplacing<float> (block);
+    
     double hrirFs = 96000;
     
     // Getting the proper hrir
     if (azimuthAngle != azStore || elevationAngle != elStore || distanceValue != dStore)
     {
         interp.getHRIR(azimuthAngle, elevationAngle, distanceValue, hrir);
-        conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir), hrirFs, juce::dsp::Convolution::Stereo::yes, juce::dsp::Convolution::Trim::yes, juce::dsp::Convolution::Normalise::no);
+        conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir),
+                                 hrirFs,
+                                 juce::dsp::Convolution::Stereo::yes,
+                                 juce::dsp::Convolution::Trim::yes,
+                                 juce::dsp::Convolution::Normalise::no);
     }
-    
-    // Doing for both channels
-    
-    // Setting comparison values
+
+    // Storing comparison values
     azStore = azimuthAngle;
     elStore = elevationAngle;
     dStore = distanceValue;
-    
+  
     // Writing to block
     conv.process(context);
     // Writing to buffer
     block.copyTo(buffer);
-        
 }
 
 //==============================================================================
