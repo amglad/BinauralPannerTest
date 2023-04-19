@@ -34,7 +34,7 @@ public:
     InterpolationDSP(); // Constructor
     
     // Interpolates and covolves in 1
-    juce::AudioBuffer<float> getHRIR(int az, int el, float d, int channel);
+    void getHRIR(int az, int el, float d, juce::AudioBuffer<float> & buffer);
     
 
 private:

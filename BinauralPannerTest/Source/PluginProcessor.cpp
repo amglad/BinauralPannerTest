@@ -127,6 +127,7 @@ void BinauralPannerTestAudioProcessor::prepareToPlay (double sampleRate, int sam
     conv.prepare(spec);
     conv.reset();
     
+    
 }
 
 void BinauralPannerTestAudioProcessor::releaseResources()
@@ -176,9 +177,6 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
     
-    // Getting buffer samples
-    int numSamples = buffer.getNumSamples();
-    
     // Getting azimuth, elevation, and distance
     float azimuthAngle = *state.getRawParameterValue("AzimuthAngle");
     float elevationAngle = *state.getRawParameterValue("ElevationAngle");
@@ -196,27 +194,25 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     auto context = juce::dsp::ProcessContextReplacing<float> (block);
     double hrirFs = 96000;
     
-    // Doing for both channels
-    for (int channel = 0; channel < totalNumInputChannels; ++channel)
+    // Getting the proper hrir
+    if (azimuthAngle != azStore || elevationAngle != elStore || distanceValue != dStore)
     {
-        // Getting the proper hrir
-        if (azimuthAngle != azStore || elevationAngle != elStore || distanceValue != dStore)
-        {
-            hrir = interp.getHRIR(azimuthAngle, elevationAngle, distanceValue, channel);
-            conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir), hrirFs, juce::dsp::Convolution::Stereo::yes, juce::dsp::Convolution::Trim::yes, juce::dsp::Convolution::Normalise::no);
-        }
-        
-        // Setting comparison values
-        azStore = azimuthAngle;
-        elStore = elevationAngle;
-        dStore = distanceValue;
-        
-        // Writing to block
-        conv.process(context);
-        // Writing to buffer
-        block.copyTo(buffer);
-        
+        interp.getHRIR(azimuthAngle, elevationAngle, distanceValue, hrir);
+        conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir), hrirFs, juce::dsp::Convolution::Stereo::yes, juce::dsp::Convolution::Trim::yes, juce::dsp::Convolution::Normalise::no);
     }
+    
+    // Doing for both channels
+    
+    // Setting comparison values
+    azStore = azimuthAngle;
+    elStore = elevationAngle;
+    dStore = distanceValue;
+    
+    // Writing to block
+    conv.process(context);
+    // Writing to buffer
+    block.copyTo(buffer);
+        
 }
 
 //==============================================================================

@@ -21,27 +21,22 @@ InterpolationDSP::InterpolationDSP() : fft (fftOrder)
 }
 
 
-juce::AudioBuffer<float> InterpolationDSP::getHRIR(int az, int el, float d, int channel)
+void InterpolationDSP::getHRIR(int az, int el, float d, juce::AudioBuffer<float> & buffer)
 {
     if(d == 2 || d == 6 || d == 10 || d == 14) // If in HRIR database
     {
-        // Getting HRIRs from .sofa file
-        const double *hrir = sofa.getHRIR(channel, az, el, d);
-        
-        // Writing this data to a float array
-//        for(auto n = 0; n < hrirSize; ++n)
-//        {
-//            hrirF[n] = hrir[n];
-//        }
-
-        IRbuffer.setDataToReferTo(hrirF, 2, hrirF[0], 2048);
-        
-        // Returning Data
-        return IRbuffer;
-        
+        for (int c = 0; c < buffer.getNumChannels() ; c++){
+            // Getting HRIRs from .sofa file
+            const double *hrir = sofa.getHRIR(c, az, el, d);
+            
+            // Writing this data to a float array
+            for(auto n = 0; n < hrirSize; ++n)
+            {
+                buffer.getWritePointer(c)[n] = static_cast<float> (hrir[n]);
+            }
+            
+        }
     }
-    
-    
     else // If we need to interpolate
     {
         // Finding the mod of our distance
@@ -55,47 +50,42 @@ juce::AudioBuffer<float> InterpolationDSP::getHRIR(int az, int el, float d, int 
         const double dLowW = abs((4 - dMod)/4);
         const double dHighW = abs(dMod/4);
             
-        // Getting HRIRs from .sofa file
-        const double *hrirLow = sofa.getHRIR(channel, az, el, dLow);
-        const double *hrirHigh = sofa.getHRIR(channel, az, el, dHigh);
-        
-        
-        // Writing this data to the bucket HRTFLow
-        for(auto n = 0; n < fftSize; ++n)
-        {
-            HRTFLow[n] = hrirLow[n];
+        for (int c = 0; c < buffer.getNumChannels() ; c++){
+            // Getting HRIRs from .sofa file
+            const double *hrirLow = sofa.getHRIR(c, az, el, dLow);
+            const double *hrirHigh = sofa.getHRIR(c, az, el, dHigh);
+            // Writing this data to the bucket HRTFLow
+            for(auto n = 0; n < fftSize; ++n)
+            {
+                HRTFLow[n] = hrirLow[n];
+            }
+            // FFT Calculation
+            fft.performRealOnlyForwardTransform(HRTFLow.data(),true);
+            
+            // Writing this data to the bucket HRTFHigh
+            for(auto n = 0; n < fftSize; ++n)
+            {
+                HRTFHigh[n] = hrirHigh[n];
+            }
+            // FFT Calculation
+            fft.performRealOnlyForwardTransform(HRTFHigh.data(),true);
+            
+            // The for loops above and below this are an example of not knowing how many samples to run these for
+            
+            // Weighting
+            for(auto n = 0; n < fftSize * 2; ++n)
+            {
+                HRTF[n] = (HRTFLow[n] * dLowW) + (HRTFHigh[n] * dHighW);
+            }
+            
+            // IFFT
+            fft.performRealOnlyInverseTransform(HRTF.data());
+            // Writing this data to a float array
+            for(auto n = 0; n < hrirSize; ++n)
+            {
+                buffer.getWritePointer(c)[n] = HRTF[n];
+            }
         }
-        // FFT Calculation
-        fft.performRealOnlyForwardTransform(HRTFLow.data());
-        
-        // Writing this data to the bucket HRTFHigh
-        for(auto n = 0; n < fftSize; ++n)
-        {
-            HRTFHigh[n] = hrirHigh[n];
-        }
-        // FFT Calculation
-        fft.performRealOnlyForwardTransform(HRTFHigh.data());
-        
-        // The for loops above and below this are an example of not knowing how many samples to run these for
-        
-        // Weighting
-        for(auto n = 0; n < fftSize * 2; ++n)
-        {
-            HRTF[n] = (HRTFLow[n] * dLowW) + (HRTFHigh[n] * dHighW);
-        }
-        
-        // IFFT
-        fft.performRealOnlyInverseTransform(HRTF.data());
-        
-        // Writing this data to a float array
-        for(auto n = 0; n < hrirSize; ++n)
-        {
-            IRbuffer.getWritePointer(channel)[n] = HRTF[n];
-        }
-        
-        // Returning Data
-        return IRbuffer;
-        
     }
 }
 

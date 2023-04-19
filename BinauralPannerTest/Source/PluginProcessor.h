@@ -70,7 +70,7 @@ public:
     float azStore = 2.f;
     float elStore = 2.f;
     float dStore = 4.f;
-    juce::AudioBuffer<float> hrir;
+    juce::AudioBuffer<float> hrir {2,2048};
     juce::dsp::Convolution conv;
 
 private:
