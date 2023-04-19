@@ -36,7 +36,7 @@ void InterpolationDSP::interConv(int az, int el, float d, int numSamples, int ch
         std::array<float, fftSize * 2> HRTF;
             
         // Writing this data to the bucket HRTF
-        for(auto n = 0; n < numSamples; ++n)
+        for(auto n = 0; n < fftSize; ++n)
         {
             HRTF[n] = hrir[n];
         }

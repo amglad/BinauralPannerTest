@@ -25,7 +25,8 @@ public:
     // Designates size of the fft window and the number of points on which it will operate. Corresponds to 2 to the power of order
     static constexpr auto fftOrder = 11;
     // Left bit shift operator which produces 2048 as binary number 100,000,000,000
-    static constexpr auto fftSize = 1 << fftOrder;
+//    static constexpr auto fftSize = 1 << fftOrder;
+    static constexpr auto fftSize = 2048;
     
 
 public:
@@ -64,6 +65,9 @@ private:
     std::array<float, fftSize * 2> HRTFLow;
     std::array<float, fftSize * 2> HRTFHigh;
     std::array<float, fftSize * 2> HRTF;
+    
+    
+    
     
     
     // fft object
