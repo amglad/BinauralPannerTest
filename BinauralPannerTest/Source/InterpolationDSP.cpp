@@ -21,7 +21,7 @@ InterpolationDSP::InterpolationDSP() : fft (fftOrder)
 }
 
 
-const float* InterpolationDSP::getHRIR(int az, int el, float d, int numSamples, int channel) // Not sure which amount of signal (buffer or just 1024 we will be using)
+juce::AudioBuffer<float> InterpolationDSP::getHRIR(int az, int el, float d, int channel)
 {
     if(d == 2 || d == 6 || d == 10 || d == 14) // If in HRIR database
     {
@@ -29,13 +29,15 @@ const float* InterpolationDSP::getHRIR(int az, int el, float d, int numSamples, 
         const double *hrir = sofa.getHRIR(channel, az, el, d);
         
         // Writing this data to a float array
-        for(auto n = 0; n < numSamples; ++n)
-        {
-            hrirF[n] = hrir[n];
-        }
+//        for(auto n = 0; n < hrirSize; ++n)
+//        {
+//            hrirF[n] = hrir[n];
+//        }
+
+        IRbuffer.setDataToReferTo(hrirF, 2, hrirF[0], 2048);
         
         // Returning Data
-        return hrirF.data();
+        return IRbuffer;
         
     }
     
@@ -85,14 +87,14 @@ const float* InterpolationDSP::getHRIR(int az, int el, float d, int numSamples, 
         // IFFT
         fft.performRealOnlyInverseTransform(HRTF.data());
         
-        // Putting into right size array
-        for (auto n = 0; n < fftSize; ++n)
+        // Writing this data to a float array
+        for(auto n = 0; n < hrirSize; ++n)
         {
-            hrir[n] = HRTF[n];
+            IRbuffer.getWritePointer(channel)[n] = HRTF[n];
         }
         
-        // Returning data
-        return hrir.data();
+        // Returning Data
+        return IRbuffer;
         
     }
 }

@@ -175,22 +175,26 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     // this code if your algorithm always overwrites all the output channels.
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
-        
-    
     
     // Getting buffer samples
     int numSamples = buffer.getNumSamples();
     
     // Getting azimuth, elevation, and distance
     float azimuthAngle = *state.getRawParameterValue("AzimuthAngle");
-    setAzimuth(azimuthAngle);
     float elevationAngle = *state.getRawParameterValue("ElevationAngle");
-    setElevation(elevationAngle);
     float distanceValue = *state.getRawParameterValue("DistanceValue");
+    
+    if (azimuthAngle == -180.f) azimuthAngle = 180.f;
+    if (elevationAngle == 90.f) azimuthAngle = 0.f;
+    
+    setAzimuth(azimuthAngle);
+    setElevation(elevationAngle);
     setDistance(distanceValue);
     
     // Making Audio Block
-    juce::dsp::AudioBlock<float> block {buffer};
+    juce::dsp::AudioBlock<float> block (buffer);
+    auto context = juce::dsp::ProcessContextReplacing<float> (block);
+    double hrirFs = 96000;
     
     // Doing for both channels
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
@@ -198,13 +202,8 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
         // Getting the proper hrir
         if (azimuthAngle != azStore || elevationAngle != elStore || distanceValue != dStore)
         {
-            hrir = interp.getHRIR(azimuthAngle, elevationAngle, distanceValue, numSamples, channel);
-            // Loading the impulse response we want to the convolution
-            for (auto n = 0; n < interp.fftSize; n++)
-            {
-                DBG(hrir[n]); // Getting some NAN values
-            }
-            conv.loadImpulseResponse(hrir, 2048, juce::dsp::Convolution::Stereo::yes, juce::dsp::Convolution::Trim::yes, 0);
+            hrir = interp.getHRIR(azimuthAngle, elevationAngle, distanceValue, channel);
+            conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir), hrirFs, juce::dsp::Convolution::Stereo::yes, juce::dsp::Convolution::Trim::yes, juce::dsp::Convolution::Normalise::no);
         }
         
         // Setting comparison values
@@ -213,25 +212,11 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
         dStore = distanceValue;
         
         // Writing to block
-        conv.process(juce::dsp::ProcessContextReplacing<float>(block));
+        conv.process(context);
         // Writing to buffer
         block.copyTo(buffer);
         
     }
-
-    
-    // This is the place where you'd normally do the guts of your plugin's
-    // audio processing...
-    // Make sure to reset the state if your inner loop is processing
-    // the samples and the outer loop is handling the channels.
-    // Alternatively, you can process the samples with the channels
-    // interleaved by keeping the same state.
-
-    
-    
-    
-    
-
 }
 
 //==============================================================================
@@ -268,7 +253,6 @@ void BinauralPannerTestAudioProcessor::setStateInformation (const void* data, in
         state.replaceState(juce::ValueTree::fromXml(*xml));
     }
     
-        
 }
 
 void BinauralPannerTestAudioProcessor::setAzimuth(float azimuthValue)
