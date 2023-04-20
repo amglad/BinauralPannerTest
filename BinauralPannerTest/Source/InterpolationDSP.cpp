@@ -15,9 +15,10 @@ InterpolationDSP::InterpolationDSP() : fft (fftOrder)
     
     // Reading SOFA file
     bool success = sofa.readSOFAFile("/Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
+    bool success2;
     if(!success)
-        bool success = sofa.readSOFAFile("/Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
-    if(!success)
+        success2 = sofa.readSOFAFile("/Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
+    if(!success2)
         return;
 
 }
