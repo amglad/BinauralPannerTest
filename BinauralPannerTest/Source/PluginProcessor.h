@@ -67,10 +67,16 @@ public:
     float distance;
     void setDistance(float distanceValue);
     
-    float azStore = 4.f;
-    float elStore = 4.f;
-    float dStore = 4.f;
+    float azStore = 0.f;
+    float elStore = 0.f;
+    float dStore = 2.f;
+    
     juce::AudioBuffer<float> hrir {2, 2048};
+    juce::AudioBuffer<float> hrirStore {2, 2048};
+    
+    juce::AudioBuffer<float> contextBuffer {2, 2048};
+    juce::AudioBuffer<float> contextStoreBuffer {2, 2048};
+    
     juce::dsp::Convolution conv;
 
 private:

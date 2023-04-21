@@ -36,6 +36,10 @@ public:
     // Interpolates and covolves in 1
     void getHRIR(int az, int el, float d, juce::AudioBuffer<float> & buffer);
     
+//    void crossfade(juce::AudioBuffer<float> & contextStoreBuffer,
+//                   juce::AudioBuffer<float> & contextBuffer,
+//                   juce::AudioBuffer<float> & buffer);
+    
 
 private:
     int az;

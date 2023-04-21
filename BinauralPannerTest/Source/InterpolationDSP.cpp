@@ -97,3 +97,21 @@ void InterpolationDSP::getHRIR(int az, int el, float d, juce::AudioBuffer<float>
     }
 }
 
+
+//void InterpolationDSP::crossfade(juce::AudioBuffer<float> & contextStoreBuffer,
+//                                 juce::AudioBuffer<float> & contextBuffer,
+//                                 juce::AudioBuffer<float> & buffer)
+//{
+//    int numSamples = contextBuffer.getNumSamples();
+//
+//    for (int channel = 0; channel < 2; ++channel) // loop through both channels
+//    {
+//        for (int n = 0; n < numSamples; ++n)
+//        {
+//            buffer.getWritePointer(channel)[n] =
+//                                  (1 - n / numSamples) * contextStoreBuffer.getSample(channel, n)
+//                                  + (n / numSamples) * contextBuffer.getSample(channel, n);
+//        }
+//    }
+//}
+
