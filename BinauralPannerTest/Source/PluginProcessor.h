@@ -71,6 +71,10 @@ public:
     float elStore = 0.f;
     float dStore = 2.f;
     
+    // counting variable for how many times we run our crossfade thing
+    int i = 0;
+    float lengthFade = 10.f;
+    
     juce::AudioBuffer<float> hrir {2, 2048};
     juce::AudioBuffer<float> hrirStore {2, 2048};
     

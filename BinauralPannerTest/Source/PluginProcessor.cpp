@@ -127,7 +127,6 @@ void BinauralPannerTestAudioProcessor::prepareToPlay (double sampleRate, int sam
     conv.prepare(spec);
     conv.reset();
     
-    
 }
 
 void BinauralPannerTestAudioProcessor::releaseResources()
@@ -182,6 +181,8 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         contextStoreBuffer.clear (i, 0, buffer.getNumSamples());
     
+    int numSamples = buffer.getNumSamples();
+    
     
     // Getting azimuth, elevation, and distance
     float azimuthAngle = *state.getRawParameterValue("AzimuthAngle");
@@ -200,9 +201,16 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     auto context = juce::dsp::ProcessContextReplacing<float> (block);
     
     double hrirFs = 96000;
+ 
+    float shiftInterval = numSamples * (1/lengthFade);
     
     // Getting the proper hrir when a knob moves
     if (azimuthAngle != azStore || elevationAngle != elStore || distanceValue != dStore)
+    {
+        i = 0;
+    }
+        
+    if (i >= 0 && i <= lengthFade)
     {
             // this is where we're coming from
             juce::dsp::AudioBlock<float> blockStore (buffer);
@@ -230,17 +238,21 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
             conv.process(context);
             block.copyTo(contextBuffer);
         
-        int numSamples = buffer.getNumSamples();
+        float shiftIndex = numSamples * (i/lengthFade);
         
-        for (int channel = 0; channel < totalNumOutputChannels; ++channel) // loop through both channels
+        for (int c = 0; c < totalNumOutputChannels; ++c) // loop through both channels
         {
-            for (int n = 0; n < numSamples; ++n) // our crossfade is currently the length of 1 buffer
+            for (int n = 0; n < numSamples; ++n)
             {
-                buffer.getWritePointer(channel)[n] =
-                                      ((numSamples - n) / numSamples) * contextStoreBuffer.getWritePointer(channel)[n]
-                                      + (n / numSamples) * contextBuffer.getWritePointer(channel)[n];
+                float index = shiftIndex + (shiftInterval * (n / numSamples));
+                float multiplier = index / numSamples;
+                
+                buffer.getWritePointer(c)[n] =
+                contextStoreBuffer.getWritePointer(c)[n] * (1 - multiplier) +
+                contextBuffer.getWritePointer(c)[n] * multiplier;
             }
         }
+        i++;
     }
     else{
         // Writing to block
