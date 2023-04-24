@@ -73,7 +73,6 @@ public:
     
     // counting variable for how many times we run our crossfade thing
     int i = 0;
-    float lengthFade = 10.f;
     
     juce::AudioBuffer<float> hrir {2, 2048};
     juce::AudioBuffer<float> hrirStore {2, 2048};
@@ -82,6 +81,7 @@ public:
     juce::AudioBuffer<float> contextStoreBuffer {2, 2048};
     
     juce::dsp::Convolution conv;
+
 
 private:
     

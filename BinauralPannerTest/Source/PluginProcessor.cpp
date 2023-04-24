@@ -173,13 +173,13 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     // This is here to avoid people getting screaming feedback
     // when they first compile a plugin, but obviously you don't need to keep
     // this code if your algorithm always overwrites all the output channels.
-    for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
-        buffer.clear (i, 0, buffer.getNumSamples());
-    // might need these?
-    for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
-        contextBuffer.clear (i, 0, buffer.getNumSamples());
-    for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
-        contextStoreBuffer.clear (i, 0, buffer.getNumSamples());
+//    for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
+//        buffer.clear (i, 0, buffer.getNumSamples());
+//    // might need these?
+//    for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
+//        contextBuffer.clear (i, 0, buffer.getNumSamples());
+//    for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
+//        contextStoreBuffer.clear (i, 0, buffer.getNumSamples());
     
     int numSamples = buffer.getNumSamples();
     
@@ -201,57 +201,47 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     auto context = juce::dsp::ProcessContextReplacing<float> (block);
     
     double hrirFs = 96000;
- 
-    float shiftInterval = numSamples * (1/lengthFade);
+    int numSamplesHRIR = 2048;
     
     // Getting the proper hrir when a knob moves
     if (azimuthAngle != azStore || elevationAngle != elStore || distanceValue != dStore)
     {
+        
+        juce::dsp::AudioBlock<float> blockStore (buffer);
+        auto contextStore = juce::dsp::ProcessContextReplacing<float> (blockStore);
+        // convolve and put it in a buffer for crossfading
+        interp.getHRIR(azStore, elStore, dStore, hrirStore);
+        conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir),
+                                 hrirFs,
+                                 juce::dsp::Convolution::Stereo::yes,
+                                 juce::dsp::Convolution::Trim::yes,
+                                 juce::dsp::Convolution::Normalise::no);
+        conv.process(contextStore);
+        blockStore.copyTo(contextStoreBuffer);
+
+        interp.getHRIR(azimuthAngle, elevationAngle, distanceValue, hrir);
+        conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir),
+                                 hrirFs,
+                                 juce::dsp::Convolution::Stereo::yes,
+                                 juce::dsp::Convolution::Trim::yes,
+                                 juce::dsp::Convolution::Normalise::no);
+        conv.process(context);
+        block.copyTo(contextBuffer);
+        
         i = 0;
     }
         
-    if (i >= 0 && i <= lengthFade)
+    if (i >= 0 && i <= numSamplesHRIR/numSamples)
     {
-            // this is where we're coming from
-            juce::dsp::AudioBlock<float> blockStore (buffer);
-            auto contextStore = juce::dsp::ProcessContextReplacing<float> (blockStore);
-            
-            interp.getHRIR(azStore, elStore, dStore, hrirStore);
-            conv.loadImpulseResponse(juce::AudioBuffer<float> (hrirStore),
-                                     hrirFs,
-                                     juce::dsp::Convolution::Stereo::yes,
-                                     juce::dsp::Convolution::Trim::yes,
-                                     juce::dsp::Convolution::Normalise::no);
-            
-            // convolve and put it in a buffer for crossfading
-            conv.process(contextStore);
-            blockStore.copyTo(contextStoreBuffer);
-            
-            
-            // this is where we're going
-            interp.getHRIR(azimuthAngle, elevationAngle, distanceValue, hrir);
-            conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir),
-                                     hrirFs,
-                                     juce::dsp::Convolution::Stereo::yes,
-                                     juce::dsp::Convolution::Trim::yes,
-                                     juce::dsp::Convolution::Normalise::no);
-            conv.process(context);
-            block.copyTo(contextBuffer);
-        
-        float shiftIndex = numSamples * (i/lengthFade);
-        
-        for (int c = 0; c < totalNumOutputChannels; ++c) // loop through both channels
+        for (int c = 0; c < totalNumOutputChannels; ++c)
         {
             for (int n = 0; n < numSamples; ++n)
             {
-                float index = shiftIndex + (shiftInterval * (n / numSamples));
-                float multiplier = index / numSamples;
-                
-                buffer.getWritePointer(c)[n] =
-                contextStoreBuffer.getWritePointer(c)[n] * (1 - multiplier) +
-                contextBuffer.getWritePointer(c)[n] * multiplier;
+                buffer.getWritePointer(c)[n] = contextStoreBuffer.getWritePointer(c)[n + (numSamples * i)] +
+                                                     contextBuffer.getWritePointer(c)[n + (numSamples * i)];
             }
         }
+
         i++;
     }
     else{

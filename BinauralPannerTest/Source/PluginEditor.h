@@ -47,9 +47,10 @@ private:
     
     juce::LookAndFeel_V4 lookAndFeelV4;
     
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BinauralPannerTestAudioProcessorEditor)
+    
 public:
     
     std::vector<std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment>> sliderAttachment;
 
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BinauralPannerTestAudioProcessorEditor)
 };
