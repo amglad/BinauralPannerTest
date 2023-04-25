@@ -70,19 +70,18 @@ public:
     float azStore = 0.f;
     float elStore = 0.f;
     float dStore = 2.f;
+
+    double hrirFs = 96000;
+    int numSamplesConv = 2048;
     
-    // counting variable for how many times we run our crossfade thing
-    int i = 0;
-    float lengthFade = 10.f;
+    int i = 100;
     
     juce::AudioBuffer<float> hrir {2, 2048};
     juce::AudioBuffer<float> hrirStore {2, 2048};
-    
-    juce::AudioBuffer<float> contextBuffer {2, 2048};
-    juce::AudioBuffer<float> contextStoreBuffer {2, 2048};
+    juce::AudioBuffer<float> convBuffer {2, 2048};
     
     juce::dsp::Convolution conv;
-
+    
 private:
     
     InterpolationDSP interp;
