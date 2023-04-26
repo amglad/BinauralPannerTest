@@ -69,7 +69,7 @@ public:
     
     float azStore = 0.f;
     float elStore = 0.f;
-    float dStore = 2.f;
+    float dStore = 6.f;
 
     double hrirFs = 96000;
     int numSamplesConv = 2048;
@@ -77,10 +77,15 @@ public:
     int i = 100;
     
     juce::AudioBuffer<float> hrir {2, 2048};
-    juce::AudioBuffer<float> hrirStore {2, 2048};
-    juce::AudioBuffer<float> convBuffer {2, 2048};
+    juce::AudioBuffer<float> hrirOld {2, 2048};
+    juce::AudioBuffer<float> hrirNew {2, 2048};
+    
+    juce::AudioBuffer<float> convBufferOld {2, 2048};
+    juce::AudioBuffer<float> convBufferNew {2, 2048};
     
     juce::dsp::Convolution conv;
+  
+    juce::dsp::Convolution convNew;
     
 private:
     

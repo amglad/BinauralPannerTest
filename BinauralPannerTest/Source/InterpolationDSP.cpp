@@ -24,9 +24,9 @@ InterpolationDSP::InterpolationDSP() : fft (fftOrder)
 }
 
 
-void InterpolationDSP::getHRIR(int az, int el, float d, juce::AudioBuffer<float> & buffer)
+void InterpolationDSP::getHRIR(float az, float el, float d, juce::AudioBuffer<float> & buffer)
 {
-    if(d == 2 || d == 6 || d == 10 || d == 14) // If in HRIR database
+    if(d == 2.0f || d == 6.0f || d == 10.0f || d == 14.0f) // If in HRIR database
     {
         for (int c = 0; c < buffer.getNumChannels() ; c++){
             // Getting HRIRs from .sofa file
@@ -42,15 +42,15 @@ void InterpolationDSP::getHRIR(int az, int el, float d, juce::AudioBuffer<float>
     else // If we need to interpolate
     {
         // Finding the mod of our distance
-        float dMod = fmod((d-2),4);
+        float dMod = fmod((d-2.f),4.f);
         
         // Getting the surrounding distances
         int dLow = d - dMod;
         int dHigh = d + (4 - dMod);
         
         // Finding weights
-        const double dLowW = abs((4 - dMod)/4);
-        const double dHighW = abs(dMod/4);
+        float dLowW = abs((4.f - dMod)/4.f);
+        float dHighW = abs(dMod/4.f);
             
         for (int c = 0; c < buffer.getNumChannels() ; c++){
             // Getting HRIRs from .sofa file
@@ -60,20 +60,14 @@ void InterpolationDSP::getHRIR(int az, int el, float d, juce::AudioBuffer<float>
             // Writing this data to the bucket HRTFLow
             for(int n = 0; n < fftSize; ++n)
             {
-                HRTFLow[n] = hrirLow[n];
+                HRTFLow[n] = static_cast<float> (hrirLow[n]);
             }
             
             // Writing this data to the bucket HRTFHigh
             for(int n = 0; n < fftSize; ++n)
             {
-                HRTFHigh[n] = hrirHigh[n];
+                HRTFHigh[n] = static_cast<float> (hrirHigh[n]);
             }
-            
-            // Time domain weighting?
-//            for (int n = 0; n < fftSize; ++n)
-//            {
-//                HRTF[n] = (HRTFLow[n] + HRTFHigh[n]) / 2;
-//            }
             
             // FFT Calculations
             fft.performRealOnlyForwardTransform(HRTFLow.data(),true);

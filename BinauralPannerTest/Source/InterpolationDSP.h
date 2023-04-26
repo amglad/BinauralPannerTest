@@ -34,7 +34,7 @@ public:
     InterpolationDSP(); // Constructor
     
     // Interpolates and covolves in 1
-    void getHRIR(int az, int el, float d, juce::AudioBuffer<float> & buffer);
+    void getHRIR(float az, float el, float d, juce::AudioBuffer<float> & buffer);
     
 //    void crossfade(juce::AudioBuffer<float> & contextStoreBuffer,
 //                   juce::AudioBuffer<float> & contextBuffer,
@@ -42,11 +42,9 @@ public:
     
 
 private:
-    int az;
-    int el;
+    float az;
+    float el;
     float d;
-    
-    float dMod;
     
     BasicSOFA::BasicSOFA sofa;
     

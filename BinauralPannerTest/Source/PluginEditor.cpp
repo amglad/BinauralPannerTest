@@ -19,14 +19,15 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     
     // azimuth knob
     azKnob.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
+    azKnob.setRotaryParameters(-3.14f, 3.14f, true);
     azKnob.setBounds(50,75,150,150);
     azKnob.setRange(-180.0,180,15.0);
     azKnob.setValue(0.0);
     azKnob.setTextValueSuffix(" degrees");
     azKnob.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 100, 25);
     azKnob.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::ivory.darker(0.27));
-    azKnob.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::limegreen.darker(0.1));
-    azKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.45));
+    azKnob.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::ivory.darker(0.33));
+    azKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::limegreen.darker(0.1));
     azKnob.setColour(juce::Slider::ColourIds::rotarySliderOutlineColourId, juce::Colours::ivory.darker(0.33));
     addAndMakeVisible(azKnob);
     
@@ -39,6 +40,7 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     
     // elevation knob
     elKnob.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
+    elKnob.setRotaryParameters(-2.36f, 0.f, true);
     elKnob.setBounds(400,75,150,150);
     elKnob.setRange(-45.0,90,15.0);
     elKnob.setValue(0.0);
