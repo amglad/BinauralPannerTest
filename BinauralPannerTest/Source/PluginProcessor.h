@@ -67,6 +67,8 @@ public:
     float distance;
     void setDistance(float distanceValue);
     
+    void updateIR();
+    
     float azStore = 0.f;
     float elStore = 0.f;
     float dStore = 2.f;
@@ -86,7 +88,7 @@ public:
     juce::dsp::Convolution conv;
     juce::dsp::Convolution convOld;
     juce::dsp::Convolution convNew;
-    
+
     juce::dsp::ProcessSpec spec;
     
 private:
