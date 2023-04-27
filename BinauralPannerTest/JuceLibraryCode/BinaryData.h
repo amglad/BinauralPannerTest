@@ -8,6 +8,12 @@
 
 namespace BinaryData
 {
+    extern const char*   outlineside_png;
+    const int            outlineside_pngSize = 121481;
+
+    extern const char*   outlinetop2_png;
+    const int            outlinetop2_pngSize = 7276;
+
     extern const char*   gif2h5;
     const int            gif2h5Size = 211136;
 
@@ -330,7 +336,7 @@ namespace BinaryData
     const int            SmallTheaterHRIRs_1_0_sofaSize = 25051963;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 107;
+    const int namedResourceListSize = 109;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

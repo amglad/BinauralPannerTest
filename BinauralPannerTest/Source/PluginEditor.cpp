@@ -98,6 +98,9 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     sliderAttachment.emplace_back(new juce::AudioProcessorValueTreeState::SliderAttachment(audioProcessor.state, "AzimuthAngle", azKnob));
     sliderAttachment.emplace_back(new juce::AudioProcessorValueTreeState::SliderAttachment(audioProcessor.state, "ElevationAngle", elKnob));
     sliderAttachment.emplace_back(new juce::AudioProcessorValueTreeState::SliderAttachment(audioProcessor.state, "DistanceValue", dSlider));
+    
+ //   headTop = juce::ImageCache::getFromMemory(BinaryData::outlinetop2_png, BinaryData::outlinetop2_pngSize);
+ //   headSide = juce::ImageCache::getFromMemory(BinaryData::outlineside_png, BinaryData::outlineside_pngSize);
 }
 
 BinauralPannerTestAudioProcessorEditor::~BinauralPannerTestAudioProcessorEditor()
@@ -128,6 +131,10 @@ void BinauralPannerTestAudioProcessorEditor::paint (juce::Graphics& g)
     
     azKnob.setBounds(azKnobX,azKnobY,knobWidth,knobHeight);
     elKnob.setBounds(elKnobX,elKnobY,knobWidth,knobHeight);
+    
+  //  g.drawImageWithin(headTop, azKnobX, azKnobY, knobWidth, knobHeight, juce::RectanglePlacement::Flags (juce::RectanglePlacement::centred));
+  //  g.drawImageWithin(headSide, elKnobX, elKnobY, knobWidth/2, knobHeight/2, juce::RectanglePlacement::Flags (juce::RectanglePlacement::onlyReduceInSize),(juce::RectanglePlacement::centred));
+ //   g.drawImage(headSide, elKnobX, elKnobY, knobWidth, knobHeight, elKnobX, elKnobY, knobWidth/2, knobHeight/2);
     
     
     // Slider bounds

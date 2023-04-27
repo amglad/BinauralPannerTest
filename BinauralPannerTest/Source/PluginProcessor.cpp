@@ -116,12 +116,18 @@ void BinauralPannerTestAudioProcessor::changeProgramName (int index, const juce:
 //==============================================================================
 void BinauralPannerTestAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    juce::dsp::ProcessSpec spec;
     
     // Setting up specifications
     spec.maximumBlockSize = samplesPerBlock;
     spec.sampleRate = sampleRate;
     spec.numChannels = getTotalNumOutputChannels();
+    
+    interp.getHRIR(azStore, elStore, dStore, hrir);
+    conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir),
+                             hrirFs,
+                             juce::dsp::Convolution::Stereo::yes,
+                             juce::dsp::Convolution::Trim::no,
+                             juce::dsp::Convolution::Normalise::no);
     
     // Seting up the convolution
     conv.prepare(spec);
@@ -175,6 +181,7 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
     {
         buffer.clear (i, 0, buffer.getNumSamples());
+        convBufferOld.clear (i, 0, convBufferOld.getNumSamples());
         convBufferNew.clear (i, 0, convBufferNew.getNumSamples());
     }
     
@@ -200,7 +207,7 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     if (azimuthAngle != azStore || elevationAngle != elStore || distanceValue != dStore)
     {
         interp.getHRIR(azStore, elStore, dStore, hrirOld);
-        conv.loadImpulseResponse(juce::AudioBuffer<float> (hrirOld),
+        convOld.loadImpulseResponse(juce::AudioBuffer<float> (hrirOld),
                                  hrirFs,
                                  juce::dsp::Convolution::Stereo::yes,
                                  juce::dsp::Convolution::Trim::no,
@@ -214,14 +221,13 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
                                  juce::dsp::Convolution::Trim::no,
                                  juce::dsp::Convolution::Normalise::no);
         
-        
         i = 0;
     }
 
     // start the timer for waiting; here, we wait 4 total buffers at a buffer size of 512
-    if (i >= 0 && i < (numSamplesConv/numSamples) * 16.f)
+    if (i >= 0 && i < numSamplesConv/numSamples)
     {
-        float totalBuffers = (numSamplesConv/numSamples) * 16.f;
+        float totalBuffers = numSamplesConv/numSamples;
         
         // when we're exactly halfway, prep the main conv object for later
         if (i == totalBuffers/2)
@@ -239,8 +245,11 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
             juce::dsp::AudioBlock<float> blockNew (buffer);
             auto contextNew = juce::dsp::ProcessContextReplacing<float> (blockNew);
             
-            conv.process(context);
-            block.copyTo(buffer);
+            juce::dsp::AudioBlock<float> blockOld (buffer);
+            auto contextOld = juce::dsp::ProcessContextReplacing<float> (blockOld);
+            
+            convOld.process(contextOld);
+            block.copyTo(convBufferOld);
             
             convNew.process(contextNew);
             blockNew.copyTo(convBufferNew);
@@ -253,7 +262,7 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
                 for (int n = 0; n < numSamples; ++n)
                 {
                     float mult = static_cast<float>(n) / static_cast<float>(numSamples) * multScale + multInt;
-                    float x = buffer.getWritePointer(c)[n] * (1.f-mult);
+                    float x = convBufferOld.getWritePointer(c)[n] * (1.f-mult);
                     float y = convBufferNew.getWritePointer(c)[n] * mult;
                     buffer.getWritePointer(c)[n] = x + y;
                 }

@@ -47,6 +47,9 @@ private:
     
     juce::LookAndFeel_V4 lookAndFeelV4;
     
+    juce::Image headSide;
+    juce::Image headTop;
+    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BinauralPannerTestAudioProcessorEditor)
     
 public:

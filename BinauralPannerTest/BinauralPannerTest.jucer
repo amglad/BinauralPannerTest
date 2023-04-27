@@ -8,6 +8,12 @@
               pluginVST3Category="Fx,Spatial,Surround">
   <MAINGROUP id="voG2Iq" name="BinauralPannerTest">
     <GROUP id="{AE9A6D91-9A3E-B082-3FBF-11E49878F5D1}" name="Source">
+      <GROUP id="{15EF816A-46E2-74EF-789F-41821F272E67}" name="BinaryData">
+        <FILE id="qVgwxb" name="outline-side.png" compile="0" resource="1"
+              file="Source/BinaryData/outline-side.png"/>
+        <FILE id="bcjXKM" name="outline-top2.png" compile="0" resource="1"
+              file="Source/BinaryData/outline-top2.png"/>
+      </GROUP>
       <GROUP id="{FC3BA05A-2B6D-00DE-4184-E9992648EB9A}" name="hdf5">
         <GROUP id="{6418F6CC-9FC1-D7E6-8544-A180C480DA6C}" name="1.12.2_2">
           <GROUP id="{743E4579-54CE-4875-FFBB-CFE2509CDF0F}" name="bin">
