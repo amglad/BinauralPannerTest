@@ -122,13 +122,13 @@ void BinauralPannerTestAudioProcessor::prepareToPlay (double sampleRate, int sam
     spec.sampleRate = sampleRate;
     spec.numChannels = getTotalNumOutputChannels();
     
-//    interp.getHRIR(azStore, elStore, dStore, hrir);
-//    conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir),
-//                             hrirFs,
-//                             juce::dsp::Convolution::Stereo::yes,
-//                             juce::dsp::Convolution::Trim::no,
-//                             juce::dsp::Convolution::Normalise::no);
-//
+    interp.getHRIR(azStore, elStore, dStore, hrir);
+    conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir),
+                             hrirFs,
+                             juce::dsp::Convolution::Stereo::yes,
+                             juce::dsp::Convolution::Trim::no,
+                             juce::dsp::Convolution::Normalise::no);
+
     // Seting up the convolution
     conv.prepare(spec);
     conv.reset();
@@ -179,12 +179,21 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     // when they first compile a plugin, but obviously you don't need to keep
     // this code if your algorithm always overwrites all the output channels.
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
-    {
         buffer.clear (i, 0, buffer.getNumSamples());
-        convBufferOld.clear (i, 0, convBufferOld.getNumSamples());
-        convBufferNew.clear (i, 0, convBufferNew.getNumSamples());
-    }
     
+    // Making Audio Block
+    juce::dsp::AudioBlock<float> block (buffer);
+    auto context = juce::dsp::ProcessContextReplacing<float> (block);
+
+    conv.process(context);
+    block.copyTo(buffer);
+    
+}
+
+// Updating IR Function
+void BinauralPannerTestAudioProcessor::updateIR()
+{
+
     // Getting azimuth, elevation, and distance
     float azimuthAngle = *state.getRawParameterValue("AzimuthAngle");
     float elevationAngle = *state.getRawParameterValue("ElevationAngle");
@@ -197,39 +206,7 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     setElevation(elevationAngle);
     setDistance(distanceValue);
     
-    // Making Audio Block
-    juce::dsp::AudioBlock<float> block (buffer);
-    auto context = juce::dsp::ProcessContextReplacing<float> (block);
-
-    int numSamples = buffer.getNumSamples();
-
-    // Getting the proper hrir when the knob changes
-    if (azimuthAngle != azStore || elevationAngle != elStore || distanceValue != dStore)
-    {
-//        interp.getHRIR(azStore, elStore, dStore, hrir);
-//        conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir),
-//                                 hrirFs,
-//                                 juce::dsp::Convolution::Stereo::yes,
-//                                 juce::dsp::Convolution::Trim::no,
-//                                 juce::dsp::Convolution::Normalise::no);
-        updateIR(); // This is right below the process block
-
-    }
-    
-    // this is the case where i has left our loop, and conv is properly set to our most recent IR (either upon opening the plugin, or once i indexes out of bounds)
-    conv.process(context);
-    block.copyTo(buffer);
-    
-    // Storing comparison values
-    azStore = azimuthAngle;
-    elStore = elevationAngle;
-    dStore = distanceValue;
-}
-
-// Updating IR Function
-void BinauralPannerTestAudioProcessor::updateIR()
-{
-    interp.getHRIR(azStore, elStore, dStore, hrir);
+    interp.getHRIR(azimuthAngle, elevationAngle, distanceValue, hrir);
     conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir),
                              hrirFs,
                              juce::dsp::Convolution::Stereo::yes,
@@ -297,81 +274,3 @@ juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
     return new BinauralPannerTestAudioProcessor();
 }
-
-
-
-
-
-//// Getting the proper hrir when the knob changes
-//if (azimuthAngle != azStore || elevationAngle != elStore || distanceValue != dStore)
-//{
-//    interp.getHRIR(azStore, elStore, dStore, hrirOld);
-//    convOld.loadImpulseResponse(juce::AudioBuffer<float> (hrirOld),
-//                             hrirFs,
-//                             juce::dsp::Convolution::Stereo::yes,
-//                             juce::dsp::Convolution::Trim::no,
-//                             juce::dsp::Convolution::Normalise::no);
-//
-//    // when a knob changes, load a new IR, but don't convolve it yet -- we need to wait a bit for it to load?
-//    interp.getHRIR(azimuthAngle, elevationAngle, distanceValue, hrirNew);
-//    convNew.loadImpulseResponse(juce::AudioBuffer<float> (hrirNew),
-//                             hrirFs,
-//                             juce::dsp::Convolution::Stereo::yes,
-//                             juce::dsp::Convolution::Trim::no,
-//                             juce::dsp::Convolution::Normalise::no);
-//
-//    i = 0;
-//}
-//
-//// start the timer for waiting; here, we wait 4 total buffers at a buffer size of 512
-//if (i >= 0 && i < numSamplesConv/numSamples)
-//{
-//    float totalBuffers = numSamplesConv/numSamples;
-//
-//    // when we're exactly halfway, prep the main conv object for later
-//    if (i == totalBuffers/2)
-//    {
-//        interp.getHRIR(azimuthAngle, elevationAngle, distanceValue, hrir);
-//        conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir),
-//                                 hrirFs,
-//                                 juce::dsp::Convolution::Stereo::yes,
-//                                 juce::dsp::Convolution::Trim::no,
-//                                 juce::dsp::Convolution::Normalise::no);
-//    }
-//    // when we're halfway or further, start fading between old and new
-//    if (i >= totalBuffers/2)
-//    {
-//        juce::dsp::AudioBlock<float> blockNew (buffer);
-//        auto contextNew = juce::dsp::ProcessContextReplacing<float> (blockNew);
-//
-//        juce::dsp::AudioBlock<float> blockOld (buffer);
-//        auto contextOld = juce::dsp::ProcessContextReplacing<float> (blockOld);
-//
-//        convOld.process(contextOld);
-//        block.copyTo(convBufferOld);
-//
-//        convNew.process(contextNew);
-//        blockNew.copyTo(convBufferNew);
-//
-//        float multScale = 1.f / (totalBuffers/2.f);
-//        float multInt = i - (totalBuffers/2.f) / (totalBuffers/2.f);
-//
-//        for (int c = 0; c < totalNumOutputChannels; ++c)
-//        {
-//            for (int n = 0; n < numSamples; ++n)
-//            {
-//                float mult = static_cast<float>(n) / static_cast<float>(numSamples) * multScale + multInt;
-//                float x = convBufferOld.getWritePointer(c)[n] * (1.f-mult);
-//                float y = convBufferNew.getWritePointer(c)[n] * mult;
-//                buffer.getWritePointer(c)[n] = x + y;
-//            }
-//        }
-//        i++;
-//    }
-//    // this is the case where we haven't waited half our buffers yet, so we still just process with the old IR
-//    else{
-//        conv.process(context);
-//        block.copyTo(buffer);
-//        i++;
-//    }
-//}

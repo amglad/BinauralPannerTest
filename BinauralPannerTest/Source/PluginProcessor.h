@@ -74,22 +74,14 @@ public:
     float dStore = 2.f;
 
     double hrirFs = 96000;
-    int numSamplesConv = 2048;
-    
-    int i = 100;
-    
+
     juce::AudioBuffer<float> hrir {2, 2048};
-    juce::AudioBuffer<float> hrirOld {2, 2048};
-    juce::AudioBuffer<float> hrirNew {2, 2048};
-    
-    juce::AudioBuffer<float> convBufferOld {2, 2048};
-    juce::AudioBuffer<float> convBufferNew {2, 2048};
     
     juce::dsp::Convolution conv;
-    juce::dsp::Convolution convOld;
-    juce::dsp::Convolution convNew;
 
     juce::dsp::ProcessSpec spec;
+
+    juce::AudioProcessorValueTreeState state;
     
 private:
     
@@ -97,7 +89,7 @@ private:
     
 public:
     
-    juce::AudioProcessorValueTreeState state;
+    
     
     // function to fill the value tree
     juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();

@@ -50,7 +50,7 @@ private:
     
     juce::LookAndFeel_V4 lookAndFeelV4;
     
-    
+    juce::ValueTree tree;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BinauralPannerTestAudioProcessorEditor)
     
 public:

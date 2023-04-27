@@ -15,6 +15,13 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
 {
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
+    tree.addListener(this);
+    addMouseListener(this, false);
+    setInterceptsMouseClicks(true, false);
+    
+    tree = audioProcessor.state.state;
+    
+    valueTreeRedirected(audioProcessor.state.state);
     
     // azimuth knob
     azKnob.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
@@ -163,22 +170,16 @@ void BinauralPannerTestAudioProcessorEditor::resized()
 }
 
 
-void BinauralPannerTestAudioProcessorEditor::valueTreePropertyChanged (juce::ValueTree &treeWhosePropertyHasChanged, const juce::Identifier &property){
-    
-    // Getting azimuth, elevation, and distance
-    int test = 1;
-    
-//    float azimuthAngle = *state.getRawParameterValue("AzimuthAngle");
-//    float elevationAngle = *state.getRawParameterValue("ElevationAngle");
-//    float distanceValue = *state.getRawParameterValue("DistanceValue");
-    
+void BinauralPannerTestAudioProcessorEditor::valueTreePropertyChanged (juce::ValueTree &treeWhosePropertyHasChanged, const juce::Identifier &property)
+{
+    audioProcessor.updateIR();
 }
 
 
-void BinauralPannerTestAudioProcessorEditor::valueTreeRedirected (juce::ValueTree &){
-    
-    if (juce::MessageManger::getInstance()->isThisTheMessageThread())
-        handleAsycUpdate();
-    else
-        triggerAsycUpdate();
+void BinauralPannerTestAudioProcessorEditor::valueTreeRedirected (juce::ValueTree &)
+{
+//    if (juce::MessageManager::getInstance()->isThisTheMessageThread())
+//        int test = 1;
+//    else
+//        int test = 1;
 }
