@@ -14,8 +14,8 @@
 //==============================================================================
 /**
 */
-class BinauralPannerTestAudioProcessorEditor  : public juce::AudioProcessorEditor
-                                                // public juce::Slider::Listener
+class BinauralPannerTestAudioProcessorEditor  : public juce::AudioProcessorEditor,
+                                                public juce::ValueTree::Listener
 {
 public:
     BinauralPannerTestAudioProcessorEditor (BinauralPannerTestAudioProcessor&);
@@ -29,6 +29,9 @@ public:
     
     int windowWidth = 600;
     int windowHeight = 300;
+    
+    void valueTreePropertyChanged (juce::ValueTree &treeWhosePropertyHasChanged, const juce::Identifier &property) override;
+    void valueTreeRedirected (juce::ValueTree &treeWhichHasBeenChanged) override;
     
 private:
     // This reference is provided as a quick way for your editor to
@@ -47,13 +50,12 @@ private:
     
     juce::LookAndFeel_V4 lookAndFeelV4;
     
-    juce::Image headSide;
-    juce::Image headTop;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BinauralPannerTestAudioProcessorEditor)
     
 public:
     
     std::vector<std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment>> sliderAttachment;
+    
 
 };

@@ -16,7 +16,6 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
     
-    
     // azimuth knob
     azKnob.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
     azKnob.setRotaryParameters(-3.14f, 3.14f, true);
@@ -161,4 +160,25 @@ void BinauralPannerTestAudioProcessorEditor::resized()
 {
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
+}
+
+
+void BinauralPannerTestAudioProcessorEditor::valueTreePropertyChanged (juce::ValueTree &treeWhosePropertyHasChanged, const juce::Identifier &property){
+    
+    // Getting azimuth, elevation, and distance
+    int test = 1;
+    
+//    float azimuthAngle = *state.getRawParameterValue("AzimuthAngle");
+//    float elevationAngle = *state.getRawParameterValue("ElevationAngle");
+//    float distanceValue = *state.getRawParameterValue("DistanceValue");
+    
+}
+
+
+void BinauralPannerTestAudioProcessorEditor::valueTreeRedirected (juce::ValueTree &){
+    
+    if (juce::MessageManger::getInstance()->isThisTheMessageThread())
+        handleAsycUpdate();
+    else
+        triggerAsycUpdate();
 }
