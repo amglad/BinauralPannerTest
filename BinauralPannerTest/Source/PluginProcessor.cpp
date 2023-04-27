@@ -206,12 +206,13 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     // Getting the proper hrir when the knob changes
     if (azimuthAngle != azStore || elevationAngle != elStore || distanceValue != dStore)
     {
-        interp.getHRIR(azStore, elStore, dStore, hrir);
-        conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir),
-                                 hrirFs,
-                                 juce::dsp::Convolution::Stereo::yes,
-                                 juce::dsp::Convolution::Trim::no,
-                                 juce::dsp::Convolution::Normalise::no);
+//        interp.getHRIR(azStore, elStore, dStore, hrir);
+//        conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir),
+//                                 hrirFs,
+//                                 juce::dsp::Convolution::Stereo::yes,
+//                                 juce::dsp::Convolution::Trim::no,
+//                                 juce::dsp::Convolution::Normalise::no);
+        updateIR(); // This is right below the process block
 
     }
     
