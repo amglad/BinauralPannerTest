@@ -27,7 +27,7 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     azKnob.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
     azKnob.setRotaryParameters(-3.14f, 3.14f, true);
     azKnob.setBounds(50,75,150,150);
-    azKnob.setRange(-180.0,180,15.0);
+    azKnob.setRange(-180.0,180,10.0); // Changed
     azKnob.setValue(0.0);
     azKnob.setTextValueSuffix(" degrees");
     azKnob.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 100, 25);
@@ -46,9 +46,9 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     
     // elevation knob
     elKnob.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
-    elKnob.setRotaryParameters(-2.36f, 0.f, true);
+    elKnob.setRotaryParameters(-2.36f, 0.f, true); // Need to change?
     elKnob.setBounds(400,75,150,150);
-    elKnob.setRange(-45.0,90,15.0);
+    elKnob.setRange(-90.0,90,10.0); // Changed
     elKnob.setValue(0.0);
     elKnob.setTextValueSuffix(" degrees");
     elKnob.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 100, 25);
@@ -68,8 +68,8 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     // distance slider
     dSlider.setSliderStyle(juce::Slider::LinearVertical);
     dSlider.setBounds(225,50,150,200);
-    dSlider.setRange(0.1,1.0,0.1);
-    dSlider.setValue(0.6);
+    dSlider.setRange(0.1,1.0,0.01); // Changed
+    dSlider.setValue(0.1); // Changed
     dSlider.setTextValueSuffix(" meters");
     dSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 100, 25);
     dSlider.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::ivory.darker(0.27));

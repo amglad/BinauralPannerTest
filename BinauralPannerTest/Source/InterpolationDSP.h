@@ -36,7 +36,7 @@ public:
     // Interpolates and covolves in 1
     void getHRIR(float az, float el, float d, juce::AudioBuffer<float> & buffer);
     
-    void SKHRIR(float az, float el, float d);
+    void SKHRIR(float az, float el, float d, juce::AudioBuffer<float> & buffer);
     
 //    void crossfade(juce::AudioBuffer<float> & contextStoreBuffer,
 //                   juce::AudioBuffer<float> & contextBuffer,

@@ -71,9 +71,10 @@ public:
     
     float azStore = 0.f;
     float elStore = 0.f;
-    float dStore = 2.f;
+    float dStore = 1.f;
 
-    double hrirFs = 96000;
+//    double hrirFs = 96000;
+    double hrirFs = 48000;
 
     juce::AudioBuffer<float> hrir {2, 2048};
     

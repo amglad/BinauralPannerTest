@@ -122,7 +122,8 @@ void BinauralPannerTestAudioProcessor::prepareToPlay (double sampleRate, int sam
     spec.sampleRate = sampleRate;
     spec.numChannels = getTotalNumOutputChannels();
     
-    interp.getHRIR(azStore, elStore, dStore, hrir);
+//    interp.getHRIR(azimuthAngle, elevationAngle, distanceValue, hrir);
+    interp.SKHRIR(azStore, elStore, dStore, hrir);
     conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir),
                              hrirFs,
                              juce::dsp::Convolution::Stereo::yes,
@@ -206,7 +207,8 @@ void BinauralPannerTestAudioProcessor::updateIR()
     setElevation(elevationAngle);
     setDistance(distanceValue);
     
-    interp.getHRIR(azimuthAngle, elevationAngle, distanceValue, hrir);
+//    interp.getHRIR(azimuthAngle, elevationAngle, distanceValue, hrir);
+    interp.SKHRIR(azimuthAngle, elevationAngle, distanceValue, hrir);
     conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir),
                              hrirFs,
                              juce::dsp::Convolution::Stereo::yes,

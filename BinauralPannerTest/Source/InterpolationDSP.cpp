@@ -23,6 +23,20 @@ InterpolationDSP::InterpolationDSP() : fft (fftOrder)
 
 }
 
+void InterpolationDSP::SKHRIR(float az, float el, float d, juce::AudioBuffer<float> & buffer)
+{
+    for (int c = 0; c < buffer.getNumChannels() ; c++){
+        // Getting HRIRs from .sofa file
+        const double *hrir = sofa.getHRIR(c, az, el, d);
+        
+        // Writing this data to a float array
+        for(int n = 0; n < hrirSize; ++n)
+        {
+            buffer.getWritePointer(c)[n] = static_cast<float> (hrir[n]);
+        }
+    }
+}
+
 
 void InterpolationDSP::getHRIR(float az, float el, float d, juce::AudioBuffer<float> & buffer)
 {
