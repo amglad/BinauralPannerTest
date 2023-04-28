@@ -68,9 +68,9 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     // distance slider
     dSlider.setSliderStyle(juce::Slider::LinearVertical);
     dSlider.setBounds(225,50,150,200);
-    dSlider.setRange(2.0,14.0,0.1);
-    dSlider.setValue(6.0);
-    dSlider.setTextValueSuffix(" feet");
+    dSlider.setRange(0.1,1.0,0.1);
+    dSlider.setValue(0.6);
+    dSlider.setTextValueSuffix(" meters");
     dSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 100, 25);
     dSlider.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::ivory.darker(0.27));
     dSlider.setColour(juce::Slider::ColourIds::trackColourId, juce::Colours::orange.brighter(0.9));

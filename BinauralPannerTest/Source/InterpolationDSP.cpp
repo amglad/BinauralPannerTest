@@ -14,10 +14,10 @@ InterpolationDSP::InterpolationDSP() : fft (fftOrder)
 {
     
     // Reading SOFA file
-    bool success = sofa.readSOFAFile("/Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
+    bool success = sofa.readSOFAFile("/Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/SOFA/ind01_h_sph_equivert_dir614_dist91.sofa");
     bool success2;
     if(!success)
-        success2 = sofa.readSOFAFile("/Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
+        success2 = sofa.readSOFAFile("/Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/SOFA/ind01_h_sph_equivert_dir614_dist91.sofa");
     if(!success2)
         return;
 
@@ -26,7 +26,7 @@ InterpolationDSP::InterpolationDSP() : fft (fftOrder)
 
 void InterpolationDSP::getHRIR(float az, float el, float d, juce::AudioBuffer<float> & buffer)
 {
-    if(d == 2.0f || d == 6.0f || d == 10.0f || d == 14.0f) // If in HRIR database
+    if(d == 0.1f || d == 0.2f || d == 0.3f || d ==0.4 || d == 0.5f || d == 0.6f || d == 0.7f || d ==0.8 || d == 0.9f || d == 1.0f) // If in HRIR database
     {
         for (int c = 0; c < buffer.getNumChannels() ; c++){
             // Getting HRIRs from .sofa file
@@ -42,15 +42,15 @@ void InterpolationDSP::getHRIR(float az, float el, float d, juce::AudioBuffer<fl
     else // If we need to interpolate
     {
         // Finding the mod of our distance
-        float dMod = fmod((d-2.f),4.f);
+        float dMod = fmod((d-0.1),0.1f);
         
         // Getting the surrounding distances
         int dLow = d - dMod;
-        int dHigh = d + (4 - dMod);
+        int dHigh = d + (0.1 - dMod);
         
         // Finding weights
-        float dLowW = abs((4.f - dMod)/4.f);
-        float dHighW = abs(dMod/4.f);
+        float dLowW = abs((0.1f - dMod)/0.1f);
+        float dHighW = abs(dMod/0.1f);
             
         for (int c = 0; c < buffer.getNumChannels() ; c++){
             // Getting HRIRs from .sofa file
