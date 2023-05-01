@@ -32,8 +32,22 @@ void InterpolationDSP::getHRIR(float az, float el, float d, juce::AudioBuffer<fl
     {
         for (int c = 0; c < buffer.getNumChannels() ; c++){
             // Getting HRIRs from .sofa file
-             const double *hrir = sofa.getHRIR(c, az, el, d);
+            const double *hrir = sofa.getHRIR(c, az, el, d);
             
+//            std::string azSt = std::to_string(static_cast <int> (az));
+//            std::string elSt = std::to_string(static_cast <int> (el));
+//            std::string dSt = std::to_string(static_cast <int> (d));
+//
+//            if (c == 0)
+//            {
+//                name = "_az" + azSt + "_el" + elSt + "_d" + dSt + "_L_wav";
+//            }
+//            else
+//            {
+//                name = "_az" + azSt + "_el" + elSt + "_d" + dSt + "_R_wav";
+//            }
+            
+//            std::string name1 = name;
 //            const auto name = "_96k_Test_wav"; //BinaryData::getNamedResourceOriginalFilename(BinaryData::namedResourceList[0]);
 //            int irDataSize = 8236;
 //            auto* irData = BinaryData::getNamedResource(name,irDataSize);
