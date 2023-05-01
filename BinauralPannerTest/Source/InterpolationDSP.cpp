@@ -32,30 +32,46 @@ void InterpolationDSP::getHRIR(float az, float el, float d, juce::AudioBuffer<fl
     {
         for (int c = 0; c < buffer.getNumChannels() ; c++){
             // Getting HRIRs from .sofa file
-            const double *hrir = sofa.getHRIR(c, az, el, d);
+//            const double *hrir = sofa.getHRIR(c, az, el, d);
             
-//            std::string azSt = std::to_string(static_cast <int> (az));
-//            std::string elSt = std::to_string(static_cast <int> (el));
-//            std::string dSt = std::to_string(static_cast <int> (d));
-//
-//            if (c == 0)
-//            {
-//                name = "_az" + azSt + "_el" + elSt + "_d" + dSt + "_L_wav";
-//            }
-//            else
-//            {
-//                name = "_az" + azSt + "_el" + elSt + "_d" + dSt + "_R_wav";
-//            }
             
-//            std::string name1 = name;
+            
+            
+            
+            
+            // Turning parameters into strings
+            std::string azSt = std::to_string(static_cast <int> (az));
+            std::string elSt = std::to_string(static_cast <int> (el));
+            std::string dSt = std::to_string(static_cast <int> (d));
+            
+            // Writes string
+            if (c == 0)
+            {
+                name = "_az" + azSt + "_el" + elSt + "_d" + dSt + "_L_wav";
+            }
+            else
+            {
+                name = "_az" + azSt + "_el" + elSt + "_d" + dSt + "_R_wav";
+            }
+        
+            // Getting to the right format
+            const char * name1 = name.c_str();
+            
 //            const auto name = "_96k_Test_wav"; //BinaryData::getNamedResourceOriginalFilename(BinaryData::namedResourceList[0]);
-//            int irDataSize = 8236;
-//            auto* irData = BinaryData::getNamedResource(name,irDataSize);
+            // Setting size and reading binary data
+            int irDataSize = 8236;
+            auto* irData = BinaryData::getNamedResource(name1,irDataSize);
+            
+            
+            
+            
+            
             
             // Writing this data to a float array
             for(int n = 0; n < hrirSize; ++n)
             {
-                buffer.getWritePointer(c)[n] = static_cast<float> (hrir[n]);
+//                buffer.getWritePointer(c)[n] = static_cast<float> (hrir[n]);
+                buffer.getWritePointer(c)[n] = static_cast<float> (irData[n]);
             }
         }
     }
@@ -74,19 +90,55 @@ void InterpolationDSP::getHRIR(float az, float el, float d, juce::AudioBuffer<fl
             
         for (int c = 0; c < buffer.getNumChannels() ; c++){
             // Getting HRIRs from .sofa file
-            auto *hrirLow = sofa.getHRIR(c, az, el, dLow);
-            auto *hrirHigh = sofa.getHRIR(c, az, el, dHigh);
+//            auto *hrirLow = sofa.getHRIR(c, az, el, dLow);
+//            auto *hrirHigh = sofa.getHRIR(c, az, el, dHigh);
+            
+            
+            
+            
+            
+            // Turning parameters into strings
+            std::string azSt = std::to_string(static_cast <int> (az));
+            std::string elSt = std::to_string(static_cast <int> (el));
+            std::string dLowSt = std::to_string(static_cast <int> (dLow));
+            std::string dHighSt = std::to_string(static_cast <int> (dHigh));
+            
+            // Writes string
+            if (c == 0)
+            {
+                nameLow = "_az" + azSt + "_el" + elSt + "_d" + dLowSt + "_L_wav";
+                nameHigh = "_az" + azSt + "_el" + elSt + "_d" + dHighSt + "_L_wav";
+            }
+            else
+            {
+                nameLow = "_az" + azSt + "_el" + elSt + "_d" + dLowSt + "_R_wav";
+                nameHigh = "_az" + azSt + "_el" + elSt + "_d" + dHighSt + "_L_wav";
+            }
+            
+            // Getting to the right format
+            const char * nameLow1 = nameLow.c_str();
+            const char * nameHigh1 = nameHigh.c_str();
+            
+//            const auto name = "_96k_Test_wav"; //BinaryData::getNamedResourceOriginalFilename(BinaryData::namedResourceList[0]);
+            // Setting size and reading binary data
+            int irDataSize = 8236;
+            auto* irDataLow = BinaryData::getNamedResource(nameLow1,irDataSize);
+            auto* irDataHigh = BinaryData::getNamedResource(nameHigh1,irDataSize);
+            
+            
+            
+            
             
             // Writing this data to the bucket HRTFLow
             for(int n = 0; n < hrirSize; ++n)
             {
-                HRTFLow[n] = hrirLow[n];
+                HRTFLow[n] = irDataLow[n];
             }
             
             // Writing this data to the bucket HRTFHigh
             for(int n = 0; n < hrirSize; ++n)
             {
-                HRTFHigh[n] = hrirHigh[n];
+                HRTFHigh[n] = irDataHigh[n];
             }
 
             // FFT Calculations

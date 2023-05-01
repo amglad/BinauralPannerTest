@@ -42,6 +42,8 @@ private:
     float el;
     float d;
     std::string name;
+    std::string nameLow;
+    std::string nameHigh;
     
     BasicSOFA::BasicSOFA sofa;
     
