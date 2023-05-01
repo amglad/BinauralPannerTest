@@ -128,6 +128,16 @@ void BinauralPannerTestAudioProcessor::prepareToPlay (double sampleRate, int sam
                              juce::dsp::Convolution::Stereo::yes,
                              juce::dsp::Convolution::Trim::no,
                              juce::dsp::Convolution::Normalise::no);
+    
+//    const auto name = "_96k_Test_wav"; //BinaryData::getNamedResourceOriginalFilename(BinaryData::namedResourceList[0]);
+//    int irDataSize = 8236;
+//    auto* irData = BinaryData::getNamedResource(name,irDataSize);
+//    conv.loadImpulseResponse(irData,
+//                             irDataSize,
+//                             juce::dsp::Convolution::Stereo::yes,
+//                             juce::dsp::Convolution::Trim::no,
+//                             0,
+//                             juce::dsp::Convolution::Normalise::no);
 
     // Seting up the convolution
     conv.prepare(spec);
@@ -185,8 +195,23 @@ void BinauralPannerTestAudioProcessor::processBlock (juce::AudioBuffer<float>& b
     juce::dsp::AudioBlock<float> block (buffer);
     auto context = juce::dsp::ProcessContextReplacing<float> (block);
 
+    int numSamples = buffer.getNumSamples();
+    
     conv.process(context);
     block.copyTo(buffer);
+    
+    double makeupGain_Lin = std::pow(10.0,gain_dB/20.0);
+    setGain(makeupGain_Lin);
+    
+    for (int c = 0; c < totalNumOutputChannels; ++c)
+    {
+        for (int n = 0; n < numSamples; ++n)
+        {
+            auto x = buffer.getWritePointer(c)[n];
+            buffer.getWritePointer(c)[n] = x * makeupGain;
+        }
+    }
+
     
 }
 
@@ -212,6 +237,16 @@ void BinauralPannerTestAudioProcessor::updateIR()
                              juce::dsp::Convolution::Stereo::yes,
                              juce::dsp::Convolution::Trim::no,
                              juce::dsp::Convolution::Normalise::no);
+    
+//    const auto name = "_96k_Test_wav"; //BinaryData::getNamedResourceOriginalFilename(BinaryData::namedResourceList[0]);
+//    int irDataSize = 8236;
+//    auto* irData = BinaryData::getNamedResource(name,irDataSize);
+//    conv.loadImpulseResponse(irData,
+//                             irDataSize,
+//                             juce::dsp::Convolution::Stereo::yes,
+//                             juce::dsp::Convolution::Trim::no,
+//                             0,
+//                             juce::dsp::Convolution::Normalise::no);
 }
 
 

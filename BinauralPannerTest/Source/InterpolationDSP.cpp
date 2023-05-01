@@ -14,10 +14,10 @@ InterpolationDSP::InterpolationDSP() : fft (fftOrder)
 {
     
     // Reading SOFA file
-    bool success = sofa.readSOFAFile("/Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
+    bool success = sofa.readSOFAFile("/Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRsPart2_1.0.sofa");
     bool success2;
     if(!success)
-        success2 = sofa.readSOFAFile("/Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRs_1.0.sofa");
+        success2 = sofa.readSOFAFile("/Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/SOFA/SmallTheaterHRIRsPart2_1.0.sofa");
     if(!success2)
         return;
 
@@ -26,11 +26,17 @@ InterpolationDSP::InterpolationDSP() : fft (fftOrder)
 
 void InterpolationDSP::getHRIR(float az, float el, float d, juce::AudioBuffer<float> & buffer)
 {
-    if(d == 2.0f || d == 6.0f || d == 10.0f || d == 14.0f) // If in HRIR database
+   // int dI = static_cast <int> (d);
+    
+    if(d == 2.f || d == 6.f || d == 10.f || d == 14.f) // If in HRIR database
     {
         for (int c = 0; c < buffer.getNumChannels() ; c++){
             // Getting HRIRs from .sofa file
-            const double *hrir = sofa.getHRIR(c, az, el, d);
+             const double *hrir = sofa.getHRIR(c, az, el, d);
+            
+//            const auto name = "_96k_Test_wav"; //BinaryData::getNamedResourceOriginalFilename(BinaryData::namedResourceList[0]);
+//            int irDataSize = 8236;
+//            auto* irData = BinaryData::getNamedResource(name,irDataSize);
             
             // Writing this data to a float array
             for(int n = 0; n < hrirSize; ++n)
@@ -54,27 +60,27 @@ void InterpolationDSP::getHRIR(float az, float el, float d, juce::AudioBuffer<fl
             
         for (int c = 0; c < buffer.getNumChannels() ; c++){
             // Getting HRIRs from .sofa file
-            const double *hrirLow = sofa.getHRIR(c, az, el, dLow);
-            const double *hrirHigh = sofa.getHRIR(c, az, el, dHigh);
+            auto *hrirLow = sofa.getHRIR(c, az, el, dLow);
+            auto *hrirHigh = sofa.getHRIR(c, az, el, dHigh);
             
             // Writing this data to the bucket HRTFLow
-            for(int n = 0; n < fftSize; ++n)
+            for(int n = 0; n < hrirSize; ++n)
             {
-                HRTFLow[n] = static_cast<float> (hrirLow[n]);
+                HRTFLow[n] = hrirLow[n];
             }
             
             // Writing this data to the bucket HRTFHigh
-            for(int n = 0; n < fftSize; ++n)
+            for(int n = 0; n < hrirSize; ++n)
             {
-                HRTFHigh[n] = static_cast<float> (hrirHigh[n]);
+                HRTFHigh[n] = hrirHigh[n];
             }
-            
+
             // FFT Calculations
             fft.performRealOnlyForwardTransform(HRTFLow.data(),true);
             fft.performRealOnlyForwardTransform(HRTFHigh.data(),true);
             
             // Weighting
-            for(int n = 0; n < fftSize * 2; ++n)
+            for(int n = 0; n < hrirSize * 2; ++n)
             {
                 HRTF[n] = (HRTFLow[n] * dLowW) + (HRTFHigh[n] * dHighW);
             }
@@ -108,4 +114,3 @@ void InterpolationDSP::getHRIR(float az, float el, float d, juce::AudioBuffer<fl
 //        }
 //    }
 //}
-

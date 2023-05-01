@@ -27,8 +27,6 @@ public:
     // Left bit shift operator which produces 2048 as binary number 100,000,000,000
     static constexpr auto fftSize = 1 << fftOrder;
     
-    int hrirSize = 2048;
-    
 
 public:
     InterpolationDSP(); // Constructor
@@ -36,11 +34,9 @@ public:
     // Interpolates and covolves in 1
     void getHRIR(float az, float el, float d, juce::AudioBuffer<float> & buffer);
     
-//    void crossfade(juce::AudioBuffer<float> & contextStoreBuffer,
-//                   juce::AudioBuffer<float> & contextBuffer,
-//                   juce::AudioBuffer<float> & buffer);
+    int hrirSize = 2048;
     
-
+    
 private:
     float az;
     float el;
@@ -52,13 +48,8 @@ private:
     std::array<float, fftSize * 2> HRTFLow;
     std::array<float, fftSize * 2> HRTFHigh;
     std::array<float, fftSize * 2> HRTF;
-    std::array<float, fftSize * 2> hrir;
-    std::array<float, fftSize> hrirF;
 
     // fft object
     juce::dsp::FFT fft;
-    
-    // audio buffer to store impulse response in
-    juce::AudioBuffer<float> IRbuffer;
     
 };

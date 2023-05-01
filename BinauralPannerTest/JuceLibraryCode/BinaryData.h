@@ -8,6 +8,12 @@
 
 namespace BinaryData
 {
+    extern const char*   _48k_Test_wav;
+    const int            _48k_Test_wavSize = 2092;
+
+    extern const char*   _96k_Test_wav;
+    const int            _96k_Test_wavSize = 8236;
+
     extern const char*   outlineside_png;
     const int            outlineside_pngSize = 121481;
 
@@ -336,7 +342,7 @@ namespace BinaryData
     const int            SmallTheaterHRIRs_1_0_sofaSize = 25051963;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 109;
+    const int namedResourceListSize = 111;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

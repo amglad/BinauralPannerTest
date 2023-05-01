@@ -67,6 +67,9 @@ public:
     float distance;
     void setDistance(float distanceValue);
     
+    double gain_dB = 0.0;
+    void setGain(double makeupGain_Lin) {makeupGain = makeupGain_Lin;}
+    
     void updateIR();
     
     float azStore = 0.f;
@@ -87,9 +90,9 @@ private:
     
     InterpolationDSP interp;
     
+    float makeupGain;
+    
 public:
-    
-    
     
     // function to fill the value tree
     juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();

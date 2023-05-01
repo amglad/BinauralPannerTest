@@ -26,7 +26,7 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     // azimuth knob
     azKnob.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
     azKnob.setRotaryParameters(-3.14f, 3.14f, true);
-    azKnob.setBounds(50,75,150,150);
+    azKnob.setBounds(400,75,150,150);
     azKnob.setRange(-180.0,180,15.0);
     azKnob.setValue(0.0);
     azKnob.setTextValueSuffix(" degrees");
@@ -46,8 +46,8 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     
     // elevation knob
     elKnob.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
-    elKnob.setRotaryParameters(-2.36f, 0.f, true);
-    elKnob.setBounds(400,75,150,150);
+    elKnob.setRotaryParameters(2.36f, 0.f, true);
+    elKnob.setBounds(50,75,150,150);
     elKnob.setRange(-45.0,90,15.0);
     elKnob.setValue(0.0);
     elKnob.setTextValueSuffix(" degrees");
@@ -85,10 +85,31 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     addAndMakeVisible(dSliderLabel);
     
     
+    // makeup gain knob
+    gainKnob.addListener(this);
+    gainKnob.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
+    gainKnob.setBounds(450,250,125,100);
+    gainKnob.setRange(0.0,12.0,0.1);
+    gainKnob.setValue(0.0);
+    gainKnob.setTextValueSuffix(" dB");
+    gainKnob.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 100, 25);
+    gainKnob.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::ivory.darker(0.27));
+    gainKnob.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::orange.brighter(0.9));
+    gainKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.45));
+    gainKnob.setColour(juce::Slider::ColourIds::rotarySliderOutlineColourId, juce::Colours::ivory.darker(0.33));
+    addAndMakeVisible(gainKnob);
+    
+    gainLabel.setText("makeup gain", juce::dontSendNotification);
+    gainLabel.attachToComponent(&gainKnob, false);
+    gainLabel.setJustificationType(juce::Justification::centredTop);
+    gainLabel.setFont(juce::Font("Arial Black", 22.0, juce::Font::bold));
+    addAndMakeVisible(gainLabel);
+    
+    
     // plugin title
     title.setText("panning, binaurally", juce::dontSendNotification);
     title.setJustificationType(juce::Justification::centred);
-    title.setBounds(175,250,250,50);
+    title.setBounds(175,275,250,50);
     title.setFont(juce::Font("Arial Black", 32.0, juce::Font::bold));
     title.setColour(juce::Label::ColourIds::textColourId, juce::Colours::whitesmoke);
     addAndMakeVisible(title);
@@ -129,14 +150,18 @@ void BinauralPannerTestAudioProcessorEditor::paint (juce::Graphics& g)
     auto knobWidth = width * 150/windowWidth;
     auto knobHeight = height * 150/windowHeight;
     
-    auto azKnobX = width * 50/windowWidth;
+    auto azKnobX = width * 400/windowWidth;
     auto azKnobY = height * 75/windowHeight;
     
-    auto elKnobX = width * 400/windowWidth;
+    auto elKnobX = width * 50/windowWidth;
     auto elKnobY = height * 75/windowHeight;
+    
+    auto gainKnobX = width * 450/windowWidth;
+    auto gainKnobY = height * 250/windowHeight;
     
     azKnob.setBounds(azKnobX,azKnobY,knobWidth,knobHeight);
     elKnob.setBounds(elKnobX,elKnobY,knobWidth,knobHeight);
+    gainKnob.setBounds(gainKnobX,gainKnobY,knobWidth/1.2,knobHeight/1.5);
     
   //  g.drawImageWithin(headTop, azKnobX, azKnobY, knobWidth, knobHeight, juce::RectanglePlacement::Flags (juce::RectanglePlacement::centred));
   //  g.drawImageWithin(headSide, elKnobX, elKnobY, knobWidth/2, knobHeight/2, juce::RectanglePlacement::Flags (juce::RectanglePlacement::onlyReduceInSize),(juce::RectanglePlacement::centred));
@@ -158,7 +183,7 @@ void BinauralPannerTestAudioProcessorEditor::paint (juce::Graphics& g)
     auto titleHeight = height * 50/windowHeight;
     
     auto titleX = width * 175/windowWidth;
-    auto titleY = height * 250/windowHeight;
+    auto titleY = height * 275/windowHeight;
  
     title.setBounds(titleX,titleY,titleWidth,titleHeight);
 }
@@ -182,4 +207,12 @@ void BinauralPannerTestAudioProcessorEditor::valueTreeRedirected (juce::ValueTre
 //        int test = 1;
 //    else
 //        int test = 1;
+}
+
+void BinauralPannerTestAudioProcessorEditor::sliderValueChanged (juce::Slider * slider)
+{
+    if (slider == &gainKnob)
+    {
+        audioProcessor.gain_dB = slider->getValue();
+    }
 }

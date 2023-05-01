@@ -9,6 +9,8 @@
   <MAINGROUP id="voG2Iq" name="BinauralPannerTest">
     <GROUP id="{AE9A6D91-9A3E-B082-3FBF-11E49878F5D1}" name="Source">
       <GROUP id="{15EF816A-46E2-74EF-789F-41821F272E67}" name="BinaryData">
+        <FILE id="jVGuZz" name="48k Test.wav" compile="0" resource="1" file="Source/BinaryData/48k Test.wav"/>
+        <FILE id="GJVKWI" name="96k Test.wav" compile="0" resource="1" file="Source/BinaryData/96k Test.wav"/>
         <FILE id="qVgwxb" name="outline-side.png" compile="0" resource="1"
               file="Source/BinaryData/outline-side.png"/>
         <FILE id="bcjXKM" name="outline-top2.png" compile="0" resource="1"
@@ -406,9 +408,9 @@
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
   <EXPORTFORMATS>
-    <XCODE_MAC targetFolder="Builds/MacOSX" extraLinkerFlags="-L$/Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/lib&#10;-L$/Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/lib&#10;-lhdf5&#10;-lhdf5_cpp&#10;-lhdf5_fortran&#10;-lhdf5_hl_cpp&#10;-lhdf5_hl_fortran&#10;-lhdf5_hl&#10;-lhdf5hl_fortran"
-               extraCompilerFlags="-DH5_USE_110_API" externalLibraries="hdf5&#10;"
-               xcodeValidArchs="arm64,i386,x86_64">
+    <XCODE_MAC targetFolder="Builds/MacOSX" extraCompilerFlags="-DH5_USE_110_API"
+               externalLibraries="hdf5&#10;" xcodeValidArchs="arm64,i386,x86_64"
+               extraLinkerFlags="-L$/Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/lib&#10;-L$/Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/lib&#10;-lhdf5&#10;-lhdf5_cpp&#10;-lhdf5_fortran&#10;-lhdf5_hl_cpp&#10;-lhdf5_hl_fortran&#10;-lhdf5_hl&#10;-lhdf5hl_fortran">
       <CONFIGURATIONS>
         <CONFIGURATION isDebug="1" name="Debug" targetName="BinauralPannerTest" libraryPath="/Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/lib&#10;/Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/lib"/>
         <CONFIGURATION isDebug="0" name="Release" targetName="BinauralPannerTest" libraryPath="/Users/mitchglad/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/lib&#10;/Users/erictarr/BinauralPannerTest/BinauralPannerTest/Source/hdf5/1.12.2_2/lib"
