@@ -8,17 +8,5213 @@
 
 namespace BinaryData
 {
-    extern const char*   _48k_Test_wav;
-    const int            _48k_Test_wavSize = 2092;
+    extern const char*   az0_el0_d2_L_wav;
+    const int            az0_el0_d2_L_wavSize = 4140;
 
-    extern const char*   _96k_Test_wav;
-    const int            _96k_Test_wavSize = 8236;
+    extern const char*   az0_el0_d2_R_wav;
+    const int            az0_el0_d2_R_wavSize = 4140;
 
-    extern const char*   outlineside_png;
-    const int            outlineside_pngSize = 121481;
+    extern const char*   az0_el0_d6_L_wav;
+    const int            az0_el0_d6_L_wavSize = 4140;
 
-    extern const char*   outlinetop2_png;
-    const int            outlinetop2_pngSize = 7276;
+    extern const char*   az0_el0_d6_R_wav;
+    const int            az0_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az0_el0_d10_L_wav;
+    const int            az0_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az0_el0_d10_R_wav;
+    const int            az0_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az0_el0_d14_L_wav;
+    const int            az0_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az0_el0_d14_R_wav;
+    const int            az0_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az0_el15_d2_L_wav;
+    const int            az0_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az0_el15_d2_R_wav;
+    const int            az0_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az0_el15_d6_L_wav;
+    const int            az0_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az0_el15_d6_R_wav;
+    const int            az0_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az0_el15_d10_L_wav;
+    const int            az0_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az0_el15_d10_R_wav;
+    const int            az0_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az0_el15_d14_L_wav;
+    const int            az0_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az0_el15_d14_R_wav;
+    const int            az0_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az0_el30_d2_L_wav;
+    const int            az0_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az0_el30_d2_R_wav;
+    const int            az0_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az0_el30_d6_L_wav;
+    const int            az0_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az0_el30_d6_R_wav;
+    const int            az0_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az0_el30_d10_L_wav;
+    const int            az0_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az0_el30_d10_R_wav;
+    const int            az0_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az0_el30_d14_L_wav;
+    const int            az0_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az0_el30_d14_R_wav;
+    const int            az0_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az0_el45_d2_L_wav;
+    const int            az0_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az0_el45_d2_R_wav;
+    const int            az0_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az0_el45_d6_L_wav;
+    const int            az0_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az0_el45_d6_R_wav;
+    const int            az0_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az0_el45_d10_L_wav;
+    const int            az0_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az0_el45_d10_R_wav;
+    const int            az0_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az0_el45_d14_L_wav;
+    const int            az0_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az0_el45_d14_R_wav;
+    const int            az0_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az0_el60_d2_L_wav;
+    const int            az0_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az0_el60_d2_R_wav;
+    const int            az0_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az0_el60_d6_L_wav;
+    const int            az0_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az0_el60_d6_R_wav;
+    const int            az0_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az0_el60_d10_L_wav;
+    const int            az0_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az0_el60_d10_R_wav;
+    const int            az0_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az0_el60_d14_L_wav;
+    const int            az0_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az0_el60_d14_R_wav;
+    const int            az0_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az0_el75_d2_L_wav;
+    const int            az0_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az0_el75_d2_R_wav;
+    const int            az0_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az0_el75_d6_L_wav;
+    const int            az0_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az0_el75_d6_R_wav;
+    const int            az0_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az0_el75_d10_L_wav;
+    const int            az0_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az0_el75_d10_R_wav;
+    const int            az0_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az0_el75_d14_L_wav;
+    const int            az0_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az0_el75_d14_R_wav;
+    const int            az0_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az0_el90_d2_L_wav;
+    const int            az0_el90_d2_L_wavSize = 4140;
+
+    extern const char*   az0_el90_d2_R_wav;
+    const int            az0_el90_d2_R_wavSize = 4140;
+
+    extern const char*   az0_el90_d6_L_wav;
+    const int            az0_el90_d6_L_wavSize = 4140;
+
+    extern const char*   az0_el90_d6_R_wav;
+    const int            az0_el90_d6_R_wavSize = 4140;
+
+    extern const char*   az0_el90_d10_L_wav;
+    const int            az0_el90_d10_L_wavSize = 4140;
+
+    extern const char*   az0_el90_d10_R_wav;
+    const int            az0_el90_d10_R_wavSize = 4140;
+
+    extern const char*   az0_el90_d14_L_wav;
+    const int            az0_el90_d14_L_wavSize = 4140;
+
+    extern const char*   az0_el90_d14_R_wav;
+    const int            az0_el90_d14_R_wavSize = 4140;
+
+    extern const char*   az0_el315_d2_L_wav;
+    const int            az0_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az0_el315_d2_R_wav;
+    const int            az0_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az0_el315_d6_L_wav;
+    const int            az0_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az0_el315_d6_R_wav;
+    const int            az0_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az0_el315_d10_L_wav;
+    const int            az0_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az0_el315_d10_R_wav;
+    const int            az0_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az0_el315_d14_L_wav;
+    const int            az0_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az0_el315_d14_R_wav;
+    const int            az0_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az0_el330_d2_L_wav;
+    const int            az0_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az0_el330_d2_R_wav;
+    const int            az0_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az0_el330_d6_L_wav;
+    const int            az0_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az0_el330_d6_R_wav;
+    const int            az0_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az0_el330_d10_L_wav;
+    const int            az0_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az0_el330_d10_R_wav;
+    const int            az0_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az0_el330_d14_L_wav;
+    const int            az0_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az0_el330_d14_R_wav;
+    const int            az0_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az0_el345_d2_L_wav;
+    const int            az0_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az0_el345_d2_R_wav;
+    const int            az0_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az0_el345_d6_L_wav;
+    const int            az0_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az0_el345_d6_R_wav;
+    const int            az0_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az0_el345_d10_L_wav;
+    const int            az0_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az0_el345_d10_R_wav;
+    const int            az0_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az0_el345_d14_L_wav;
+    const int            az0_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az0_el345_d14_R_wav;
+    const int            az0_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az15_el0_d2_L_wav;
+    const int            az15_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az15_el0_d2_R_wav;
+    const int            az15_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az15_el0_d6_L_wav;
+    const int            az15_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az15_el0_d6_R_wav;
+    const int            az15_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az15_el0_d10_L_wav;
+    const int            az15_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az15_el0_d10_R_wav;
+    const int            az15_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az15_el0_d14_L_wav;
+    const int            az15_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az15_el0_d14_R_wav;
+    const int            az15_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az15_el15_d2_L_wav;
+    const int            az15_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az15_el15_d2_R_wav;
+    const int            az15_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az15_el15_d6_L_wav;
+    const int            az15_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az15_el15_d6_R_wav;
+    const int            az15_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az15_el15_d10_L_wav;
+    const int            az15_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az15_el15_d10_R_wav;
+    const int            az15_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az15_el15_d14_L_wav;
+    const int            az15_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az15_el15_d14_R_wav;
+    const int            az15_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az15_el30_d2_L_wav;
+    const int            az15_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az15_el30_d2_R_wav;
+    const int            az15_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az15_el30_d6_L_wav;
+    const int            az15_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az15_el30_d6_R_wav;
+    const int            az15_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az15_el30_d10_L_wav;
+    const int            az15_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az15_el30_d10_R_wav;
+    const int            az15_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az15_el30_d14_L_wav;
+    const int            az15_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az15_el30_d14_R_wav;
+    const int            az15_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az15_el45_d2_L_wav;
+    const int            az15_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az15_el45_d2_R_wav;
+    const int            az15_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az15_el45_d6_L_wav;
+    const int            az15_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az15_el45_d6_R_wav;
+    const int            az15_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az15_el45_d10_L_wav;
+    const int            az15_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az15_el45_d10_R_wav;
+    const int            az15_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az15_el45_d14_L_wav;
+    const int            az15_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az15_el45_d14_R_wav;
+    const int            az15_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az15_el60_d2_L_wav;
+    const int            az15_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az15_el60_d2_R_wav;
+    const int            az15_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az15_el60_d6_L_wav;
+    const int            az15_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az15_el60_d6_R_wav;
+    const int            az15_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az15_el60_d10_L_wav;
+    const int            az15_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az15_el60_d10_R_wav;
+    const int            az15_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az15_el60_d14_L_wav;
+    const int            az15_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az15_el60_d14_R_wav;
+    const int            az15_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az15_el75_d2_L_wav;
+    const int            az15_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az15_el75_d2_R_wav;
+    const int            az15_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az15_el75_d6_L_wav;
+    const int            az15_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az15_el75_d6_R_wav;
+    const int            az15_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az15_el75_d10_L_wav;
+    const int            az15_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az15_el75_d10_R_wav;
+    const int            az15_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az15_el75_d14_L_wav;
+    const int            az15_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az15_el75_d14_R_wav;
+    const int            az15_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az15_el315_d2_L_wav;
+    const int            az15_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az15_el315_d2_R_wav;
+    const int            az15_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az15_el315_d6_L_wav;
+    const int            az15_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az15_el315_d6_R_wav;
+    const int            az15_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az15_el315_d10_L_wav;
+    const int            az15_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az15_el315_d10_R_wav;
+    const int            az15_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az15_el315_d14_L_wav;
+    const int            az15_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az15_el315_d14_R_wav;
+    const int            az15_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az15_el330_d2_L_wav;
+    const int            az15_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az15_el330_d2_R_wav;
+    const int            az15_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az15_el330_d6_L_wav;
+    const int            az15_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az15_el330_d6_R_wav;
+    const int            az15_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az15_el330_d10_L_wav;
+    const int            az15_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az15_el330_d10_R_wav;
+    const int            az15_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az15_el330_d14_L_wav;
+    const int            az15_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az15_el330_d14_R_wav;
+    const int            az15_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az15_el345_d2_L_wav;
+    const int            az15_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az15_el345_d2_R_wav;
+    const int            az15_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az15_el345_d6_L_wav;
+    const int            az15_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az15_el345_d6_R_wav;
+    const int            az15_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az15_el345_d10_L_wav;
+    const int            az15_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az15_el345_d10_R_wav;
+    const int            az15_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az15_el345_d14_L_wav;
+    const int            az15_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az15_el345_d14_R_wav;
+    const int            az15_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az30_el0_d2_L_wav;
+    const int            az30_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az30_el0_d2_R_wav;
+    const int            az30_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az30_el0_d6_L_wav;
+    const int            az30_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az30_el0_d6_R_wav;
+    const int            az30_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az30_el0_d10_L_wav;
+    const int            az30_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az30_el0_d10_R_wav;
+    const int            az30_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az30_el0_d14_L_wav;
+    const int            az30_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az30_el0_d14_R_wav;
+    const int            az30_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az30_el15_d2_L_wav;
+    const int            az30_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az30_el15_d2_R_wav;
+    const int            az30_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az30_el15_d6_L_wav;
+    const int            az30_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az30_el15_d6_R_wav;
+    const int            az30_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az30_el15_d10_L_wav;
+    const int            az30_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az30_el15_d10_R_wav;
+    const int            az30_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az30_el15_d14_L_wav;
+    const int            az30_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az30_el15_d14_R_wav;
+    const int            az30_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az30_el30_d2_L_wav;
+    const int            az30_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az30_el30_d2_R_wav;
+    const int            az30_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az30_el30_d6_L_wav;
+    const int            az30_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az30_el30_d6_R_wav;
+    const int            az30_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az30_el30_d10_L_wav;
+    const int            az30_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az30_el30_d10_R_wav;
+    const int            az30_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az30_el30_d14_L_wav;
+    const int            az30_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az30_el30_d14_R_wav;
+    const int            az30_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az30_el45_d2_L_wav;
+    const int            az30_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az30_el45_d2_R_wav;
+    const int            az30_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az30_el45_d6_L_wav;
+    const int            az30_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az30_el45_d6_R_wav;
+    const int            az30_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az30_el45_d10_L_wav;
+    const int            az30_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az30_el45_d10_R_wav;
+    const int            az30_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az30_el45_d14_L_wav;
+    const int            az30_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az30_el45_d14_R_wav;
+    const int            az30_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az30_el60_d2_L_wav;
+    const int            az30_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az30_el60_d2_R_wav;
+    const int            az30_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az30_el60_d6_L_wav;
+    const int            az30_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az30_el60_d6_R_wav;
+    const int            az30_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az30_el60_d10_L_wav;
+    const int            az30_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az30_el60_d10_R_wav;
+    const int            az30_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az30_el60_d14_L_wav;
+    const int            az30_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az30_el60_d14_R_wav;
+    const int            az30_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az30_el75_d2_L_wav;
+    const int            az30_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az30_el75_d2_R_wav;
+    const int            az30_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az30_el75_d6_L_wav;
+    const int            az30_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az30_el75_d6_R_wav;
+    const int            az30_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az30_el75_d10_L_wav;
+    const int            az30_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az30_el75_d10_R_wav;
+    const int            az30_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az30_el75_d14_L_wav;
+    const int            az30_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az30_el75_d14_R_wav;
+    const int            az30_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az30_el315_d2_L_wav;
+    const int            az30_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az30_el315_d2_R_wav;
+    const int            az30_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az30_el315_d6_L_wav;
+    const int            az30_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az30_el315_d6_R_wav;
+    const int            az30_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az30_el315_d10_L_wav;
+    const int            az30_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az30_el315_d10_R_wav;
+    const int            az30_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az30_el315_d14_L_wav;
+    const int            az30_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az30_el315_d14_R_wav;
+    const int            az30_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az30_el330_d2_L_wav;
+    const int            az30_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az30_el330_d2_R_wav;
+    const int            az30_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az30_el330_d6_L_wav;
+    const int            az30_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az30_el330_d6_R_wav;
+    const int            az30_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az30_el330_d10_L_wav;
+    const int            az30_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az30_el330_d10_R_wav;
+    const int            az30_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az30_el330_d14_L_wav;
+    const int            az30_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az30_el330_d14_R_wav;
+    const int            az30_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az30_el345_d2_L_wav;
+    const int            az30_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az30_el345_d2_R_wav;
+    const int            az30_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az30_el345_d6_L_wav;
+    const int            az30_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az30_el345_d6_R_wav;
+    const int            az30_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az30_el345_d10_L_wav;
+    const int            az30_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az30_el345_d10_R_wav;
+    const int            az30_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az30_el345_d14_L_wav;
+    const int            az30_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az30_el345_d14_R_wav;
+    const int            az30_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az45_el0_d2_L_wav;
+    const int            az45_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az45_el0_d2_R_wav;
+    const int            az45_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az45_el0_d6_L_wav;
+    const int            az45_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az45_el0_d6_R_wav;
+    const int            az45_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az45_el0_d10_L_wav;
+    const int            az45_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az45_el0_d10_R_wav;
+    const int            az45_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az45_el0_d14_L_wav;
+    const int            az45_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az45_el0_d14_R_wav;
+    const int            az45_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az45_el15_d2_L_wav;
+    const int            az45_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az45_el15_d2_R_wav;
+    const int            az45_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az45_el15_d6_L_wav;
+    const int            az45_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az45_el15_d6_R_wav;
+    const int            az45_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az45_el15_d10_L_wav;
+    const int            az45_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az45_el15_d10_R_wav;
+    const int            az45_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az45_el15_d14_L_wav;
+    const int            az45_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az45_el15_d14_R_wav;
+    const int            az45_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az45_el30_d2_L_wav;
+    const int            az45_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az45_el30_d2_R_wav;
+    const int            az45_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az45_el30_d6_L_wav;
+    const int            az45_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az45_el30_d6_R_wav;
+    const int            az45_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az45_el30_d10_L_wav;
+    const int            az45_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az45_el30_d10_R_wav;
+    const int            az45_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az45_el30_d14_L_wav;
+    const int            az45_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az45_el30_d14_R_wav;
+    const int            az45_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az45_el45_d2_L_wav;
+    const int            az45_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az45_el45_d2_R_wav;
+    const int            az45_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az45_el45_d6_L_wav;
+    const int            az45_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az45_el45_d6_R_wav;
+    const int            az45_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az45_el45_d10_L_wav;
+    const int            az45_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az45_el45_d10_R_wav;
+    const int            az45_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az45_el45_d14_L_wav;
+    const int            az45_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az45_el45_d14_R_wav;
+    const int            az45_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az45_el60_d2_L_wav;
+    const int            az45_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az45_el60_d2_R_wav;
+    const int            az45_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az45_el60_d6_L_wav;
+    const int            az45_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az45_el60_d6_R_wav;
+    const int            az45_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az45_el60_d10_L_wav;
+    const int            az45_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az45_el60_d10_R_wav;
+    const int            az45_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az45_el60_d14_L_wav;
+    const int            az45_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az45_el60_d14_R_wav;
+    const int            az45_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az45_el75_d2_L_wav;
+    const int            az45_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az45_el75_d2_R_wav;
+    const int            az45_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az45_el75_d6_L_wav;
+    const int            az45_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az45_el75_d6_R_wav;
+    const int            az45_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az45_el75_d10_L_wav;
+    const int            az45_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az45_el75_d10_R_wav;
+    const int            az45_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az45_el75_d14_L_wav;
+    const int            az45_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az45_el75_d14_R_wav;
+    const int            az45_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az45_el315_d2_L_wav;
+    const int            az45_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az45_el315_d2_R_wav;
+    const int            az45_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az45_el315_d6_L_wav;
+    const int            az45_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az45_el315_d6_R_wav;
+    const int            az45_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az45_el315_d10_L_wav;
+    const int            az45_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az45_el315_d10_R_wav;
+    const int            az45_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az45_el315_d14_L_wav;
+    const int            az45_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az45_el315_d14_R_wav;
+    const int            az45_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az45_el330_d2_L_wav;
+    const int            az45_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az45_el330_d2_R_wav;
+    const int            az45_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az45_el330_d6_L_wav;
+    const int            az45_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az45_el330_d6_R_wav;
+    const int            az45_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az45_el330_d10_L_wav;
+    const int            az45_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az45_el330_d10_R_wav;
+    const int            az45_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az45_el330_d14_L_wav;
+    const int            az45_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az45_el330_d14_R_wav;
+    const int            az45_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az45_el345_d2_L_wav;
+    const int            az45_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az45_el345_d2_R_wav;
+    const int            az45_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az45_el345_d6_L_wav;
+    const int            az45_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az45_el345_d6_R_wav;
+    const int            az45_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az45_el345_d10_L_wav;
+    const int            az45_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az45_el345_d10_R_wav;
+    const int            az45_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az45_el345_d14_L_wav;
+    const int            az45_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az45_el345_d14_R_wav;
+    const int            az45_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az60_el0_d2_L_wav;
+    const int            az60_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az60_el0_d2_R_wav;
+    const int            az60_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az60_el0_d6_L_wav;
+    const int            az60_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az60_el0_d6_R_wav;
+    const int            az60_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az60_el0_d10_L_wav;
+    const int            az60_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az60_el0_d10_R_wav;
+    const int            az60_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az60_el0_d14_L_wav;
+    const int            az60_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az60_el0_d14_R_wav;
+    const int            az60_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az60_el15_d2_L_wav;
+    const int            az60_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az60_el15_d2_R_wav;
+    const int            az60_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az60_el15_d6_L_wav;
+    const int            az60_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az60_el15_d6_R_wav;
+    const int            az60_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az60_el15_d10_L_wav;
+    const int            az60_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az60_el15_d10_R_wav;
+    const int            az60_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az60_el15_d14_L_wav;
+    const int            az60_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az60_el15_d14_R_wav;
+    const int            az60_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az60_el30_d2_L_wav;
+    const int            az60_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az60_el30_d2_R_wav;
+    const int            az60_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az60_el30_d6_L_wav;
+    const int            az60_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az60_el30_d6_R_wav;
+    const int            az60_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az60_el30_d10_L_wav;
+    const int            az60_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az60_el30_d10_R_wav;
+    const int            az60_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az60_el30_d14_L_wav;
+    const int            az60_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az60_el30_d14_R_wav;
+    const int            az60_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az60_el45_d2_L_wav;
+    const int            az60_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az60_el45_d2_R_wav;
+    const int            az60_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az60_el45_d6_L_wav;
+    const int            az60_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az60_el45_d6_R_wav;
+    const int            az60_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az60_el45_d10_L_wav;
+    const int            az60_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az60_el45_d10_R_wav;
+    const int            az60_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az60_el45_d14_L_wav;
+    const int            az60_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az60_el45_d14_R_wav;
+    const int            az60_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az60_el60_d2_L_wav;
+    const int            az60_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az60_el60_d2_R_wav;
+    const int            az60_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az60_el60_d6_L_wav;
+    const int            az60_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az60_el60_d6_R_wav;
+    const int            az60_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az60_el60_d10_L_wav;
+    const int            az60_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az60_el60_d10_R_wav;
+    const int            az60_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az60_el60_d14_L_wav;
+    const int            az60_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az60_el60_d14_R_wav;
+    const int            az60_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az60_el75_d2_L_wav;
+    const int            az60_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az60_el75_d2_R_wav;
+    const int            az60_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az60_el75_d6_L_wav;
+    const int            az60_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az60_el75_d6_R_wav;
+    const int            az60_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az60_el75_d10_L_wav;
+    const int            az60_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az60_el75_d10_R_wav;
+    const int            az60_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az60_el75_d14_L_wav;
+    const int            az60_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az60_el75_d14_R_wav;
+    const int            az60_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az60_el315_d2_L_wav;
+    const int            az60_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az60_el315_d2_R_wav;
+    const int            az60_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az60_el315_d6_L_wav;
+    const int            az60_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az60_el315_d6_R_wav;
+    const int            az60_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az60_el315_d10_L_wav;
+    const int            az60_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az60_el315_d10_R_wav;
+    const int            az60_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az60_el315_d14_L_wav;
+    const int            az60_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az60_el315_d14_R_wav;
+    const int            az60_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az60_el330_d2_L_wav;
+    const int            az60_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az60_el330_d2_R_wav;
+    const int            az60_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az60_el330_d6_L_wav;
+    const int            az60_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az60_el330_d6_R_wav;
+    const int            az60_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az60_el330_d10_L_wav;
+    const int            az60_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az60_el330_d10_R_wav;
+    const int            az60_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az60_el330_d14_L_wav;
+    const int            az60_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az60_el330_d14_R_wav;
+    const int            az60_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az60_el345_d2_L_wav;
+    const int            az60_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az60_el345_d2_R_wav;
+    const int            az60_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az60_el345_d6_L_wav;
+    const int            az60_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az60_el345_d6_R_wav;
+    const int            az60_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az60_el345_d10_L_wav;
+    const int            az60_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az60_el345_d10_R_wav;
+    const int            az60_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az60_el345_d14_L_wav;
+    const int            az60_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az60_el345_d14_R_wav;
+    const int            az60_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az75_el0_d2_L_wav;
+    const int            az75_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az75_el0_d2_R_wav;
+    const int            az75_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az75_el0_d6_L_wav;
+    const int            az75_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az75_el0_d6_R_wav;
+    const int            az75_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az75_el0_d10_L_wav;
+    const int            az75_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az75_el0_d10_R_wav;
+    const int            az75_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az75_el0_d14_L_wav;
+    const int            az75_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az75_el0_d14_R_wav;
+    const int            az75_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az75_el15_d2_L_wav;
+    const int            az75_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az75_el15_d2_R_wav;
+    const int            az75_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az75_el15_d6_L_wav;
+    const int            az75_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az75_el15_d6_R_wav;
+    const int            az75_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az75_el15_d10_L_wav;
+    const int            az75_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az75_el15_d10_R_wav;
+    const int            az75_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az75_el15_d14_L_wav;
+    const int            az75_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az75_el15_d14_R_wav;
+    const int            az75_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az75_el30_d2_L_wav;
+    const int            az75_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az75_el30_d2_R_wav;
+    const int            az75_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az75_el30_d6_L_wav;
+    const int            az75_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az75_el30_d6_R_wav;
+    const int            az75_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az75_el30_d10_L_wav;
+    const int            az75_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az75_el30_d10_R_wav;
+    const int            az75_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az75_el30_d14_L_wav;
+    const int            az75_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az75_el30_d14_R_wav;
+    const int            az75_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az75_el45_d2_L_wav;
+    const int            az75_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az75_el45_d2_R_wav;
+    const int            az75_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az75_el45_d6_L_wav;
+    const int            az75_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az75_el45_d6_R_wav;
+    const int            az75_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az75_el45_d10_L_wav;
+    const int            az75_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az75_el45_d10_R_wav;
+    const int            az75_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az75_el45_d14_L_wav;
+    const int            az75_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az75_el45_d14_R_wav;
+    const int            az75_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az75_el60_d2_L_wav;
+    const int            az75_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az75_el60_d2_R_wav;
+    const int            az75_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az75_el60_d6_L_wav;
+    const int            az75_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az75_el60_d6_R_wav;
+    const int            az75_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az75_el60_d10_L_wav;
+    const int            az75_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az75_el60_d10_R_wav;
+    const int            az75_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az75_el60_d14_L_wav;
+    const int            az75_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az75_el60_d14_R_wav;
+    const int            az75_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az75_el75_d2_L_wav;
+    const int            az75_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az75_el75_d2_R_wav;
+    const int            az75_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az75_el75_d6_L_wav;
+    const int            az75_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az75_el75_d6_R_wav;
+    const int            az75_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az75_el75_d10_L_wav;
+    const int            az75_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az75_el75_d10_R_wav;
+    const int            az75_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az75_el75_d14_L_wav;
+    const int            az75_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az75_el75_d14_R_wav;
+    const int            az75_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az75_el315_d2_L_wav;
+    const int            az75_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az75_el315_d2_R_wav;
+    const int            az75_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az75_el315_d6_L_wav;
+    const int            az75_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az75_el315_d6_R_wav;
+    const int            az75_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az75_el315_d10_L_wav;
+    const int            az75_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az75_el315_d10_R_wav;
+    const int            az75_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az75_el315_d14_L_wav;
+    const int            az75_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az75_el315_d14_R_wav;
+    const int            az75_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az75_el330_d2_L_wav;
+    const int            az75_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az75_el330_d2_R_wav;
+    const int            az75_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az75_el330_d6_L_wav;
+    const int            az75_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az75_el330_d6_R_wav;
+    const int            az75_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az75_el330_d10_L_wav;
+    const int            az75_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az75_el330_d10_R_wav;
+    const int            az75_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az75_el330_d14_L_wav;
+    const int            az75_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az75_el330_d14_R_wav;
+    const int            az75_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az75_el345_d2_L_wav;
+    const int            az75_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az75_el345_d2_R_wav;
+    const int            az75_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az75_el345_d6_L_wav;
+    const int            az75_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az75_el345_d6_R_wav;
+    const int            az75_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az75_el345_d10_L_wav;
+    const int            az75_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az75_el345_d10_R_wav;
+    const int            az75_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az75_el345_d14_L_wav;
+    const int            az75_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az75_el345_d14_R_wav;
+    const int            az75_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az90_el0_d2_L_wav;
+    const int            az90_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az90_el0_d2_R_wav;
+    const int            az90_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az90_el0_d6_L_wav;
+    const int            az90_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az90_el0_d6_R_wav;
+    const int            az90_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az90_el0_d10_L_wav;
+    const int            az90_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az90_el0_d10_R_wav;
+    const int            az90_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az90_el0_d14_L_wav;
+    const int            az90_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az90_el0_d14_R_wav;
+    const int            az90_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az90_el15_d2_L_wav;
+    const int            az90_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az90_el15_d2_R_wav;
+    const int            az90_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az90_el15_d6_L_wav;
+    const int            az90_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az90_el15_d6_R_wav;
+    const int            az90_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az90_el15_d10_L_wav;
+    const int            az90_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az90_el15_d10_R_wav;
+    const int            az90_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az90_el15_d14_L_wav;
+    const int            az90_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az90_el15_d14_R_wav;
+    const int            az90_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az90_el30_d2_L_wav;
+    const int            az90_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az90_el30_d2_R_wav;
+    const int            az90_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az90_el30_d6_L_wav;
+    const int            az90_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az90_el30_d6_R_wav;
+    const int            az90_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az90_el30_d10_L_wav;
+    const int            az90_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az90_el30_d10_R_wav;
+    const int            az90_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az90_el30_d14_L_wav;
+    const int            az90_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az90_el30_d14_R_wav;
+    const int            az90_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az90_el45_d2_L_wav;
+    const int            az90_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az90_el45_d2_R_wav;
+    const int            az90_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az90_el45_d6_L_wav;
+    const int            az90_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az90_el45_d6_R_wav;
+    const int            az90_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az90_el45_d10_L_wav;
+    const int            az90_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az90_el45_d10_R_wav;
+    const int            az90_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az90_el45_d14_L_wav;
+    const int            az90_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az90_el45_d14_R_wav;
+    const int            az90_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az90_el60_d2_L_wav;
+    const int            az90_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az90_el60_d2_R_wav;
+    const int            az90_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az90_el60_d6_L_wav;
+    const int            az90_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az90_el60_d6_R_wav;
+    const int            az90_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az90_el60_d10_L_wav;
+    const int            az90_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az90_el60_d10_R_wav;
+    const int            az90_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az90_el60_d14_L_wav;
+    const int            az90_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az90_el60_d14_R_wav;
+    const int            az90_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az90_el75_d2_L_wav;
+    const int            az90_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az90_el75_d2_R_wav;
+    const int            az90_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az90_el75_d6_L_wav;
+    const int            az90_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az90_el75_d6_R_wav;
+    const int            az90_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az90_el75_d10_L_wav;
+    const int            az90_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az90_el75_d10_R_wav;
+    const int            az90_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az90_el75_d14_L_wav;
+    const int            az90_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az90_el75_d14_R_wav;
+    const int            az90_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az90_el315_d2_L_wav;
+    const int            az90_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az90_el315_d2_R_wav;
+    const int            az90_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az90_el315_d6_L_wav;
+    const int            az90_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az90_el315_d6_R_wav;
+    const int            az90_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az90_el315_d10_L_wav;
+    const int            az90_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az90_el315_d10_R_wav;
+    const int            az90_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az90_el315_d14_L_wav;
+    const int            az90_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az90_el315_d14_R_wav;
+    const int            az90_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az90_el330_d2_L_wav;
+    const int            az90_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az90_el330_d2_R_wav;
+    const int            az90_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az90_el330_d6_L_wav;
+    const int            az90_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az90_el330_d6_R_wav;
+    const int            az90_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az90_el330_d10_L_wav;
+    const int            az90_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az90_el330_d10_R_wav;
+    const int            az90_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az90_el330_d14_L_wav;
+    const int            az90_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az90_el330_d14_R_wav;
+    const int            az90_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az90_el345_d2_L_wav;
+    const int            az90_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az90_el345_d2_R_wav;
+    const int            az90_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az90_el345_d6_L_wav;
+    const int            az90_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az90_el345_d6_R_wav;
+    const int            az90_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az90_el345_d10_L_wav;
+    const int            az90_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az90_el345_d10_R_wav;
+    const int            az90_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az90_el345_d14_L_wav;
+    const int            az90_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az90_el345_d14_R_wav;
+    const int            az90_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az105_el0_d2_L_wav;
+    const int            az105_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az105_el0_d2_R_wav;
+    const int            az105_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az105_el0_d6_L_wav;
+    const int            az105_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az105_el0_d6_R_wav;
+    const int            az105_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az105_el0_d10_L_wav;
+    const int            az105_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az105_el0_d10_R_wav;
+    const int            az105_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az105_el0_d14_L_wav;
+    const int            az105_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az105_el0_d14_R_wav;
+    const int            az105_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az105_el15_d2_L_wav;
+    const int            az105_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az105_el15_d2_R_wav;
+    const int            az105_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az105_el15_d6_L_wav;
+    const int            az105_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az105_el15_d6_R_wav;
+    const int            az105_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az105_el15_d10_L_wav;
+    const int            az105_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az105_el15_d10_R_wav;
+    const int            az105_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az105_el15_d14_L_wav;
+    const int            az105_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az105_el15_d14_R_wav;
+    const int            az105_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az105_el30_d2_L_wav;
+    const int            az105_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az105_el30_d2_R_wav;
+    const int            az105_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az105_el30_d6_L_wav;
+    const int            az105_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az105_el30_d6_R_wav;
+    const int            az105_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az105_el30_d10_L_wav;
+    const int            az105_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az105_el30_d10_R_wav;
+    const int            az105_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az105_el30_d14_L_wav;
+    const int            az105_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az105_el30_d14_R_wav;
+    const int            az105_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az105_el45_d2_L_wav;
+    const int            az105_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az105_el45_d2_R_wav;
+    const int            az105_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az105_el45_d6_L_wav;
+    const int            az105_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az105_el45_d6_R_wav;
+    const int            az105_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az105_el45_d10_L_wav;
+    const int            az105_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az105_el45_d10_R_wav;
+    const int            az105_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az105_el45_d14_L_wav;
+    const int            az105_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az105_el45_d14_R_wav;
+    const int            az105_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az105_el60_d2_L_wav;
+    const int            az105_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az105_el60_d2_R_wav;
+    const int            az105_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az105_el60_d6_L_wav;
+    const int            az105_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az105_el60_d6_R_wav;
+    const int            az105_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az105_el60_d10_L_wav;
+    const int            az105_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az105_el60_d10_R_wav;
+    const int            az105_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az105_el60_d14_L_wav;
+    const int            az105_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az105_el60_d14_R_wav;
+    const int            az105_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az105_el75_d2_L_wav;
+    const int            az105_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az105_el75_d2_R_wav;
+    const int            az105_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az105_el75_d6_L_wav;
+    const int            az105_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az105_el75_d6_R_wav;
+    const int            az105_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az105_el75_d10_L_wav;
+    const int            az105_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az105_el75_d10_R_wav;
+    const int            az105_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az105_el75_d14_L_wav;
+    const int            az105_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az105_el75_d14_R_wav;
+    const int            az105_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az105_el315_d2_L_wav;
+    const int            az105_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az105_el315_d2_R_wav;
+    const int            az105_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az105_el315_d6_L_wav;
+    const int            az105_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az105_el315_d6_R_wav;
+    const int            az105_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az105_el315_d10_L_wav;
+    const int            az105_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az105_el315_d10_R_wav;
+    const int            az105_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az105_el315_d14_L_wav;
+    const int            az105_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az105_el315_d14_R_wav;
+    const int            az105_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az105_el330_d2_L_wav;
+    const int            az105_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az105_el330_d2_R_wav;
+    const int            az105_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az105_el330_d6_L_wav;
+    const int            az105_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az105_el330_d6_R_wav;
+    const int            az105_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az105_el330_d10_L_wav;
+    const int            az105_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az105_el330_d10_R_wav;
+    const int            az105_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az105_el330_d14_L_wav;
+    const int            az105_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az105_el330_d14_R_wav;
+    const int            az105_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az105_el345_d2_L_wav;
+    const int            az105_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az105_el345_d2_R_wav;
+    const int            az105_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az105_el345_d6_L_wav;
+    const int            az105_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az105_el345_d6_R_wav;
+    const int            az105_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az105_el345_d10_L_wav;
+    const int            az105_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az105_el345_d10_R_wav;
+    const int            az105_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az105_el345_d14_L_wav;
+    const int            az105_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az105_el345_d14_R_wav;
+    const int            az105_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az120_el0_d2_L_wav;
+    const int            az120_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az120_el0_d2_R_wav;
+    const int            az120_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az120_el0_d6_L_wav;
+    const int            az120_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az120_el0_d6_R_wav;
+    const int            az120_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az120_el0_d10_L_wav;
+    const int            az120_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az120_el0_d10_R_wav;
+    const int            az120_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az120_el0_d14_L_wav;
+    const int            az120_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az120_el0_d14_R_wav;
+    const int            az120_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az120_el15_d2_L_wav;
+    const int            az120_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az120_el15_d2_R_wav;
+    const int            az120_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az120_el15_d6_L_wav;
+    const int            az120_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az120_el15_d6_R_wav;
+    const int            az120_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az120_el15_d10_L_wav;
+    const int            az120_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az120_el15_d10_R_wav;
+    const int            az120_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az120_el15_d14_L_wav;
+    const int            az120_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az120_el15_d14_R_wav;
+    const int            az120_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az120_el30_d2_L_wav;
+    const int            az120_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az120_el30_d2_R_wav;
+    const int            az120_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az120_el30_d6_L_wav;
+    const int            az120_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az120_el30_d6_R_wav;
+    const int            az120_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az120_el30_d10_L_wav;
+    const int            az120_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az120_el30_d10_R_wav;
+    const int            az120_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az120_el30_d14_L_wav;
+    const int            az120_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az120_el30_d14_R_wav;
+    const int            az120_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az120_el45_d2_L_wav;
+    const int            az120_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az120_el45_d2_R_wav;
+    const int            az120_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az120_el45_d6_L_wav;
+    const int            az120_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az120_el45_d6_R_wav;
+    const int            az120_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az120_el45_d10_L_wav;
+    const int            az120_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az120_el45_d10_R_wav;
+    const int            az120_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az120_el45_d14_L_wav;
+    const int            az120_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az120_el45_d14_R_wav;
+    const int            az120_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az120_el60_d2_L_wav;
+    const int            az120_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az120_el60_d2_R_wav;
+    const int            az120_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az120_el60_d6_L_wav;
+    const int            az120_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az120_el60_d6_R_wav;
+    const int            az120_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az120_el60_d10_L_wav;
+    const int            az120_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az120_el60_d10_R_wav;
+    const int            az120_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az120_el60_d14_L_wav;
+    const int            az120_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az120_el60_d14_R_wav;
+    const int            az120_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az120_el75_d2_L_wav;
+    const int            az120_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az120_el75_d2_R_wav;
+    const int            az120_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az120_el75_d6_L_wav;
+    const int            az120_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az120_el75_d6_R_wav;
+    const int            az120_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az120_el75_d10_L_wav;
+    const int            az120_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az120_el75_d10_R_wav;
+    const int            az120_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az120_el75_d14_L_wav;
+    const int            az120_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az120_el75_d14_R_wav;
+    const int            az120_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az120_el315_d2_L_wav;
+    const int            az120_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az120_el315_d2_R_wav;
+    const int            az120_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az120_el315_d6_L_wav;
+    const int            az120_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az120_el315_d6_R_wav;
+    const int            az120_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az120_el315_d10_L_wav;
+    const int            az120_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az120_el315_d10_R_wav;
+    const int            az120_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az120_el315_d14_L_wav;
+    const int            az120_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az120_el315_d14_R_wav;
+    const int            az120_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az120_el330_d2_L_wav;
+    const int            az120_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az120_el330_d2_R_wav;
+    const int            az120_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az120_el330_d6_L_wav;
+    const int            az120_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az120_el330_d6_R_wav;
+    const int            az120_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az120_el330_d10_L_wav;
+    const int            az120_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az120_el330_d10_R_wav;
+    const int            az120_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az120_el330_d14_L_wav;
+    const int            az120_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az120_el330_d14_R_wav;
+    const int            az120_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az120_el345_d2_L_wav;
+    const int            az120_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az120_el345_d2_R_wav;
+    const int            az120_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az120_el345_d6_L_wav;
+    const int            az120_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az120_el345_d6_R_wav;
+    const int            az120_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az120_el345_d10_L_wav;
+    const int            az120_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az120_el345_d10_R_wav;
+    const int            az120_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az120_el345_d14_L_wav;
+    const int            az120_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az120_el345_d14_R_wav;
+    const int            az120_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az135_el0_d2_L_wav;
+    const int            az135_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az135_el0_d2_R_wav;
+    const int            az135_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az135_el0_d6_L_wav;
+    const int            az135_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az135_el0_d6_R_wav;
+    const int            az135_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az135_el0_d10_L_wav;
+    const int            az135_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az135_el0_d10_R_wav;
+    const int            az135_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az135_el0_d14_L_wav;
+    const int            az135_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az135_el0_d14_R_wav;
+    const int            az135_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az135_el15_d2_L_wav;
+    const int            az135_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az135_el15_d2_R_wav;
+    const int            az135_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az135_el15_d6_L_wav;
+    const int            az135_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az135_el15_d6_R_wav;
+    const int            az135_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az135_el15_d10_L_wav;
+    const int            az135_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az135_el15_d10_R_wav;
+    const int            az135_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az135_el15_d14_L_wav;
+    const int            az135_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az135_el15_d14_R_wav;
+    const int            az135_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az135_el30_d2_L_wav;
+    const int            az135_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az135_el30_d2_R_wav;
+    const int            az135_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az135_el30_d6_L_wav;
+    const int            az135_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az135_el30_d6_R_wav;
+    const int            az135_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az135_el30_d10_L_wav;
+    const int            az135_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az135_el30_d10_R_wav;
+    const int            az135_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az135_el30_d14_L_wav;
+    const int            az135_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az135_el30_d14_R_wav;
+    const int            az135_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az135_el45_d2_L_wav;
+    const int            az135_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az135_el45_d2_R_wav;
+    const int            az135_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az135_el45_d6_L_wav;
+    const int            az135_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az135_el45_d6_R_wav;
+    const int            az135_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az135_el45_d10_L_wav;
+    const int            az135_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az135_el45_d10_R_wav;
+    const int            az135_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az135_el45_d14_L_wav;
+    const int            az135_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az135_el45_d14_R_wav;
+    const int            az135_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az135_el60_d2_L_wav;
+    const int            az135_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az135_el60_d2_R_wav;
+    const int            az135_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az135_el60_d6_L_wav;
+    const int            az135_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az135_el60_d6_R_wav;
+    const int            az135_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az135_el60_d10_L_wav;
+    const int            az135_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az135_el60_d10_R_wav;
+    const int            az135_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az135_el60_d14_L_wav;
+    const int            az135_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az135_el60_d14_R_wav;
+    const int            az135_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az135_el75_d2_L_wav;
+    const int            az135_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az135_el75_d2_R_wav;
+    const int            az135_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az135_el75_d6_L_wav;
+    const int            az135_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az135_el75_d6_R_wav;
+    const int            az135_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az135_el75_d10_L_wav;
+    const int            az135_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az135_el75_d10_R_wav;
+    const int            az135_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az135_el75_d14_L_wav;
+    const int            az135_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az135_el75_d14_R_wav;
+    const int            az135_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az135_el315_d2_L_wav;
+    const int            az135_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az135_el315_d2_R_wav;
+    const int            az135_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az135_el315_d6_L_wav;
+    const int            az135_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az135_el315_d6_R_wav;
+    const int            az135_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az135_el315_d10_L_wav;
+    const int            az135_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az135_el315_d10_R_wav;
+    const int            az135_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az135_el315_d14_L_wav;
+    const int            az135_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az135_el315_d14_R_wav;
+    const int            az135_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az135_el330_d2_L_wav;
+    const int            az135_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az135_el330_d2_R_wav;
+    const int            az135_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az135_el330_d6_L_wav;
+    const int            az135_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az135_el330_d6_R_wav;
+    const int            az135_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az135_el330_d10_L_wav;
+    const int            az135_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az135_el330_d10_R_wav;
+    const int            az135_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az135_el330_d14_L_wav;
+    const int            az135_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az135_el330_d14_R_wav;
+    const int            az135_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az135_el345_d2_L_wav;
+    const int            az135_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az135_el345_d2_R_wav;
+    const int            az135_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az135_el345_d6_L_wav;
+    const int            az135_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az135_el345_d6_R_wav;
+    const int            az135_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az135_el345_d10_L_wav;
+    const int            az135_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az135_el345_d10_R_wav;
+    const int            az135_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az135_el345_d14_L_wav;
+    const int            az135_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az135_el345_d14_R_wav;
+    const int            az135_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az150_el0_d2_L_wav;
+    const int            az150_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az150_el0_d2_R_wav;
+    const int            az150_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az150_el0_d6_L_wav;
+    const int            az150_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az150_el0_d6_R_wav;
+    const int            az150_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az150_el0_d10_L_wav;
+    const int            az150_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az150_el0_d10_R_wav;
+    const int            az150_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az150_el0_d14_L_wav;
+    const int            az150_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az150_el0_d14_R_wav;
+    const int            az150_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az150_el15_d2_L_wav;
+    const int            az150_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az150_el15_d2_R_wav;
+    const int            az150_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az150_el15_d6_L_wav;
+    const int            az150_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az150_el15_d6_R_wav;
+    const int            az150_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az150_el15_d10_L_wav;
+    const int            az150_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az150_el15_d10_R_wav;
+    const int            az150_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az150_el15_d14_L_wav;
+    const int            az150_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az150_el15_d14_R_wav;
+    const int            az150_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az150_el30_d2_L_wav;
+    const int            az150_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az150_el30_d2_R_wav;
+    const int            az150_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az150_el30_d6_L_wav;
+    const int            az150_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az150_el30_d6_R_wav;
+    const int            az150_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az150_el30_d10_L_wav;
+    const int            az150_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az150_el30_d10_R_wav;
+    const int            az150_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az150_el30_d14_L_wav;
+    const int            az150_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az150_el30_d14_R_wav;
+    const int            az150_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az150_el45_d2_L_wav;
+    const int            az150_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az150_el45_d2_R_wav;
+    const int            az150_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az150_el45_d6_L_wav;
+    const int            az150_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az150_el45_d6_R_wav;
+    const int            az150_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az150_el45_d10_L_wav;
+    const int            az150_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az150_el45_d10_R_wav;
+    const int            az150_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az150_el45_d14_L_wav;
+    const int            az150_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az150_el45_d14_R_wav;
+    const int            az150_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az150_el60_d2_L_wav;
+    const int            az150_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az150_el60_d2_R_wav;
+    const int            az150_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az150_el60_d6_L_wav;
+    const int            az150_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az150_el60_d6_R_wav;
+    const int            az150_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az150_el60_d10_L_wav;
+    const int            az150_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az150_el60_d10_R_wav;
+    const int            az150_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az150_el60_d14_L_wav;
+    const int            az150_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az150_el60_d14_R_wav;
+    const int            az150_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az150_el75_d2_L_wav;
+    const int            az150_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az150_el75_d2_R_wav;
+    const int            az150_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az150_el75_d6_L_wav;
+    const int            az150_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az150_el75_d6_R_wav;
+    const int            az150_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az150_el75_d10_L_wav;
+    const int            az150_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az150_el75_d10_R_wav;
+    const int            az150_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az150_el75_d14_L_wav;
+    const int            az150_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az150_el75_d14_R_wav;
+    const int            az150_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az150_el315_d2_L_wav;
+    const int            az150_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az150_el315_d2_R_wav;
+    const int            az150_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az150_el315_d6_L_wav;
+    const int            az150_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az150_el315_d6_R_wav;
+    const int            az150_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az150_el315_d10_L_wav;
+    const int            az150_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az150_el315_d10_R_wav;
+    const int            az150_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az150_el315_d14_L_wav;
+    const int            az150_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az150_el315_d14_R_wav;
+    const int            az150_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az150_el330_d2_L_wav;
+    const int            az150_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az150_el330_d2_R_wav;
+    const int            az150_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az150_el330_d6_L_wav;
+    const int            az150_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az150_el330_d6_R_wav;
+    const int            az150_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az150_el330_d10_L_wav;
+    const int            az150_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az150_el330_d10_R_wav;
+    const int            az150_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az150_el330_d14_L_wav;
+    const int            az150_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az150_el330_d14_R_wav;
+    const int            az150_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az150_el345_d2_L_wav;
+    const int            az150_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az150_el345_d2_R_wav;
+    const int            az150_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az150_el345_d6_L_wav;
+    const int            az150_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az150_el345_d6_R_wav;
+    const int            az150_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az150_el345_d10_L_wav;
+    const int            az150_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az150_el345_d10_R_wav;
+    const int            az150_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az150_el345_d14_L_wav;
+    const int            az150_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az150_el345_d14_R_wav;
+    const int            az150_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az165_el0_d2_L_wav;
+    const int            az165_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az165_el0_d2_R_wav;
+    const int            az165_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az165_el0_d6_L_wav;
+    const int            az165_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az165_el0_d6_R_wav;
+    const int            az165_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az165_el0_d10_L_wav;
+    const int            az165_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az165_el0_d10_R_wav;
+    const int            az165_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az165_el0_d14_L_wav;
+    const int            az165_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az165_el0_d14_R_wav;
+    const int            az165_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az165_el15_d2_L_wav;
+    const int            az165_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az165_el15_d2_R_wav;
+    const int            az165_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az165_el15_d6_L_wav;
+    const int            az165_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az165_el15_d6_R_wav;
+    const int            az165_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az165_el15_d10_L_wav;
+    const int            az165_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az165_el15_d10_R_wav;
+    const int            az165_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az165_el15_d14_L_wav;
+    const int            az165_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az165_el15_d14_R_wav;
+    const int            az165_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az165_el30_d2_L_wav;
+    const int            az165_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az165_el30_d2_R_wav;
+    const int            az165_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az165_el30_d6_L_wav;
+    const int            az165_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az165_el30_d6_R_wav;
+    const int            az165_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az165_el30_d10_L_wav;
+    const int            az165_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az165_el30_d10_R_wav;
+    const int            az165_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az165_el30_d14_L_wav;
+    const int            az165_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az165_el30_d14_R_wav;
+    const int            az165_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az165_el45_d2_L_wav;
+    const int            az165_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az165_el45_d2_R_wav;
+    const int            az165_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az165_el45_d6_L_wav;
+    const int            az165_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az165_el45_d6_R_wav;
+    const int            az165_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az165_el45_d10_L_wav;
+    const int            az165_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az165_el45_d10_R_wav;
+    const int            az165_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az165_el45_d14_L_wav;
+    const int            az165_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az165_el45_d14_R_wav;
+    const int            az165_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az165_el60_d2_L_wav;
+    const int            az165_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az165_el60_d2_R_wav;
+    const int            az165_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az165_el60_d6_L_wav;
+    const int            az165_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az165_el60_d6_R_wav;
+    const int            az165_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az165_el60_d10_L_wav;
+    const int            az165_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az165_el60_d10_R_wav;
+    const int            az165_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az165_el60_d14_L_wav;
+    const int            az165_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az165_el60_d14_R_wav;
+    const int            az165_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az165_el75_d2_L_wav;
+    const int            az165_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az165_el75_d2_R_wav;
+    const int            az165_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az165_el75_d6_L_wav;
+    const int            az165_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az165_el75_d6_R_wav;
+    const int            az165_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az165_el75_d10_L_wav;
+    const int            az165_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az165_el75_d10_R_wav;
+    const int            az165_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az165_el75_d14_L_wav;
+    const int            az165_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az165_el75_d14_R_wav;
+    const int            az165_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az165_el315_d2_L_wav;
+    const int            az165_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az165_el315_d2_R_wav;
+    const int            az165_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az165_el315_d6_L_wav;
+    const int            az165_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az165_el315_d6_R_wav;
+    const int            az165_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az165_el315_d10_L_wav;
+    const int            az165_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az165_el315_d10_R_wav;
+    const int            az165_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az165_el315_d14_L_wav;
+    const int            az165_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az165_el315_d14_R_wav;
+    const int            az165_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az165_el330_d2_L_wav;
+    const int            az165_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az165_el330_d2_R_wav;
+    const int            az165_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az165_el330_d6_L_wav;
+    const int            az165_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az165_el330_d6_R_wav;
+    const int            az165_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az165_el330_d10_L_wav;
+    const int            az165_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az165_el330_d10_R_wav;
+    const int            az165_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az165_el330_d14_L_wav;
+    const int            az165_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az165_el330_d14_R_wav;
+    const int            az165_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az165_el345_d2_L_wav;
+    const int            az165_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az165_el345_d2_R_wav;
+    const int            az165_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az165_el345_d6_L_wav;
+    const int            az165_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az165_el345_d6_R_wav;
+    const int            az165_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az165_el345_d10_L_wav;
+    const int            az165_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az165_el345_d10_R_wav;
+    const int            az165_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az165_el345_d14_L_wav;
+    const int            az165_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az165_el345_d14_R_wav;
+    const int            az165_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az180_el0_d2_L_wav;
+    const int            az180_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az180_el0_d2_R_wav;
+    const int            az180_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az180_el0_d6_L_wav;
+    const int            az180_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az180_el0_d6_R_wav;
+    const int            az180_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az180_el0_d10_L_wav;
+    const int            az180_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az180_el0_d10_R_wav;
+    const int            az180_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az180_el0_d14_L_wav;
+    const int            az180_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az180_el0_d14_R_wav;
+    const int            az180_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az180_el15_d2_L_wav;
+    const int            az180_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az180_el15_d2_R_wav;
+    const int            az180_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az180_el15_d6_L_wav;
+    const int            az180_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az180_el15_d6_R_wav;
+    const int            az180_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az180_el15_d10_L_wav;
+    const int            az180_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az180_el15_d10_R_wav;
+    const int            az180_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az180_el15_d14_L_wav;
+    const int            az180_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az180_el15_d14_R_wav;
+    const int            az180_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az180_el30_d2_L_wav;
+    const int            az180_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az180_el30_d2_R_wav;
+    const int            az180_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az180_el30_d6_L_wav;
+    const int            az180_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az180_el30_d6_R_wav;
+    const int            az180_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az180_el30_d10_L_wav;
+    const int            az180_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az180_el30_d10_R_wav;
+    const int            az180_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az180_el30_d14_L_wav;
+    const int            az180_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az180_el30_d14_R_wav;
+    const int            az180_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az180_el45_d2_L_wav;
+    const int            az180_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az180_el45_d2_R_wav;
+    const int            az180_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az180_el45_d6_L_wav;
+    const int            az180_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az180_el45_d6_R_wav;
+    const int            az180_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az180_el45_d10_L_wav;
+    const int            az180_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az180_el45_d10_R_wav;
+    const int            az180_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az180_el45_d14_L_wav;
+    const int            az180_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az180_el45_d14_R_wav;
+    const int            az180_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az180_el60_d2_L_wav;
+    const int            az180_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az180_el60_d2_R_wav;
+    const int            az180_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az180_el60_d6_L_wav;
+    const int            az180_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az180_el60_d6_R_wav;
+    const int            az180_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az180_el60_d10_L_wav;
+    const int            az180_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az180_el60_d10_R_wav;
+    const int            az180_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az180_el60_d14_L_wav;
+    const int            az180_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az180_el60_d14_R_wav;
+    const int            az180_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az180_el75_d2_L_wav;
+    const int            az180_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az180_el75_d2_R_wav;
+    const int            az180_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az180_el75_d6_L_wav;
+    const int            az180_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az180_el75_d6_R_wav;
+    const int            az180_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az180_el75_d10_L_wav;
+    const int            az180_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az180_el75_d10_R_wav;
+    const int            az180_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az180_el75_d14_L_wav;
+    const int            az180_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az180_el75_d14_R_wav;
+    const int            az180_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az180_el315_d2_L_wav;
+    const int            az180_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az180_el315_d2_R_wav;
+    const int            az180_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az180_el315_d6_L_wav;
+    const int            az180_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az180_el315_d6_R_wav;
+    const int            az180_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az180_el315_d10_L_wav;
+    const int            az180_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az180_el315_d10_R_wav;
+    const int            az180_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az180_el315_d14_L_wav;
+    const int            az180_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az180_el315_d14_R_wav;
+    const int            az180_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az180_el330_d2_L_wav;
+    const int            az180_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az180_el330_d2_R_wav;
+    const int            az180_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az180_el330_d6_L_wav;
+    const int            az180_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az180_el330_d6_R_wav;
+    const int            az180_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az180_el330_d10_L_wav;
+    const int            az180_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az180_el330_d10_R_wav;
+    const int            az180_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az180_el330_d14_L_wav;
+    const int            az180_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az180_el330_d14_R_wav;
+    const int            az180_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az180_el345_d2_L_wav;
+    const int            az180_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az180_el345_d2_R_wav;
+    const int            az180_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az180_el345_d6_L_wav;
+    const int            az180_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az180_el345_d6_R_wav;
+    const int            az180_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az180_el345_d10_L_wav;
+    const int            az180_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az180_el345_d10_R_wav;
+    const int            az180_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az180_el345_d14_L_wav;
+    const int            az180_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az180_el345_d14_R_wav;
+    const int            az180_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az195_el0_d2_L_wav;
+    const int            az195_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az195_el0_d2_R_wav;
+    const int            az195_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az195_el0_d6_L_wav;
+    const int            az195_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az195_el0_d6_R_wav;
+    const int            az195_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az195_el0_d10_L_wav;
+    const int            az195_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az195_el0_d10_R_wav;
+    const int            az195_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az195_el0_d14_L_wav;
+    const int            az195_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az195_el0_d14_R_wav;
+    const int            az195_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az195_el15_d2_L_wav;
+    const int            az195_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az195_el15_d2_R_wav;
+    const int            az195_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az195_el15_d6_L_wav;
+    const int            az195_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az195_el15_d6_R_wav;
+    const int            az195_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az195_el15_d10_L_wav;
+    const int            az195_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az195_el15_d10_R_wav;
+    const int            az195_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az195_el15_d14_L_wav;
+    const int            az195_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az195_el15_d14_R_wav;
+    const int            az195_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az195_el30_d2_L_wav;
+    const int            az195_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az195_el30_d2_R_wav;
+    const int            az195_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az195_el30_d6_L_wav;
+    const int            az195_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az195_el30_d6_R_wav;
+    const int            az195_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az195_el30_d10_L_wav;
+    const int            az195_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az195_el30_d10_R_wav;
+    const int            az195_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az195_el30_d14_L_wav;
+    const int            az195_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az195_el30_d14_R_wav;
+    const int            az195_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az195_el45_d2_L_wav;
+    const int            az195_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az195_el45_d2_R_wav;
+    const int            az195_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az195_el45_d6_L_wav;
+    const int            az195_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az195_el45_d6_R_wav;
+    const int            az195_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az195_el45_d10_L_wav;
+    const int            az195_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az195_el45_d10_R_wav;
+    const int            az195_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az195_el45_d14_L_wav;
+    const int            az195_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az195_el45_d14_R_wav;
+    const int            az195_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az195_el60_d2_L_wav;
+    const int            az195_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az195_el60_d2_R_wav;
+    const int            az195_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az195_el60_d6_L_wav;
+    const int            az195_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az195_el60_d6_R_wav;
+    const int            az195_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az195_el60_d10_L_wav;
+    const int            az195_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az195_el60_d10_R_wav;
+    const int            az195_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az195_el60_d14_L_wav;
+    const int            az195_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az195_el60_d14_R_wav;
+    const int            az195_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az195_el75_d2_L_wav;
+    const int            az195_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az195_el75_d2_R_wav;
+    const int            az195_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az195_el75_d6_L_wav;
+    const int            az195_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az195_el75_d6_R_wav;
+    const int            az195_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az195_el75_d10_L_wav;
+    const int            az195_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az195_el75_d10_R_wav;
+    const int            az195_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az195_el75_d14_L_wav;
+    const int            az195_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az195_el75_d14_R_wav;
+    const int            az195_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az195_el315_d2_L_wav;
+    const int            az195_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az195_el315_d2_R_wav;
+    const int            az195_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az195_el315_d6_L_wav;
+    const int            az195_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az195_el315_d6_R_wav;
+    const int            az195_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az195_el315_d10_L_wav;
+    const int            az195_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az195_el315_d10_R_wav;
+    const int            az195_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az195_el315_d14_L_wav;
+    const int            az195_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az195_el315_d14_R_wav;
+    const int            az195_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az195_el330_d2_L_wav;
+    const int            az195_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az195_el330_d2_R_wav;
+    const int            az195_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az195_el330_d6_L_wav;
+    const int            az195_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az195_el330_d6_R_wav;
+    const int            az195_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az195_el330_d10_L_wav;
+    const int            az195_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az195_el330_d10_R_wav;
+    const int            az195_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az195_el330_d14_L_wav;
+    const int            az195_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az195_el330_d14_R_wav;
+    const int            az195_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az195_el345_d2_L_wav;
+    const int            az195_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az195_el345_d2_R_wav;
+    const int            az195_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az195_el345_d6_L_wav;
+    const int            az195_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az195_el345_d6_R_wav;
+    const int            az195_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az195_el345_d10_L_wav;
+    const int            az195_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az195_el345_d10_R_wav;
+    const int            az195_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az195_el345_d14_L_wav;
+    const int            az195_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az195_el345_d14_R_wav;
+    const int            az195_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az210_el0_d2_L_wav;
+    const int            az210_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az210_el0_d2_R_wav;
+    const int            az210_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az210_el0_d6_L_wav;
+    const int            az210_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az210_el0_d6_R_wav;
+    const int            az210_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az210_el0_d10_L_wav;
+    const int            az210_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az210_el0_d10_R_wav;
+    const int            az210_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az210_el0_d14_L_wav;
+    const int            az210_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az210_el0_d14_R_wav;
+    const int            az210_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az210_el15_d2_L_wav;
+    const int            az210_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az210_el15_d2_R_wav;
+    const int            az210_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az210_el15_d6_L_wav;
+    const int            az210_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az210_el15_d6_R_wav;
+    const int            az210_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az210_el15_d10_L_wav;
+    const int            az210_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az210_el15_d10_R_wav;
+    const int            az210_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az210_el15_d14_L_wav;
+    const int            az210_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az210_el15_d14_R_wav;
+    const int            az210_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az210_el30_d2_L_wav;
+    const int            az210_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az210_el30_d2_R_wav;
+    const int            az210_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az210_el30_d6_L_wav;
+    const int            az210_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az210_el30_d6_R_wav;
+    const int            az210_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az210_el30_d10_L_wav;
+    const int            az210_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az210_el30_d10_R_wav;
+    const int            az210_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az210_el30_d14_L_wav;
+    const int            az210_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az210_el30_d14_R_wav;
+    const int            az210_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az210_el45_d2_L_wav;
+    const int            az210_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az210_el45_d2_R_wav;
+    const int            az210_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az210_el45_d6_L_wav;
+    const int            az210_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az210_el45_d6_R_wav;
+    const int            az210_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az210_el45_d10_L_wav;
+    const int            az210_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az210_el45_d10_R_wav;
+    const int            az210_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az210_el45_d14_L_wav;
+    const int            az210_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az210_el45_d14_R_wav;
+    const int            az210_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az210_el60_d2_L_wav;
+    const int            az210_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az210_el60_d2_R_wav;
+    const int            az210_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az210_el60_d6_L_wav;
+    const int            az210_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az210_el60_d6_R_wav;
+    const int            az210_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az210_el60_d10_L_wav;
+    const int            az210_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az210_el60_d10_R_wav;
+    const int            az210_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az210_el60_d14_L_wav;
+    const int            az210_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az210_el60_d14_R_wav;
+    const int            az210_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az210_el75_d2_L_wav;
+    const int            az210_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az210_el75_d2_R_wav;
+    const int            az210_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az210_el75_d6_L_wav;
+    const int            az210_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az210_el75_d6_R_wav;
+    const int            az210_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az210_el75_d10_L_wav;
+    const int            az210_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az210_el75_d10_R_wav;
+    const int            az210_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az210_el75_d14_L_wav;
+    const int            az210_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az210_el75_d14_R_wav;
+    const int            az210_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az210_el315_d2_L_wav;
+    const int            az210_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az210_el315_d2_R_wav;
+    const int            az210_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az210_el315_d6_L_wav;
+    const int            az210_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az210_el315_d6_R_wav;
+    const int            az210_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az210_el315_d10_L_wav;
+    const int            az210_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az210_el315_d10_R_wav;
+    const int            az210_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az210_el315_d14_L_wav;
+    const int            az210_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az210_el315_d14_R_wav;
+    const int            az210_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az210_el330_d2_L_wav;
+    const int            az210_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az210_el330_d2_R_wav;
+    const int            az210_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az210_el330_d6_L_wav;
+    const int            az210_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az210_el330_d6_R_wav;
+    const int            az210_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az210_el330_d10_L_wav;
+    const int            az210_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az210_el330_d10_R_wav;
+    const int            az210_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az210_el330_d14_L_wav;
+    const int            az210_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az210_el330_d14_R_wav;
+    const int            az210_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az210_el345_d2_L_wav;
+    const int            az210_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az210_el345_d2_R_wav;
+    const int            az210_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az210_el345_d6_L_wav;
+    const int            az210_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az210_el345_d6_R_wav;
+    const int            az210_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az210_el345_d10_L_wav;
+    const int            az210_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az210_el345_d10_R_wav;
+    const int            az210_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az210_el345_d14_L_wav;
+    const int            az210_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az210_el345_d14_R_wav;
+    const int            az210_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az225_el0_d2_L_wav;
+    const int            az225_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az225_el0_d2_R_wav;
+    const int            az225_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az225_el0_d6_L_wav;
+    const int            az225_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az225_el0_d6_R_wav;
+    const int            az225_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az225_el0_d10_L_wav;
+    const int            az225_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az225_el0_d10_R_wav;
+    const int            az225_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az225_el0_d14_L_wav;
+    const int            az225_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az225_el0_d14_R_wav;
+    const int            az225_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az225_el15_d2_L_wav;
+    const int            az225_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az225_el15_d2_R_wav;
+    const int            az225_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az225_el15_d6_L_wav;
+    const int            az225_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az225_el15_d6_R_wav;
+    const int            az225_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az225_el15_d10_L_wav;
+    const int            az225_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az225_el15_d10_R_wav;
+    const int            az225_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az225_el15_d14_L_wav;
+    const int            az225_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az225_el15_d14_R_wav;
+    const int            az225_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az225_el30_d2_L_wav;
+    const int            az225_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az225_el30_d2_R_wav;
+    const int            az225_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az225_el30_d6_L_wav;
+    const int            az225_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az225_el30_d6_R_wav;
+    const int            az225_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az225_el30_d10_L_wav;
+    const int            az225_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az225_el30_d10_R_wav;
+    const int            az225_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az225_el30_d14_L_wav;
+    const int            az225_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az225_el30_d14_R_wav;
+    const int            az225_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az225_el45_d2_L_wav;
+    const int            az225_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az225_el45_d2_R_wav;
+    const int            az225_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az225_el45_d6_L_wav;
+    const int            az225_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az225_el45_d6_R_wav;
+    const int            az225_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az225_el45_d10_L_wav;
+    const int            az225_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az225_el45_d10_R_wav;
+    const int            az225_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az225_el45_d14_L_wav;
+    const int            az225_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az225_el45_d14_R_wav;
+    const int            az225_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az225_el60_d2_L_wav;
+    const int            az225_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az225_el60_d2_R_wav;
+    const int            az225_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az225_el60_d6_L_wav;
+    const int            az225_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az225_el60_d6_R_wav;
+    const int            az225_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az225_el60_d10_L_wav;
+    const int            az225_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az225_el60_d10_R_wav;
+    const int            az225_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az225_el60_d14_L_wav;
+    const int            az225_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az225_el60_d14_R_wav;
+    const int            az225_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az225_el75_d2_L_wav;
+    const int            az225_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az225_el75_d2_R_wav;
+    const int            az225_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az225_el75_d6_L_wav;
+    const int            az225_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az225_el75_d6_R_wav;
+    const int            az225_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az225_el75_d10_L_wav;
+    const int            az225_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az225_el75_d10_R_wav;
+    const int            az225_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az225_el75_d14_L_wav;
+    const int            az225_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az225_el75_d14_R_wav;
+    const int            az225_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az225_el315_d2_L_wav;
+    const int            az225_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az225_el315_d2_R_wav;
+    const int            az225_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az225_el315_d6_L_wav;
+    const int            az225_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az225_el315_d6_R_wav;
+    const int            az225_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az225_el315_d10_L_wav;
+    const int            az225_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az225_el315_d10_R_wav;
+    const int            az225_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az225_el315_d14_L_wav;
+    const int            az225_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az225_el315_d14_R_wav;
+    const int            az225_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az225_el330_d2_L_wav;
+    const int            az225_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az225_el330_d2_R_wav;
+    const int            az225_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az225_el330_d6_L_wav;
+    const int            az225_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az225_el330_d6_R_wav;
+    const int            az225_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az225_el330_d10_L_wav;
+    const int            az225_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az225_el330_d10_R_wav;
+    const int            az225_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az225_el330_d14_L_wav;
+    const int            az225_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az225_el330_d14_R_wav;
+    const int            az225_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az225_el345_d2_L_wav;
+    const int            az225_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az225_el345_d2_R_wav;
+    const int            az225_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az225_el345_d6_L_wav;
+    const int            az225_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az225_el345_d6_R_wav;
+    const int            az225_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az225_el345_d10_L_wav;
+    const int            az225_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az225_el345_d10_R_wav;
+    const int            az225_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az225_el345_d14_L_wav;
+    const int            az225_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az225_el345_d14_R_wav;
+    const int            az225_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az240_el0_d2_L_wav;
+    const int            az240_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az240_el0_d2_R_wav;
+    const int            az240_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az240_el0_d6_L_wav;
+    const int            az240_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az240_el0_d6_R_wav;
+    const int            az240_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az240_el0_d10_L_wav;
+    const int            az240_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az240_el0_d10_R_wav;
+    const int            az240_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az240_el0_d14_L_wav;
+    const int            az240_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az240_el0_d14_R_wav;
+    const int            az240_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az240_el15_d2_L_wav;
+    const int            az240_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az240_el15_d2_R_wav;
+    const int            az240_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az240_el15_d6_L_wav;
+    const int            az240_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az240_el15_d6_R_wav;
+    const int            az240_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az240_el15_d10_L_wav;
+    const int            az240_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az240_el15_d10_R_wav;
+    const int            az240_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az240_el15_d14_L_wav;
+    const int            az240_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az240_el15_d14_R_wav;
+    const int            az240_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az240_el30_d2_L_wav;
+    const int            az240_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az240_el30_d2_R_wav;
+    const int            az240_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az240_el30_d6_L_wav;
+    const int            az240_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az240_el30_d6_R_wav;
+    const int            az240_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az240_el30_d10_L_wav;
+    const int            az240_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az240_el30_d10_R_wav;
+    const int            az240_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az240_el30_d14_L_wav;
+    const int            az240_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az240_el30_d14_R_wav;
+    const int            az240_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az240_el45_d2_L_wav;
+    const int            az240_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az240_el45_d2_R_wav;
+    const int            az240_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az240_el45_d6_L_wav;
+    const int            az240_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az240_el45_d6_R_wav;
+    const int            az240_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az240_el45_d10_L_wav;
+    const int            az240_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az240_el45_d10_R_wav;
+    const int            az240_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az240_el45_d14_L_wav;
+    const int            az240_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az240_el45_d14_R_wav;
+    const int            az240_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az240_el60_d2_L_wav;
+    const int            az240_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az240_el60_d2_R_wav;
+    const int            az240_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az240_el60_d6_L_wav;
+    const int            az240_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az240_el60_d6_R_wav;
+    const int            az240_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az240_el60_d10_L_wav;
+    const int            az240_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az240_el60_d10_R_wav;
+    const int            az240_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az240_el60_d14_L_wav;
+    const int            az240_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az240_el60_d14_R_wav;
+    const int            az240_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az240_el75_d2_L_wav;
+    const int            az240_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az240_el75_d2_R_wav;
+    const int            az240_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az240_el75_d6_L_wav;
+    const int            az240_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az240_el75_d6_R_wav;
+    const int            az240_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az240_el75_d10_L_wav;
+    const int            az240_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az240_el75_d10_R_wav;
+    const int            az240_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az240_el75_d14_L_wav;
+    const int            az240_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az240_el75_d14_R_wav;
+    const int            az240_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az240_el315_d2_L_wav;
+    const int            az240_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az240_el315_d2_R_wav;
+    const int            az240_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az240_el315_d6_L_wav;
+    const int            az240_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az240_el315_d6_R_wav;
+    const int            az240_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az240_el315_d10_L_wav;
+    const int            az240_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az240_el315_d10_R_wav;
+    const int            az240_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az240_el315_d14_L_wav;
+    const int            az240_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az240_el315_d14_R_wav;
+    const int            az240_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az240_el330_d2_L_wav;
+    const int            az240_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az240_el330_d2_R_wav;
+    const int            az240_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az240_el330_d6_L_wav;
+    const int            az240_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az240_el330_d6_R_wav;
+    const int            az240_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az240_el330_d10_L_wav;
+    const int            az240_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az240_el330_d10_R_wav;
+    const int            az240_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az240_el330_d14_L_wav;
+    const int            az240_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az240_el330_d14_R_wav;
+    const int            az240_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az240_el345_d2_L_wav;
+    const int            az240_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az240_el345_d2_R_wav;
+    const int            az240_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az240_el345_d6_L_wav;
+    const int            az240_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az240_el345_d6_R_wav;
+    const int            az240_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az240_el345_d10_L_wav;
+    const int            az240_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az240_el345_d10_R_wav;
+    const int            az240_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az240_el345_d14_L_wav;
+    const int            az240_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az240_el345_d14_R_wav;
+    const int            az240_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az255_el0_d2_L_wav;
+    const int            az255_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az255_el0_d2_R_wav;
+    const int            az255_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az255_el0_d6_L_wav;
+    const int            az255_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az255_el0_d6_R_wav;
+    const int            az255_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az255_el0_d10_L_wav;
+    const int            az255_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az255_el0_d10_R_wav;
+    const int            az255_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az255_el0_d14_L_wav;
+    const int            az255_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az255_el0_d14_R_wav;
+    const int            az255_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az255_el15_d2_L_wav;
+    const int            az255_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az255_el15_d2_R_wav;
+    const int            az255_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az255_el15_d6_L_wav;
+    const int            az255_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az255_el15_d6_R_wav;
+    const int            az255_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az255_el15_d10_L_wav;
+    const int            az255_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az255_el15_d10_R_wav;
+    const int            az255_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az255_el15_d14_L_wav;
+    const int            az255_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az255_el15_d14_R_wav;
+    const int            az255_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az255_el30_d2_L_wav;
+    const int            az255_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az255_el30_d2_R_wav;
+    const int            az255_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az255_el30_d6_L_wav;
+    const int            az255_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az255_el30_d6_R_wav;
+    const int            az255_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az255_el30_d10_L_wav;
+    const int            az255_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az255_el30_d10_R_wav;
+    const int            az255_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az255_el30_d14_L_wav;
+    const int            az255_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az255_el30_d14_R_wav;
+    const int            az255_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az255_el45_d2_L_wav;
+    const int            az255_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az255_el45_d2_R_wav;
+    const int            az255_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az255_el45_d6_L_wav;
+    const int            az255_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az255_el45_d6_R_wav;
+    const int            az255_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az255_el45_d10_L_wav;
+    const int            az255_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az255_el45_d10_R_wav;
+    const int            az255_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az255_el45_d14_L_wav;
+    const int            az255_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az255_el45_d14_R_wav;
+    const int            az255_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az255_el60_d2_L_wav;
+    const int            az255_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az255_el60_d2_R_wav;
+    const int            az255_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az255_el60_d6_L_wav;
+    const int            az255_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az255_el60_d6_R_wav;
+    const int            az255_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az255_el60_d10_L_wav;
+    const int            az255_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az255_el60_d10_R_wav;
+    const int            az255_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az255_el60_d14_L_wav;
+    const int            az255_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az255_el60_d14_R_wav;
+    const int            az255_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az255_el75_d2_L_wav;
+    const int            az255_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az255_el75_d2_R_wav;
+    const int            az255_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az255_el75_d6_L_wav;
+    const int            az255_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az255_el75_d6_R_wav;
+    const int            az255_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az255_el75_d10_L_wav;
+    const int            az255_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az255_el75_d10_R_wav;
+    const int            az255_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az255_el75_d14_L_wav;
+    const int            az255_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az255_el75_d14_R_wav;
+    const int            az255_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az255_el315_d2_L_wav;
+    const int            az255_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az255_el315_d2_R_wav;
+    const int            az255_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az255_el315_d6_L_wav;
+    const int            az255_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az255_el315_d6_R_wav;
+    const int            az255_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az255_el315_d10_L_wav;
+    const int            az255_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az255_el315_d10_R_wav;
+    const int            az255_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az255_el315_d14_L_wav;
+    const int            az255_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az255_el315_d14_R_wav;
+    const int            az255_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az255_el330_d2_L_wav;
+    const int            az255_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az255_el330_d2_R_wav;
+    const int            az255_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az255_el330_d6_L_wav;
+    const int            az255_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az255_el330_d6_R_wav;
+    const int            az255_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az255_el330_d10_L_wav;
+    const int            az255_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az255_el330_d10_R_wav;
+    const int            az255_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az255_el330_d14_L_wav;
+    const int            az255_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az255_el330_d14_R_wav;
+    const int            az255_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az255_el345_d2_L_wav;
+    const int            az255_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az255_el345_d2_R_wav;
+    const int            az255_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az255_el345_d6_L_wav;
+    const int            az255_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az255_el345_d6_R_wav;
+    const int            az255_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az255_el345_d10_L_wav;
+    const int            az255_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az255_el345_d10_R_wav;
+    const int            az255_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az255_el345_d14_L_wav;
+    const int            az255_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az255_el345_d14_R_wav;
+    const int            az255_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az270_el0_d2_L_wav;
+    const int            az270_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az270_el0_d2_R_wav;
+    const int            az270_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az270_el0_d6_L_wav;
+    const int            az270_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az270_el0_d6_R_wav;
+    const int            az270_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az270_el0_d10_L_wav;
+    const int            az270_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az270_el0_d10_R_wav;
+    const int            az270_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az270_el0_d14_L_wav;
+    const int            az270_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az270_el0_d14_R_wav;
+    const int            az270_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az270_el15_d2_L_wav;
+    const int            az270_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az270_el15_d2_R_wav;
+    const int            az270_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az270_el15_d6_L_wav;
+    const int            az270_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az270_el15_d6_R_wav;
+    const int            az270_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az270_el15_d10_L_wav;
+    const int            az270_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az270_el15_d10_R_wav;
+    const int            az270_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az270_el15_d14_L_wav;
+    const int            az270_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az270_el15_d14_R_wav;
+    const int            az270_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az270_el30_d2_L_wav;
+    const int            az270_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az270_el30_d2_R_wav;
+    const int            az270_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az270_el30_d6_L_wav;
+    const int            az270_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az270_el30_d6_R_wav;
+    const int            az270_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az270_el30_d10_L_wav;
+    const int            az270_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az270_el30_d10_R_wav;
+    const int            az270_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az270_el30_d14_L_wav;
+    const int            az270_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az270_el30_d14_R_wav;
+    const int            az270_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az270_el45_d2_L_wav;
+    const int            az270_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az270_el45_d2_R_wav;
+    const int            az270_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az270_el45_d6_L_wav;
+    const int            az270_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az270_el45_d6_R_wav;
+    const int            az270_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az270_el45_d10_L_wav;
+    const int            az270_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az270_el45_d10_R_wav;
+    const int            az270_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az270_el45_d14_L_wav;
+    const int            az270_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az270_el45_d14_R_wav;
+    const int            az270_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az270_el60_d2_L_wav;
+    const int            az270_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az270_el60_d2_R_wav;
+    const int            az270_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az270_el60_d6_L_wav;
+    const int            az270_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az270_el60_d6_R_wav;
+    const int            az270_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az270_el60_d10_L_wav;
+    const int            az270_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az270_el60_d10_R_wav;
+    const int            az270_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az270_el60_d14_L_wav;
+    const int            az270_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az270_el60_d14_R_wav;
+    const int            az270_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az270_el75_d2_L_wav;
+    const int            az270_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az270_el75_d2_R_wav;
+    const int            az270_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az270_el75_d6_L_wav;
+    const int            az270_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az270_el75_d6_R_wav;
+    const int            az270_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az270_el75_d10_L_wav;
+    const int            az270_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az270_el75_d10_R_wav;
+    const int            az270_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az270_el75_d14_L_wav;
+    const int            az270_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az270_el75_d14_R_wav;
+    const int            az270_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az270_el315_d2_L_wav;
+    const int            az270_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az270_el315_d2_R_wav;
+    const int            az270_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az270_el315_d6_L_wav;
+    const int            az270_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az270_el315_d6_R_wav;
+    const int            az270_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az270_el315_d10_L_wav;
+    const int            az270_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az270_el315_d10_R_wav;
+    const int            az270_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az270_el315_d14_L_wav;
+    const int            az270_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az270_el315_d14_R_wav;
+    const int            az270_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az270_el330_d2_L_wav;
+    const int            az270_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az270_el330_d2_R_wav;
+    const int            az270_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az270_el330_d6_L_wav;
+    const int            az270_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az270_el330_d6_R_wav;
+    const int            az270_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az270_el330_d10_L_wav;
+    const int            az270_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az270_el330_d10_R_wav;
+    const int            az270_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az270_el330_d14_L_wav;
+    const int            az270_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az270_el330_d14_R_wav;
+    const int            az270_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az270_el345_d2_L_wav;
+    const int            az270_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az270_el345_d2_R_wav;
+    const int            az270_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az270_el345_d6_L_wav;
+    const int            az270_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az270_el345_d6_R_wav;
+    const int            az270_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az270_el345_d10_L_wav;
+    const int            az270_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az270_el345_d10_R_wav;
+    const int            az270_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az270_el345_d14_L_wav;
+    const int            az270_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az270_el345_d14_R_wav;
+    const int            az270_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az285_el0_d2_L_wav;
+    const int            az285_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az285_el0_d2_R_wav;
+    const int            az285_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az285_el0_d6_L_wav;
+    const int            az285_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az285_el0_d6_R_wav;
+    const int            az285_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az285_el0_d10_L_wav;
+    const int            az285_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az285_el0_d10_R_wav;
+    const int            az285_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az285_el0_d14_L_wav;
+    const int            az285_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az285_el0_d14_R_wav;
+    const int            az285_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az285_el15_d2_L_wav;
+    const int            az285_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az285_el15_d2_R_wav;
+    const int            az285_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az285_el15_d6_L_wav;
+    const int            az285_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az285_el15_d6_R_wav;
+    const int            az285_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az285_el15_d10_L_wav;
+    const int            az285_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az285_el15_d10_R_wav;
+    const int            az285_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az285_el15_d14_L_wav;
+    const int            az285_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az285_el15_d14_R_wav;
+    const int            az285_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az285_el30_d2_L_wav;
+    const int            az285_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az285_el30_d2_R_wav;
+    const int            az285_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az285_el30_d6_L_wav;
+    const int            az285_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az285_el30_d6_R_wav;
+    const int            az285_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az285_el30_d10_L_wav;
+    const int            az285_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az285_el30_d10_R_wav;
+    const int            az285_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az285_el30_d14_L_wav;
+    const int            az285_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az285_el30_d14_R_wav;
+    const int            az285_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az285_el45_d2_L_wav;
+    const int            az285_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az285_el45_d2_R_wav;
+    const int            az285_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az285_el45_d6_L_wav;
+    const int            az285_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az285_el45_d6_R_wav;
+    const int            az285_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az285_el45_d10_L_wav;
+    const int            az285_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az285_el45_d10_R_wav;
+    const int            az285_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az285_el45_d14_L_wav;
+    const int            az285_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az285_el45_d14_R_wav;
+    const int            az285_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az285_el60_d2_L_wav;
+    const int            az285_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az285_el60_d2_R_wav;
+    const int            az285_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az285_el60_d6_L_wav;
+    const int            az285_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az285_el60_d6_R_wav;
+    const int            az285_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az285_el60_d10_L_wav;
+    const int            az285_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az285_el60_d10_R_wav;
+    const int            az285_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az285_el60_d14_L_wav;
+    const int            az285_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az285_el60_d14_R_wav;
+    const int            az285_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az285_el75_d2_L_wav;
+    const int            az285_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az285_el75_d2_R_wav;
+    const int            az285_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az285_el75_d6_L_wav;
+    const int            az285_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az285_el75_d6_R_wav;
+    const int            az285_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az285_el75_d10_L_wav;
+    const int            az285_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az285_el75_d10_R_wav;
+    const int            az285_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az285_el75_d14_L_wav;
+    const int            az285_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az285_el75_d14_R_wav;
+    const int            az285_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az285_el315_d2_L_wav;
+    const int            az285_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az285_el315_d2_R_wav;
+    const int            az285_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az285_el315_d6_L_wav;
+    const int            az285_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az285_el315_d6_R_wav;
+    const int            az285_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az285_el315_d10_L_wav;
+    const int            az285_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az285_el315_d10_R_wav;
+    const int            az285_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az285_el315_d14_L_wav;
+    const int            az285_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az285_el315_d14_R_wav;
+    const int            az285_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az285_el330_d2_L_wav;
+    const int            az285_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az285_el330_d2_R_wav;
+    const int            az285_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az285_el330_d6_L_wav;
+    const int            az285_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az285_el330_d6_R_wav;
+    const int            az285_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az285_el330_d10_L_wav;
+    const int            az285_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az285_el330_d10_R_wav;
+    const int            az285_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az285_el330_d14_L_wav;
+    const int            az285_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az285_el330_d14_R_wav;
+    const int            az285_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az285_el345_d2_L_wav;
+    const int            az285_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az285_el345_d2_R_wav;
+    const int            az285_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az285_el345_d6_L_wav;
+    const int            az285_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az285_el345_d6_R_wav;
+    const int            az285_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az285_el345_d10_L_wav;
+    const int            az285_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az285_el345_d10_R_wav;
+    const int            az285_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az285_el345_d14_L_wav;
+    const int            az285_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az285_el345_d14_R_wav;
+    const int            az285_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az300_el0_d2_L_wav;
+    const int            az300_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az300_el0_d2_R_wav;
+    const int            az300_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az300_el0_d6_L_wav;
+    const int            az300_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az300_el0_d6_R_wav;
+    const int            az300_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az300_el0_d10_L_wav;
+    const int            az300_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az300_el0_d10_R_wav;
+    const int            az300_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az300_el0_d14_L_wav;
+    const int            az300_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az300_el0_d14_R_wav;
+    const int            az300_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az300_el15_d2_L_wav;
+    const int            az300_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az300_el15_d2_R_wav;
+    const int            az300_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az300_el15_d6_L_wav;
+    const int            az300_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az300_el15_d6_R_wav;
+    const int            az300_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az300_el15_d10_L_wav;
+    const int            az300_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az300_el15_d10_R_wav;
+    const int            az300_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az300_el15_d14_L_wav;
+    const int            az300_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az300_el15_d14_R_wav;
+    const int            az300_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az300_el30_d2_L_wav;
+    const int            az300_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az300_el30_d2_R_wav;
+    const int            az300_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az300_el30_d6_L_wav;
+    const int            az300_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az300_el30_d6_R_wav;
+    const int            az300_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az300_el30_d10_L_wav;
+    const int            az300_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az300_el30_d10_R_wav;
+    const int            az300_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az300_el30_d14_L_wav;
+    const int            az300_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az300_el30_d14_R_wav;
+    const int            az300_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az300_el45_d2_L_wav;
+    const int            az300_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az300_el45_d2_R_wav;
+    const int            az300_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az300_el45_d6_L_wav;
+    const int            az300_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az300_el45_d6_R_wav;
+    const int            az300_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az300_el45_d10_L_wav;
+    const int            az300_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az300_el45_d10_R_wav;
+    const int            az300_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az300_el45_d14_L_wav;
+    const int            az300_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az300_el45_d14_R_wav;
+    const int            az300_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az300_el60_d2_L_wav;
+    const int            az300_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az300_el60_d2_R_wav;
+    const int            az300_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az300_el60_d6_L_wav;
+    const int            az300_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az300_el60_d6_R_wav;
+    const int            az300_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az300_el60_d10_L_wav;
+    const int            az300_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az300_el60_d10_R_wav;
+    const int            az300_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az300_el60_d14_L_wav;
+    const int            az300_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az300_el60_d14_R_wav;
+    const int            az300_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az300_el75_d2_L_wav;
+    const int            az300_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az300_el75_d2_R_wav;
+    const int            az300_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az300_el75_d6_L_wav;
+    const int            az300_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az300_el75_d6_R_wav;
+    const int            az300_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az300_el75_d10_L_wav;
+    const int            az300_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az300_el75_d10_R_wav;
+    const int            az300_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az300_el75_d14_L_wav;
+    const int            az300_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az300_el75_d14_R_wav;
+    const int            az300_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az300_el315_d2_L_wav;
+    const int            az300_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az300_el315_d2_R_wav;
+    const int            az300_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az300_el315_d6_L_wav;
+    const int            az300_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az300_el315_d6_R_wav;
+    const int            az300_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az300_el315_d10_L_wav;
+    const int            az300_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az300_el315_d10_R_wav;
+    const int            az300_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az300_el315_d14_L_wav;
+    const int            az300_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az300_el315_d14_R_wav;
+    const int            az300_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az300_el330_d2_L_wav;
+    const int            az300_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az300_el330_d2_R_wav;
+    const int            az300_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az300_el330_d6_L_wav;
+    const int            az300_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az300_el330_d6_R_wav;
+    const int            az300_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az300_el330_d10_L_wav;
+    const int            az300_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az300_el330_d10_R_wav;
+    const int            az300_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az300_el330_d14_L_wav;
+    const int            az300_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az300_el330_d14_R_wav;
+    const int            az300_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az300_el345_d2_L_wav;
+    const int            az300_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az300_el345_d2_R_wav;
+    const int            az300_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az300_el345_d6_L_wav;
+    const int            az300_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az300_el345_d6_R_wav;
+    const int            az300_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az300_el345_d10_L_wav;
+    const int            az300_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az300_el345_d10_R_wav;
+    const int            az300_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az300_el345_d14_L_wav;
+    const int            az300_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az300_el345_d14_R_wav;
+    const int            az300_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az315_el0_d2_L_wav;
+    const int            az315_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az315_el0_d2_R_wav;
+    const int            az315_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az315_el0_d6_L_wav;
+    const int            az315_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az315_el0_d6_R_wav;
+    const int            az315_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az315_el0_d10_L_wav;
+    const int            az315_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az315_el0_d10_R_wav;
+    const int            az315_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az315_el0_d14_L_wav;
+    const int            az315_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az315_el0_d14_R_wav;
+    const int            az315_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az315_el15_d2_L_wav;
+    const int            az315_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az315_el15_d2_R_wav;
+    const int            az315_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az315_el15_d6_L_wav;
+    const int            az315_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az315_el15_d6_R_wav;
+    const int            az315_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az315_el15_d10_L_wav;
+    const int            az315_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az315_el15_d10_R_wav;
+    const int            az315_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az315_el15_d14_L_wav;
+    const int            az315_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az315_el15_d14_R_wav;
+    const int            az315_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az315_el30_d2_L_wav;
+    const int            az315_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az315_el30_d2_R_wav;
+    const int            az315_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az315_el30_d6_L_wav;
+    const int            az315_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az315_el30_d6_R_wav;
+    const int            az315_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az315_el30_d10_L_wav;
+    const int            az315_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az315_el30_d10_R_wav;
+    const int            az315_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az315_el30_d14_L_wav;
+    const int            az315_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az315_el30_d14_R_wav;
+    const int            az315_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az315_el45_d2_L_wav;
+    const int            az315_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az315_el45_d2_R_wav;
+    const int            az315_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az315_el45_d6_L_wav;
+    const int            az315_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az315_el45_d6_R_wav;
+    const int            az315_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az315_el45_d10_L_wav;
+    const int            az315_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az315_el45_d10_R_wav;
+    const int            az315_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az315_el45_d14_L_wav;
+    const int            az315_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az315_el45_d14_R_wav;
+    const int            az315_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az315_el60_d2_L_wav;
+    const int            az315_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az315_el60_d2_R_wav;
+    const int            az315_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az315_el60_d6_L_wav;
+    const int            az315_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az315_el60_d6_R_wav;
+    const int            az315_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az315_el60_d10_L_wav;
+    const int            az315_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az315_el60_d10_R_wav;
+    const int            az315_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az315_el60_d14_L_wav;
+    const int            az315_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az315_el60_d14_R_wav;
+    const int            az315_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az315_el75_d2_L_wav;
+    const int            az315_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az315_el75_d2_R_wav;
+    const int            az315_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az315_el75_d6_L_wav;
+    const int            az315_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az315_el75_d6_R_wav;
+    const int            az315_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az315_el75_d10_L_wav;
+    const int            az315_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az315_el75_d10_R_wav;
+    const int            az315_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az315_el75_d14_L_wav;
+    const int            az315_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az315_el75_d14_R_wav;
+    const int            az315_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az315_el315_d2_L_wav;
+    const int            az315_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az315_el315_d2_R_wav;
+    const int            az315_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az315_el315_d6_L_wav;
+    const int            az315_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az315_el315_d6_R_wav;
+    const int            az315_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az315_el315_d10_L_wav;
+    const int            az315_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az315_el315_d10_R_wav;
+    const int            az315_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az315_el315_d14_L_wav;
+    const int            az315_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az315_el315_d14_R_wav;
+    const int            az315_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az315_el330_d2_L_wav;
+    const int            az315_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az315_el330_d2_R_wav;
+    const int            az315_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az315_el330_d6_L_wav;
+    const int            az315_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az315_el330_d6_R_wav;
+    const int            az315_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az315_el330_d10_L_wav;
+    const int            az315_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az315_el330_d10_R_wav;
+    const int            az315_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az315_el330_d14_L_wav;
+    const int            az315_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az315_el330_d14_R_wav;
+    const int            az315_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az315_el345_d2_L_wav;
+    const int            az315_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az315_el345_d2_R_wav;
+    const int            az315_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az315_el345_d6_L_wav;
+    const int            az315_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az315_el345_d6_R_wav;
+    const int            az315_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az315_el345_d10_L_wav;
+    const int            az315_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az315_el345_d10_R_wav;
+    const int            az315_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az315_el345_d14_L_wav;
+    const int            az315_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az315_el345_d14_R_wav;
+    const int            az315_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az330_el0_d2_L_wav;
+    const int            az330_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az330_el0_d2_R_wav;
+    const int            az330_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az330_el0_d6_L_wav;
+    const int            az330_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az330_el0_d6_R_wav;
+    const int            az330_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az330_el0_d10_L_wav;
+    const int            az330_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az330_el0_d10_R_wav;
+    const int            az330_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az330_el0_d14_L_wav;
+    const int            az330_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az330_el0_d14_R_wav;
+    const int            az330_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az330_el15_d2_L_wav;
+    const int            az330_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az330_el15_d2_R_wav;
+    const int            az330_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az330_el15_d6_L_wav;
+    const int            az330_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az330_el15_d6_R_wav;
+    const int            az330_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az330_el15_d10_L_wav;
+    const int            az330_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az330_el15_d10_R_wav;
+    const int            az330_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az330_el15_d14_L_wav;
+    const int            az330_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az330_el15_d14_R_wav;
+    const int            az330_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az330_el30_d2_L_wav;
+    const int            az330_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az330_el30_d2_R_wav;
+    const int            az330_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az330_el30_d6_L_wav;
+    const int            az330_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az330_el30_d6_R_wav;
+    const int            az330_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az330_el30_d10_L_wav;
+    const int            az330_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az330_el30_d10_R_wav;
+    const int            az330_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az330_el30_d14_L_wav;
+    const int            az330_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az330_el30_d14_R_wav;
+    const int            az330_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az330_el45_d2_L_wav;
+    const int            az330_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az330_el45_d2_R_wav;
+    const int            az330_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az330_el45_d6_L_wav;
+    const int            az330_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az330_el45_d6_R_wav;
+    const int            az330_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az330_el45_d10_L_wav;
+    const int            az330_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az330_el45_d10_R_wav;
+    const int            az330_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az330_el45_d14_L_wav;
+    const int            az330_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az330_el45_d14_R_wav;
+    const int            az330_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az330_el60_d2_L_wav;
+    const int            az330_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az330_el60_d2_R_wav;
+    const int            az330_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az330_el60_d6_L_wav;
+    const int            az330_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az330_el60_d6_R_wav;
+    const int            az330_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az330_el60_d10_L_wav;
+    const int            az330_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az330_el60_d10_R_wav;
+    const int            az330_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az330_el60_d14_L_wav;
+    const int            az330_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az330_el60_d14_R_wav;
+    const int            az330_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az330_el75_d2_L_wav;
+    const int            az330_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az330_el75_d2_R_wav;
+    const int            az330_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az330_el75_d6_L_wav;
+    const int            az330_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az330_el75_d6_R_wav;
+    const int            az330_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az330_el75_d10_L_wav;
+    const int            az330_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az330_el75_d10_R_wav;
+    const int            az330_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az330_el75_d14_L_wav;
+    const int            az330_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az330_el75_d14_R_wav;
+    const int            az330_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az330_el315_d2_L_wav;
+    const int            az330_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az330_el315_d2_R_wav;
+    const int            az330_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az330_el315_d6_L_wav;
+    const int            az330_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az330_el315_d6_R_wav;
+    const int            az330_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az330_el315_d10_L_wav;
+    const int            az330_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az330_el315_d10_R_wav;
+    const int            az330_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az330_el315_d14_L_wav;
+    const int            az330_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az330_el315_d14_R_wav;
+    const int            az330_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az330_el330_d2_L_wav;
+    const int            az330_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az330_el330_d2_R_wav;
+    const int            az330_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az330_el330_d6_L_wav;
+    const int            az330_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az330_el330_d6_R_wav;
+    const int            az330_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az330_el330_d10_L_wav;
+    const int            az330_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az330_el330_d10_R_wav;
+    const int            az330_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az330_el330_d14_L_wav;
+    const int            az330_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az330_el330_d14_R_wav;
+    const int            az330_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az330_el345_d2_L_wav;
+    const int            az330_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az330_el345_d2_R_wav;
+    const int            az330_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az330_el345_d6_L_wav;
+    const int            az330_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az330_el345_d6_R_wav;
+    const int            az330_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az330_el345_d10_L_wav;
+    const int            az330_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az330_el345_d10_R_wav;
+    const int            az330_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az330_el345_d14_L_wav;
+    const int            az330_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az330_el345_d14_R_wav;
+    const int            az330_el345_d14_R_wavSize = 4140;
+
+    extern const char*   az345_el0_d2_L_wav;
+    const int            az345_el0_d2_L_wavSize = 4140;
+
+    extern const char*   az345_el0_d2_R_wav;
+    const int            az345_el0_d2_R_wavSize = 4140;
+
+    extern const char*   az345_el0_d6_L_wav;
+    const int            az345_el0_d6_L_wavSize = 4140;
+
+    extern const char*   az345_el0_d6_R_wav;
+    const int            az345_el0_d6_R_wavSize = 4140;
+
+    extern const char*   az345_el0_d10_L_wav;
+    const int            az345_el0_d10_L_wavSize = 4140;
+
+    extern const char*   az345_el0_d10_R_wav;
+    const int            az345_el0_d10_R_wavSize = 4140;
+
+    extern const char*   az345_el0_d14_L_wav;
+    const int            az345_el0_d14_L_wavSize = 4140;
+
+    extern const char*   az345_el0_d14_R_wav;
+    const int            az345_el0_d14_R_wavSize = 4140;
+
+    extern const char*   az345_el15_d2_L_wav;
+    const int            az345_el15_d2_L_wavSize = 4140;
+
+    extern const char*   az345_el15_d2_R_wav;
+    const int            az345_el15_d2_R_wavSize = 4140;
+
+    extern const char*   az345_el15_d6_L_wav;
+    const int            az345_el15_d6_L_wavSize = 4140;
+
+    extern const char*   az345_el15_d6_R_wav;
+    const int            az345_el15_d6_R_wavSize = 4140;
+
+    extern const char*   az345_el15_d10_L_wav;
+    const int            az345_el15_d10_L_wavSize = 4140;
+
+    extern const char*   az345_el15_d10_R_wav;
+    const int            az345_el15_d10_R_wavSize = 4140;
+
+    extern const char*   az345_el15_d14_L_wav;
+    const int            az345_el15_d14_L_wavSize = 4140;
+
+    extern const char*   az345_el15_d14_R_wav;
+    const int            az345_el15_d14_R_wavSize = 4140;
+
+    extern const char*   az345_el30_d2_L_wav;
+    const int            az345_el30_d2_L_wavSize = 4140;
+
+    extern const char*   az345_el30_d2_R_wav;
+    const int            az345_el30_d2_R_wavSize = 4140;
+
+    extern const char*   az345_el30_d6_L_wav;
+    const int            az345_el30_d6_L_wavSize = 4140;
+
+    extern const char*   az345_el30_d6_R_wav;
+    const int            az345_el30_d6_R_wavSize = 4140;
+
+    extern const char*   az345_el30_d10_L_wav;
+    const int            az345_el30_d10_L_wavSize = 4140;
+
+    extern const char*   az345_el30_d10_R_wav;
+    const int            az345_el30_d10_R_wavSize = 4140;
+
+    extern const char*   az345_el30_d14_L_wav;
+    const int            az345_el30_d14_L_wavSize = 4140;
+
+    extern const char*   az345_el30_d14_R_wav;
+    const int            az345_el30_d14_R_wavSize = 4140;
+
+    extern const char*   az345_el45_d2_L_wav;
+    const int            az345_el45_d2_L_wavSize = 4140;
+
+    extern const char*   az345_el45_d2_R_wav;
+    const int            az345_el45_d2_R_wavSize = 4140;
+
+    extern const char*   az345_el45_d6_L_wav;
+    const int            az345_el45_d6_L_wavSize = 4140;
+
+    extern const char*   az345_el45_d6_R_wav;
+    const int            az345_el45_d6_R_wavSize = 4140;
+
+    extern const char*   az345_el45_d10_L_wav;
+    const int            az345_el45_d10_L_wavSize = 4140;
+
+    extern const char*   az345_el45_d10_R_wav;
+    const int            az345_el45_d10_R_wavSize = 4140;
+
+    extern const char*   az345_el45_d14_L_wav;
+    const int            az345_el45_d14_L_wavSize = 4140;
+
+    extern const char*   az345_el45_d14_R_wav;
+    const int            az345_el45_d14_R_wavSize = 4140;
+
+    extern const char*   az345_el60_d2_L_wav;
+    const int            az345_el60_d2_L_wavSize = 4140;
+
+    extern const char*   az345_el60_d2_R_wav;
+    const int            az345_el60_d2_R_wavSize = 4140;
+
+    extern const char*   az345_el60_d6_L_wav;
+    const int            az345_el60_d6_L_wavSize = 4140;
+
+    extern const char*   az345_el60_d6_R_wav;
+    const int            az345_el60_d6_R_wavSize = 4140;
+
+    extern const char*   az345_el60_d10_L_wav;
+    const int            az345_el60_d10_L_wavSize = 4140;
+
+    extern const char*   az345_el60_d10_R_wav;
+    const int            az345_el60_d10_R_wavSize = 4140;
+
+    extern const char*   az345_el60_d14_L_wav;
+    const int            az345_el60_d14_L_wavSize = 4140;
+
+    extern const char*   az345_el60_d14_R_wav;
+    const int            az345_el60_d14_R_wavSize = 4140;
+
+    extern const char*   az345_el75_d2_L_wav;
+    const int            az345_el75_d2_L_wavSize = 4140;
+
+    extern const char*   az345_el75_d2_R_wav;
+    const int            az345_el75_d2_R_wavSize = 4140;
+
+    extern const char*   az345_el75_d6_L_wav;
+    const int            az345_el75_d6_L_wavSize = 4140;
+
+    extern const char*   az345_el75_d6_R_wav;
+    const int            az345_el75_d6_R_wavSize = 4140;
+
+    extern const char*   az345_el75_d10_L_wav;
+    const int            az345_el75_d10_L_wavSize = 4140;
+
+    extern const char*   az345_el75_d10_R_wav;
+    const int            az345_el75_d10_R_wavSize = 4140;
+
+    extern const char*   az345_el75_d14_L_wav;
+    const int            az345_el75_d14_L_wavSize = 4140;
+
+    extern const char*   az345_el75_d14_R_wav;
+    const int            az345_el75_d14_R_wavSize = 4140;
+
+    extern const char*   az345_el315_d2_L_wav;
+    const int            az345_el315_d2_L_wavSize = 4140;
+
+    extern const char*   az345_el315_d2_R_wav;
+    const int            az345_el315_d2_R_wavSize = 4140;
+
+    extern const char*   az345_el315_d6_L_wav;
+    const int            az345_el315_d6_L_wavSize = 4140;
+
+    extern const char*   az345_el315_d6_R_wav;
+    const int            az345_el315_d6_R_wavSize = 4140;
+
+    extern const char*   az345_el315_d10_L_wav;
+    const int            az345_el315_d10_L_wavSize = 4140;
+
+    extern const char*   az345_el315_d10_R_wav;
+    const int            az345_el315_d10_R_wavSize = 4140;
+
+    extern const char*   az345_el315_d14_L_wav;
+    const int            az345_el315_d14_L_wavSize = 4140;
+
+    extern const char*   az345_el315_d14_R_wav;
+    const int            az345_el315_d14_R_wavSize = 4140;
+
+    extern const char*   az345_el330_d2_L_wav;
+    const int            az345_el330_d2_L_wavSize = 4140;
+
+    extern const char*   az345_el330_d2_R_wav;
+    const int            az345_el330_d2_R_wavSize = 4140;
+
+    extern const char*   az345_el330_d6_L_wav;
+    const int            az345_el330_d6_L_wavSize = 4140;
+
+    extern const char*   az345_el330_d6_R_wav;
+    const int            az345_el330_d6_R_wavSize = 4140;
+
+    extern const char*   az345_el330_d10_L_wav;
+    const int            az345_el330_d10_L_wavSize = 4140;
+
+    extern const char*   az345_el330_d10_R_wav;
+    const int            az345_el330_d10_R_wavSize = 4140;
+
+    extern const char*   az345_el330_d14_L_wav;
+    const int            az345_el330_d14_L_wavSize = 4140;
+
+    extern const char*   az345_el330_d14_R_wav;
+    const int            az345_el330_d14_R_wavSize = 4140;
+
+    extern const char*   az345_el345_d2_L_wav;
+    const int            az345_el345_d2_L_wavSize = 4140;
+
+    extern const char*   az345_el345_d2_R_wav;
+    const int            az345_el345_d2_R_wavSize = 4140;
+
+    extern const char*   az345_el345_d6_L_wav;
+    const int            az345_el345_d6_L_wavSize = 4140;
+
+    extern const char*   az345_el345_d6_R_wav;
+    const int            az345_el345_d6_R_wavSize = 4140;
+
+    extern const char*   az345_el345_d10_L_wav;
+    const int            az345_el345_d10_L_wavSize = 4140;
+
+    extern const char*   az345_el345_d10_R_wav;
+    const int            az345_el345_d10_R_wavSize = 4140;
+
+    extern const char*   az345_el345_d14_L_wav;
+    const int            az345_el345_d14_L_wavSize = 4140;
+
+    extern const char*   az345_el345_d14_R_wav;
+    const int            az345_el345_d14_R_wavSize = 4140;
 
     extern const char*   gif2h5;
     const int            gif2h5Size = 211136;
@@ -342,7 +5538,7 @@ namespace BinaryData
     const int            SmallTheaterHRIRs_1_0_sofaSize = 25051963;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 111;
+    const int namedResourceListSize = 1843;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];
