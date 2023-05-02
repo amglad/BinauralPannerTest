@@ -13,14 +13,11 @@
 BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (BinauralPannerTestAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p)
 {
-    // Make sure that before the constructor has finished, you've set the
-    // editor's size to whatever you need it to be.
     tree.addListener(this);
     addMouseListener(this, false);
     setInterceptsMouseClicks(true, false);
     
     tree = audioProcessor.state.state;
-    
     valueTreeRedirected(audioProcessor.state.state);
     
     // azimuth knob
@@ -86,24 +83,24 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     
     
     // makeup gain knob
-    gainKnob.addListener(this);
-    gainKnob.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
-    gainKnob.setBounds(450,250,125,100);
-    gainKnob.setRange(0.0,12.0,0.1);
-    gainKnob.setValue(0.0);
-    gainKnob.setTextValueSuffix(" dB");
-    gainKnob.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 100, 25);
-    gainKnob.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::ivory.darker(0.27));
-    gainKnob.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::orange.brighter(0.9));
-    gainKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.45));
-    gainKnob.setColour(juce::Slider::ColourIds::rotarySliderOutlineColourId, juce::Colours::ivory.darker(0.33));
-    addAndMakeVisible(gainKnob);
-    
-    gainLabel.setText("makeup gain", juce::dontSendNotification);
-    gainLabel.attachToComponent(&gainKnob, false);
-    gainLabel.setJustificationType(juce::Justification::centredTop);
-    gainLabel.setFont(juce::Font("Arial Black", 22.0, juce::Font::bold));
-    addAndMakeVisible(gainLabel);
+//    gainKnob.addListener(this);
+//    gainKnob.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
+//    gainKnob.setBounds(0,250,125,100);
+//    gainKnob.setRange(-12.0,12.0,0.1);
+//    gainKnob.setValue(0.0);
+//    gainKnob.setTextValueSuffix(" dB");
+//    gainKnob.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 100, 25);
+//    gainKnob.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::ivory.darker(0.27));
+//    gainKnob.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::orange.brighter(0.9));
+//    gainKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.45));
+//    gainKnob.setColour(juce::Slider::ColourIds::rotarySliderOutlineColourId, juce::Colours::ivory.darker(0.33));
+//    addAndMakeVisible(gainKnob);
+//
+//    gainLabel.setText("output gain", juce::dontSendNotification);
+//    gainLabel.attachToComponent(&gainKnob, false);
+//    gainLabel.setJustificationType(juce::Justification::centredTop);
+//    gainLabel.setFont(juce::Font("Arial Black", 20.0, juce::Font::bold));
+//    addAndMakeVisible(gainLabel);
     
     
     // plugin title
@@ -125,9 +122,6 @@ BinauralPannerTestAudioProcessorEditor::BinauralPannerTestAudioProcessorEditor (
     sliderAttachment.emplace_back(new juce::AudioProcessorValueTreeState::SliderAttachment(audioProcessor.state, "AzimuthAngle", azKnob));
     sliderAttachment.emplace_back(new juce::AudioProcessorValueTreeState::SliderAttachment(audioProcessor.state, "ElevationAngle", elKnob));
     sliderAttachment.emplace_back(new juce::AudioProcessorValueTreeState::SliderAttachment(audioProcessor.state, "DistanceValue", dSlider));
-    
- //   headTop = juce::ImageCache::getFromMemory(BinaryData::outlinetop2_png, BinaryData::outlinetop2_pngSize);
- //   headSide = juce::ImageCache::getFromMemory(BinaryData::outlineside_png, BinaryData::outlineside_pngSize);
 }
 
 BinauralPannerTestAudioProcessorEditor::~BinauralPannerTestAudioProcessorEditor()
@@ -156,16 +150,12 @@ void BinauralPannerTestAudioProcessorEditor::paint (juce::Graphics& g)
     auto elKnobX = width * 50/windowWidth;
     auto elKnobY = height * 75/windowHeight;
     
-    auto gainKnobX = width * 450/windowWidth;
-    auto gainKnobY = height * 250/windowHeight;
+//    auto gainKnobX = width * 450/windowWidth;
+//    auto gainKnobY = height * 250/windowHeight;
     
     azKnob.setBounds(azKnobX,azKnobY,knobWidth,knobHeight);
     elKnob.setBounds(elKnobX,elKnobY,knobWidth,knobHeight);
-    gainKnob.setBounds(gainKnobX,gainKnobY,knobWidth/1.2,knobHeight/1.5);
-    
-  //  g.drawImageWithin(headTop, azKnobX, azKnobY, knobWidth, knobHeight, juce::RectanglePlacement::Flags (juce::RectanglePlacement::centred));
-  //  g.drawImageWithin(headSide, elKnobX, elKnobY, knobWidth/2, knobHeight/2, juce::RectanglePlacement::Flags (juce::RectanglePlacement::onlyReduceInSize),(juce::RectanglePlacement::centred));
- //   g.drawImage(headSide, elKnobX, elKnobY, knobWidth, knobHeight, elKnobX, elKnobY, knobWidth/2, knobHeight/2);
+//    gainKnob.setBounds(gainKnobX,gainKnobY,knobWidth/1.2,knobHeight/1.5);
     
     
     // Slider bounds
@@ -183,7 +173,7 @@ void BinauralPannerTestAudioProcessorEditor::paint (juce::Graphics& g)
     auto titleHeight = height * 50/windowHeight;
     
     auto titleX = width * 175/windowWidth;
-    auto titleY = height * 275/windowHeight;
+    auto titleY = height * 250/windowHeight;
  
     title.setBounds(titleX,titleY,titleWidth,titleHeight);
 }
@@ -203,16 +193,13 @@ void BinauralPannerTestAudioProcessorEditor::valueTreePropertyChanged (juce::Val
 
 void BinauralPannerTestAudioProcessorEditor::valueTreeRedirected (juce::ValueTree &)
 {
-//    if (juce::MessageManager::getInstance()->isThisTheMessageThread())
-//        int test = 1;
-//    else
-//        int test = 1;
+
 }
 
-void BinauralPannerTestAudioProcessorEditor::sliderValueChanged (juce::Slider * slider)
-{
-    if (slider == &gainKnob)
-    {
-        audioProcessor.gain_dB = slider->getValue();
-    }
-}
+//void BinauralPannerTestAudioProcessorEditor::sliderValueChanged (juce::Slider * slider)
+//{
+//    if (slider == &gainKnob)
+//    {
+//        audioProcessor.gain_dB = slider->getValue();
+//    }
+//}

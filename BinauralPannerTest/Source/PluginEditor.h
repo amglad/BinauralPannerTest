@@ -15,8 +15,8 @@
 /**
 */
 class BinauralPannerTestAudioProcessorEditor  : public juce::AudioProcessorEditor,
-                                                public juce::ValueTree::Listener,
-                                                public juce::Slider::Listener
+                                                public juce::ValueTree::Listener
+                                               // public juce::Slider::Listener
 {
 public:
     BinauralPannerTestAudioProcessorEditor (BinauralPannerTestAudioProcessor&);
@@ -29,13 +29,13 @@ public:
     // virtual void sliderValueChanged(juce::Slider* slider) override;
     
     int windowWidth = 600;
-    int windowHeight = 350;
+    int windowHeight = 300;
     
     void valueTreePropertyChanged (juce::ValueTree &treeWhosePropertyHasChanged, const juce::Identifier &property) override;
     void valueTreeRedirected (juce::ValueTree &treeWhichHasBeenChanged) override;
     
     // slider listener for just the gain knob
-    void sliderValueChanged(juce::Slider * slider) override;
+//    void sliderValueChanged(juce::Slider * slider) override;
     
 private:
     // This reference is provided as a quick way for your editor to
@@ -45,12 +45,12 @@ private:
     juce::Slider azKnob;
     juce::Slider elKnob;
     juce::Slider dSlider;
-    juce::Slider gainKnob;
+  //  juce::Slider gainKnob;
     
     juce::Label azKnobLabel;
     juce::Label elKnobLabel;
     juce::Label dSliderLabel;
-    juce::Label gainLabel;
+ //   juce::Label gainLabel;
     
     juce::Label title;
     
@@ -62,6 +62,5 @@ private:
 public:
     
     std::vector<std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment>> sliderAttachment;
-    
 
 };

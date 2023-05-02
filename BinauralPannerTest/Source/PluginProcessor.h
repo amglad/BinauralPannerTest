@@ -67,8 +67,8 @@ public:
     float distance;
     void setDistance(float distanceValue);
     
-    double gain_dB = 0.0;
-    void setGain(double makeupGain_Lin) {makeupGain = makeupGain_Lin;}
+//    double gain_dB = 0.0;
+//    void setGain(double makeupGain_Lin) {makeupGain = makeupGain_Lin;}
     
     void updateIR();
     
