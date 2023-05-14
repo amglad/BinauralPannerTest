@@ -92,11 +92,11 @@ private:
     
     float makeupGain;
     
+    //============================================
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BinauralPannerTestAudioProcessor)
+    
 public:
     
     // function to fill the value tree
     juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
-    
-    //============================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BinauralPannerTestAudioProcessor)
 };
