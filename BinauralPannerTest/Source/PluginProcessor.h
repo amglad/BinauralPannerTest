@@ -78,7 +78,7 @@ public:
 
     double hrirFs = 96000;
 
-    juce::AudioBuffer<float> hrir {2, 2048};
+    juce::AudioBuffer<float> irBuffer {2, 2048};
     
     juce::dsp::Convolution conv;
 

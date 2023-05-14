@@ -122,12 +122,19 @@ void BinauralPannerTestAudioProcessor::prepareToPlay (double sampleRate, int sam
     spec.sampleRate = sampleRate;
     spec.numChannels = getTotalNumOutputChannels();
     
-    interp.getHRIR(azStore, elStore, dStore, hrir);
-    conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir),
+//    interp.getHRIR(azStore, elStore, dStore, hrir);
+//    conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir),
+//                             hrirFs,
+//                             juce::dsp::Convolution::Stereo::yes,
+//                             juce::dsp::Convolution::Trim::no,
+//                             juce::dsp::Convolution::Normalise::no);
+    
+    interp.getHRIR(azStore, elStore, dStore, irBuffer);
+    conv.loadImpulseResponse(juce::AudioBuffer<float>(irBuffer),
                              hrirFs,
                              juce::dsp::Convolution::Stereo::yes,
                              juce::dsp::Convolution::Trim::no,
-                             juce::dsp::Convolution::Normalise::no);
+                             juce::dsp::Convolution::Normalise::yes);
 
     // Seting up the convolution
     conv.prepare(spec);
@@ -202,12 +209,12 @@ void BinauralPannerTestAudioProcessor::updateIR()
     setElevation(elevationAngle);
     setDistance(distanceValue);
     
-    interp.getHRIR(azimuthAngle, elevationAngle, distanceValue, hrir);
-    conv.loadImpulseResponse(juce::AudioBuffer<float> (hrir),
+    interp.getHRIR(azimuthAngle, elevationAngle, distanceValue, irBuffer);
+    conv.loadImpulseResponse(juce::AudioBuffer<float>(irBuffer),
                              hrirFs,
                              juce::dsp::Convolution::Stereo::yes,
                              juce::dsp::Convolution::Trim::no,
-                             juce::dsp::Convolution::Normalise::no);
+                             juce::dsp::Convolution::Normalise::yes);
 }
 
 

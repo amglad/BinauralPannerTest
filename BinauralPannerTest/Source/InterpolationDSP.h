@@ -32,7 +32,7 @@ public:
     InterpolationDSP(); // Constructor
     
     // Interpolates and covolves in 1
-    void getHRIR(float az, float el, float d, juce::AudioBuffer<float> & buffer);
+    void getHRIR(float az, float el, float d, juce::AudioBuffer<float> & irBuffer);
     
     int hrirSize = 2048;
     
